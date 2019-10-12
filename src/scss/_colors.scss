@@ -1,0 +1,28 @@
+$light-grey: #222222;
+$light-green: #a4c400;
+$white: #fff;
+
+$success: $light-green;
+$body-background-color: $light-grey;
+$footer-background-color: $light-grey;
+$title-color: $white;
+$subtitle-color: $white;
+$link: #4e8dc5;
+$link-hover: $light-green;
+
+$text: $white;
+
+$label-color: $white;
+$code-background: transparent;
+
+$table-background-color: $light-grey;
+$table-color: $white;
+$table-head-cell-color: $light-green;
+$table-striped-row-even-hover-background-color: darken($light-green, 20%);
+$table-striped-row-even-hover-color: $white;
+$table-striped-row-even-background-color: lighten($light-grey, 5%);
+
+$tabs-link-active-color: $light-green;
+$tabs-link-hover-color: $light-green;
+$tabs-link-hover-border-bottom-color: $light-green;
+$tabs-link-active-border-bottom-color: $light-green;

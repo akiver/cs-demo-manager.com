@@ -1,0 +1,1 @@
+**This repository is only for the CSGO Demos Manager website, to create an issue about the application please go to [https://github.com/akiver/CSGO-Demos-Manager/issues/new](https://github.com/akiver/CSGO-Demos-Manager/issues/new)!**

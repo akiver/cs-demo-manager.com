@@ -1,0 +1,56 @@
+{
+  "news": "actualité",
+  "loading": "Chargement...",
+
+  "navbar.home": "Accueil",
+  "navbar.docs": "Documentation",
+  "navbar.changelog": "Changelog",
+  "navbar.download": "Téléchargement",
+  "navbar.language": "Langue",
+
+  "home.feature.demosAltImage": "Démos",
+  "home.feature.watchAltImage": "Regarder démos",
+  "home.feature.statsAltImage": "Statistiques",
+  "home.feature.exportAltImage": "Export",
+  "home.feature.downloadsAltImage": "Téléchargements",
+  "home.feature.suspectsAltImage": "Suspects",
+  "home.feature.integrationAltImage": "Intégration",
+
+  "footer.credits": "{csgoDemosManager} créé par {authorLink}",
+  "footer.twitter": "Suivre CSGO Demos Manager sur {twitterLink}",
+  "footer.license": " Code source disponible sur {githubLink} sous licence {licenseLink}",
+
+  "download.title": "Téléchargement",
+  "download.source": "Les fichiers d'installation se trouvent sur {githubLink}, ne jamais télécharger un soit disant installeur depuis un site inconnu!",
+  "download.button": "Télécharger ({version})",
+  "download.checksum": "Un fichier de checksum SHA1 est disponible sur GitHub.",
+  "download.error": "Une erreur est survenue pendant la récupération du lien de téléchargement.",
+  "download.loadingLink": "Chargement du lien de téléchargement...",
+  "download.compatibility": "CSGO Demos Manager est disponible seulement sous Windows (7 et plus), son code source est disponible sur {githubLink}.",
+  "download.requirements": "*CSGO Demos Manager requiert {netFrameworkLink} et {visualRedistributableLink}.",
+  "download.requirements.visualC++Redistributable": "Redistribuable Visual C++ pour Visual Studio 2015 (x86)",
+  "download.donate.title": "Donation",
+  "download.donate": "J'ai créé et maintiens CSGO Demos Manager pendant mon temps libre, c'est un logiciel libre et le sera toujours. Si vous voulez me remercier, vous pouvez faire une donation. Merci!",
+
+  "changelog.loading": "Chargement du changelog...",
+  "changelog.fetchError": "Une erreur est survenue pendant la récupération du changelog depuis GitHub.",
+  "changelog.noChangelog": "Changelog indisponible",
+
+  "docs.tab.about": "A propos",
+  "docs.tab.general": "Général",
+  "docs.tab.analyze": "Analyse",
+  "docs.tab.stats": "Statistiques",
+  "docs.tab.watch": "Visionnage",
+  "docs.tab.suspects": "Suspects",
+  "docs.tab.downloads": "Téléchargements",
+  "docs.tab.movie": "Vidéo",
+
+  "docs.movie.gettingStarted": "Introduction",
+  "docs.movie.general": "Général",
+  "docs.movie.cfg": "CFG",
+
+  "language.availableLanguages": "Le site web de CSGO Demos Manager est disponible dans les langues suivantes:",
+  "language.docLink": "cette documentation",
+  "language.missingTranslation": " Si certaines parties sont en Anglais, cela signifie que le site n'est pas traduit entierement dans votre langue.",
+  "language.contribute": "Vous pouvez contribuer a sa traduction, pour cela merci de lire {docLink}."
+}
