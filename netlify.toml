@@ -1,9 +1,4 @@
 [[redirects]]
-  from = "/update"
-  to = "https://raw.githubusercontent.com/akiver/csgo-demos-manager.com/master/update.txt"
-  status = 200
-
-[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
