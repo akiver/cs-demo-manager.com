@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/update"
-  to = "https://github.com/akiver/csgo-demos-manager.com/blob/master/update.txt"
+  to = "https://raw.githubusercontent.com/akiver/csgo-demos-manager.com/master/update.txt"
   status = 200
 
 [[redirects]]
