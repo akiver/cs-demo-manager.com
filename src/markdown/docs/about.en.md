@@ -1,6 +1,6 @@
 <a class="anchor" id="data-generation"></a>
 
-### How does data are generated? [#](/docs/about#data-generation)
+### How is the data generated? [#](/docs/about#data-generation)
 
 Valve has released a tool written in C++ called demoinfogo which allow to parse .dem files to retrieve a lot of data.
 
