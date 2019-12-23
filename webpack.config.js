@@ -98,7 +98,10 @@ module.exports = (env, { mode = 'development' }) => {
         title: 'CSGO Demos Manager',
         favicon: 'public/favicon.ico',
       }),
-      new CopyPlugin([{ from: 'src/images/docs', to: 'docs' }, { from: 'public/robots.txt', to: '.' }]),
+      new CopyPlugin([
+        { from: 'src/images/docs', to: 'docs' },
+        { from: 'public/robots.txt', to: '.' },
+      ]),
       new MiniCssExtractPlugin({
         filename: 'css/[name].bundle.css',
         chunkFilename: '[id].css',
