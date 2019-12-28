@@ -24,7 +24,7 @@
   "download.source": "Installers are hosted on {githubLink}, do not download any installers from an untrusted website!",
   "download.button": "Download ({version})",
   "download.checksum": "A SHA1 checksum file is available on GitHub.",
-  "download.error": "An error occured while retrieving the download link",
+  "download.error": "An error occurred while retrieving the download link",
   "download.loadingLink": "Loading download link...",
   "download.compatibility": "CSGO Demos Manager is available only on Windows (7 and later), the source code is available on {githubLink}.",
   "download.requirements": "*CSGO Demos Manager requires {netFrameworkLink} and {visualRedistributableLink}.",
@@ -33,7 +33,7 @@
   "download.donate": "I created and maintain CSGO Demos Manager during my free time, it's a free software and will always be. If you want to say thank you, please feel free to make a donation. Thank you!",
 
   "changelog.loading": "Loading changelog...",
-  "changelog.fetchError": "An error occured while fetching changelog from GitHub.",
+  "changelog.fetchError": "An error occurred while fetching changelog from GitHub.",
   "changelog.noChangelog": "No changelog",
 
   "docs.tab.about": "About",
