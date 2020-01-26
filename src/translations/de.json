@@ -1,0 +1,56 @@
+{
+  "news": "Nachrichten",
+  "loading": "Wird geladen...",
+
+  "navbar.home": "Zuhause",
+  "navbar.docs": "Dokumentation",
+  "navbar.changelog": "Änderungsprotokoll",
+  "navbar.download": "Herunterladen",
+  "navbar.language": "Sprache",
+
+  "home.feature.demosAltImage": "Demo Funktionen",
+  "home.feature.watchAltImage": "Anschau Funktionen",
+  "home.feature.statsAltImage": "Statistik Funktionen",
+  "home.feature.exportAltImage": "Exportier Funktionen",
+  "home.feature.downloadsAltImage": "Herunterlad Funktionen",
+  "home.feature.suspectsAltImage": "Verdächtigungs Funktionen",
+  "home.feature.integrationAltImage": "Integrations Funktionen",
+
+  "footer.credits": "{csgoDemosManager} von {authorLink}",
+  "footer.twitter": "Folgt CSGO Demos Manager auf {twitterLink}",
+  "footer.license": "Der Quellcode ist verfügbar auf {githubLink} und unterliegt der {licenseLink} Lizenz",
+
+  "download.title": "Herunterladen",
+  "download.source": "Die Installationsdateien werden auf {githubLink} bereitgestellt, laden Sie keine Installationsdateien von nicht vertrauenswürdigen Internetseiten runter!",
+  "download.button": "Herunterladen ({version})",
+  "download.checksum": "Eine SHA1 Prüfsummen Datei ist auf GitHub verfügbar.",
+  "download.error": "Beim abrufen des Download-Link is ein Fehler aufgetreten",
+  "download.loadingLink": "Download-Link wird geladen...",
+  "download.compatibility": "CSGO Demos Manager ist nur für Windows (7 oder höher) verfügbar, der Quellcode ist verfügbar auf {githubLink}.",
+  "download.requirements": "*CSGO Demos Manager benötigt {netFrameworkLink} und {visualRedistributableLink}.",
+  "download.requirements.visualC++Redistributable": "Visual C++ Redistributable für Visual Studio 2015",
+  "download.donate.title": "Spenden",
+  "download.donate": "Ich erstellte CSGO Demos Manager und hielt es während meiner Freizeit Instand, es ist ein kostenloses Programm und das wird es auch für immer bleiben. Falls Sie sich bedanken möchten, würden wir uns über eine Spende freuen. Vielen Dank!",
+
+  "changelog.loading": "Änderungsprotokoll wird geladen...",
+  "changelog.fetchError": "Beim abrufen des Änderungsprotokolles von GitHub is ein Fehler aufgetreten.",
+  "changelog.noChangelog": "Kein Änderungsprotokoll",
+
+  "docs.tab.about": "Über",
+  "docs.tab.general": "Allgemeines",
+  "docs.tab.analyze": "Analyse",
+  "docs.tab.stats": "Statistiken",
+  "docs.tab.watch": "Anschauen",
+  "docs.tab.suspects": "Verdächtige",
+  "docs.tab.downloads": "Downloads",
+  "docs.tab.movie": "Film",
+
+  "docs.movie.gettingStarted": "Erste Schritte",
+  "docs.movie.general": "Allgemeines",
+  "docs.movie.cfg": "CFG",
+
+  "language.availableLanguages": "Die CSGO Demos Manager Internetseite ist in folgenden Sprachen verfügbar:",
+  "language.docLink": "Diese Dokumentation",
+  "language.missingTranslation": "Falls Teile dieser Internetseite noch auf Englisch geschrieben sind liegt das daran, dass Sie noch nicht vollständig Übersetzt wurde.",
+  "language.contribute": "Sie können zu der Internationalisierung dieser Seite beitragen, bitte lesen Sie {docLink} für mehr Informationen."
+}
