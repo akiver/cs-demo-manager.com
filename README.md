@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/akiver/csgo-demos-manager.com) 
+
 # csgo-demos-manager.com
 
 Source code of [https://csgo-demos-manager.com](https://csgo-demos-manager.com), the website of the application [CSGO Demos Manager](https://github.com/akiver/csgo-demos-manager).
