@@ -10,14 +10,14 @@ Das ist der Grund warum die Anwendung den In-Game Befehl `startmovie` benutzt.
 
 <br />
 
-Der `startmovie` Befehl generiert Roh-Dateien die sich aus einer menge Bild Datein (`.tga`) und einer Audio Datei (`.wav`) zusammensetzt.
+Der `startmovie` Befehl generiert Roh-Dateien, die sich aus einer menge Bild Datein (`.tga`) und einer Audio Datei (`.wav`) zusammensetzt.
 
 Die genaue Anzahl der Bilder kommt auf die gewählte Framerate und auf die länge der Sequenz an.
 
 Zum Beispiel hat man bei einer Framerate von `60` und einer länge von `20` Sekunden am Ende `20 * 60 = 1200` Bilder.
 
 <p class="has-text-warning">
-Roh-Dateien verbrauchen sehr viel Speicherplatz, die Anwendung zeigt an wie viel Platz benötigt wird gibt eine Warnung sollte diser 30GB überschreiten.
+Roh-Dateien verbrauchen sehr viel Speicherplatz, die Anwendung zeigt an wie viel Platz benötigt wird und gibt eine Warnung sollte diser 30GB überschreiten.
 </p>
 
 <br />
@@ -28,10 +28,10 @@ Ticks sind in dem Spiel die Einheit für Zeit, man kann sie mit Sekunden verglei
 
 Wie viele Ticks jedoch einer Sekunde entsprechen hängt von der Tickrate des Servers ab.
 
-Zum Beispiel, die Tickrate der Matchmaking Server ist `64`, somit ist dort `1 second` gleichzusetzten mit `64 ticks`.
+Zum Beispiel, die Tickrate der Matchmaking Server ist `64`, somit ist dort `1 sekunde` gleichzusetzten mit `64 ticks`.
 
 <p class="has-text-warning">
-Weil es für uns als Menschen leichter ist, Sekunden zu benutzen ermöglicht es die anwendung die länge in Sekunden an zu geben da diese dann automatisch zu den Start / End Ticks umgerechnet wird.
+Weil es für uns als Menschen leichter ist Sekunden zu benutzen, ermöglicht die Anwendung es die länge in Sekunden an zu geben, da diese dann automatisch zu den Start / End Ticks umgerechnet wird.
 </p>
 
 ---
@@ -40,13 +40,13 @@ Weil es für uns als Menschen leichter ist, Sekunden zu benutzen ermöglicht es 
 
 ### Wie Funktioniert es? [#](/docs/movie/getting-started#how-it-works)
 
-Wenn man eine Video generation startet, werden folgende Schritte erfüllt:
+Wenn man eine Videogeneration startet, werden folgende Schritte erfüllt:
 
-1. Erstellung einer `.vdm` Datei welche beschreibt was alles während der Wiedergabe passiert (gototick, startmovie...)
-2. Erstellung einer `.cfg` Datei welche die benuzerdefinierte Konfiguration des Nutzers beinhaltet
+1. Erstellung einer `.vdm` Datei, welche beschreibt was alles während der Wiedergabe passiert (gototick, startmovie...)
+2. Erstellung einer `.cfg` Datei, welche die benuzerdefinierte Konfiguration des Nutzers beinhaltet
 3. Das Spiel wird gestartet und somit auch die Demo
-4. Die `.vdm` zwingt die Wiedergabe dazu Dinge auszuführen wie zum Beispiel die `.cfg file`, Aufnahme startet...
-5. VirtualDub oder FFmpeg werden gestartet um das Video zu Kodieren sobald die Aufname fertig ist und das Spiel beendet
+4. Die `.vdm` zwingt die Wiedergabe dazu Dinge wie zum Beispiel die `.cfg Datei` auszuführen. Aufnahme startet...
+5. VirtualDub oder FFmpeg werden gestartet um das Video zu Kodieren, sobald die Aufname fertig ist wird das Spiel beendet
 6. Alle Daten die dabei entstanden sind werden entsorgt sobald die Kodierung fertig gestellt ist
 
 ---
@@ -55,7 +55,7 @@ Wenn man eine Video generation startet, werden folgende Schritte erfüllt:
 
 ### Bekannte Probleme [#](/docs/movie/getting-started#known-issues)
 
-Manchmal stürzt Steam beim starten von CSGO ab, ein einfach Neustart behebt die allerdings in den meisten Fällen schon.
+Manchmal stürzt Steam beim starten von CSGO ab, ein einfach Neustart behebt allerdings in den meisten Fällen schon den Fehler.
 
 ---
 
@@ -63,7 +63,7 @@ Manchmal stürzt Steam beim starten von CSGO ab, ein einfach Neustart behebt die
 
 ### Wo liegt der unterschied zwischen VirtualDub und FFmpeg? [#](/docs/movie/getting-started#vd-ffmpeg)
 
-[VirtualDub](http://www.virtualdub.org/) wird von der Anwendung nur genommen um unkomprimierte Videos zu erstellen und [FFmpeg](https://www.ffmpeg.org/) um komprimierte x264 Videos zu generieren.
+[VirtualDub](http://www.virtualdub.org/) wird von der Anwendung nur genommen um unkomprimierte Videos zu generieren, im Gegensatz dazu wird [FFmpeg](https://www.ffmpeg.org/) genommen um komprimierte x264 Videos zu generieren.
 
 ---
 
@@ -71,7 +71,7 @@ Manchmal stürzt Steam beim starten von CSGO ab, ein einfach Neustart behebt die
 
 ### Warum nicht nur VirtualDub nutzen? [#](/docs/movie/getting-started#why-vd)
 
-Weil VirtualDub keinen Codec wie den x264 standartmäßig mit inklusive hat, man müsste es dann Selbst instalieren was ein sehr Nerviger Prozess ist.
+Weil VirtualDub keinen Codec wie den x264 standardmäßig beinhaltet. Man müsste ihn dann Selbst installieren, was ein sehr Nerviger Prozess ist.
 
 ---
 
@@ -79,9 +79,9 @@ Weil VirtualDub keinen Codec wie den x264 standartmäßig mit inklusive hat, man
 
 ### Funktionieren POV Demos? [#](/docs/movie/getting-started#pov-demos)
 
-Ja aber nur ohne Zeitleiste..
+Ja aber nur ohne Zeitleiste.
 
-Allerdings kann man sich wichtige Ticks dann mit einem Kommentar notieren.
+Allerdings kann man sich wichtige Ticks in einem Kommentar notieren.
 
 ---
 
@@ -89,7 +89,7 @@ Allerdings kann man sich wichtige Ticks dann mit einem Kommentar notieren.
 
 ### Notiz über beschädigte Demos [#](/docs/movie/getting-started#corrupted-demos)
 
-Ist eine Demo Beschädigt, kann man dennoch Videos generieren allerdings fehlen einem dann die Zeitleiste und die benötigte Speicherplatzrechnung.
+Ist eine Demo Beschädigt kann man dennoch Videos generieren, allerdings fehlen einem dann die Zeitleiste und die benötigte Speicherplatzrechnung.
 
 ---
 
@@ -97,17 +97,16 @@ Ist eine Demo Beschädigt, kann man dennoch Videos generieren allerdings fehlen 
 
 ### CSGO Kompatibilität [#](/docs/movie/getting-started#csgo-compatibility)
 
-Die Film Funktion funktioniert aber auch nur mit [CSGO 1.36.1.8](http://blog.counter-strike.net/index.php/2017/12/19817/) und allen folgenden.
+Die Film Funktion funktioniert, allerdings nur ab [CSGO 1.36.1.8](http://blog.counter-strike.net/index.php/2017/12/19817/) und allen folgenden Versionen.
 
-Man kann es nicht mit Älteren Varianten nutzen.
+Man kann es nicht mit Älteren Versionen nutzen.
 
 ---
 
 <a class="anchor" id="howto-video"></a>
 
-### Wie macht mans (Video) [#](/docs/movie/getting-started#howto-video)
+### Wie macht man´s (Video) [#](/docs/movie/getting-started#howto-video)
 
-[This video](https://www.youtube.com/watch?v=83anQLF9z18) zeigt wie man ein Video mit VirtualDub generiert und das ist fast der gleiche Prozess wie bei FFmpeg.
+[Dieses Video](https://www.youtube.com/watch?v=83anQLF9z18) zeigt wie man ein Video mit VirtualDub generiert, die Generierung mit FFmpeg ist so gut wie Identisch.
 
-Um FFmpeg an stelle von VirtualDub zu nutzen muss man oben erst den Schalter umlegen.
-
+Um FFmpeg an Stelle von VirtualDub zu nutzen muss man ganz oben erst den Schalter umlegen.

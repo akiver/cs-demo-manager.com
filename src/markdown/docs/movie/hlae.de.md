@@ -1,6 +1,6 @@
 ### Warum ist HLAE notwendig?
 
-Einer Seits bietet es viele nützliche Funktionen, die im Spiel standartmäßig nicht sind und anderer Seits ist HLAE notwendig weil es ein Audio [Sync Problem](https://github.com/ValveSoftware/csgo-osx-linux/issues/1534) mit dem `startmovie` Befehl gibt, das so gelöst wird.
+Einer Seits bietet es viele nützliche Funktionen, die im Spiel standartmäßig gegeben sind und anderer Seits ist HLAE notwendig weil es ein Audio [Sync Problem](https://github.com/ValveSoftware/csgo-osx-linux/issues/1534) mit dem `startmovie` Befehl gibt, dass so gelöst wird.
 
 ---
 
@@ -11,19 +11,19 @@ Einer Seits bietet es viele nützliche Funktionen, die im Spiel standartmäßig 
 #### csgo.exe Pfad
 
 - Standpunkt der `csgo.exe` Datei.
-- Diese wir benötigt damit HLAE funktioniert.
-- 
-#### Aktiviere Movie Making Config Parent Ordner
+- Diese wird benötigt damit HLAE funktioniert.
+
+#### Aktiviere "movie making config parent folder"
 
 - Aus der HLAE Dokumentation:
 
 <em>
-Wenn aktiviert, setzt du ein übergeordneten Ordner für deine Movie-Making-Config für das Spiel. Das Spiel wird sich selbst einen Unterordner names CFG anlegen mit der config.cfg und den Video Einstellungen drin. Du kannst deine Movie-Making-Config auch in den CFG Ordner legen, allerdings wird das Spie sie nur laden wenn sie nicht bereits in dem CSGO/CFG Ordner ist.
+Wenn aktiviert kannst du einen übergeordneten Ordner für deine Movie Making Config festlegen. Das Spiel erstellt dort einen Unterordner mit dem Namen cfg und speichert die config.cfg und Videoeinstellungen in diesem Ordner. Du kannst deine Movie-Making-Config auch in den cfg Unterordner legen, allerdings wird das Spie sie nur laden wenn sie nicht bereits in dem csgo/cfg Ordner sind.
 </em>
 
 #### Wie füge ich meine eigenen mirv_ befehle hinzu?
 
-- Du kannst `mirv_` Befehle in der Eingabe des CFG eintragen, diese werden bei der Wiedergabe ausgeführt.
+- Du kannst `mirv_` Befehle in der cfg Eingabe eintragen, diese werden bei bei beginn der Wiedergabe ausgeführt.
 
 #### Notiz über HLAE Update
 
