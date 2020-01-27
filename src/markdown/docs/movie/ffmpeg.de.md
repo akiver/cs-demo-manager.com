@@ -25,12 +25,12 @@ Das ist auch die empfohlene Möglichkeit wenn Sie ein direkt anschaubares Video 
 - Das Audio wird mit dem [LAME MP3](http://lame.sourceforge.net/) Kodierer kodiert.
 - Extra Eingabe Parameter.
 - Weitere Eingabe Parameter für das FFmpeg CLI.
-- Das ist jedoch nur für erfahrene Nutzer, Sie können allerdings alle möglichen Informationen in der FFmpeg [documentation](https://www.ffmpeg.org/documentation.html) finden.
+- Das ist jedoch nur für erfahrene Nutzer, Sie können allerdings alle möglichen Informationen in der FFmpeg [Documentation](https://www.ffmpeg.org/documentation.html) finden.
 
 #### Extra Parameter
 
 - Weitere Ausgabe Parameter für das FFmpeg CLI.
-- Das ist jedoch nur für erfahrene Nutzer, Sie können allerdings alle möglichen Informationen in der FFmpeg [documentation](https://www.ffmpeg.org/documentation.html) finden.
+- Das ist jedoch nur für erfahrene Nutzer, Sie können allerdings alle möglichen Informationen in der FFmpeg [Documentation](https://www.ffmpeg.org/documentation.html) finden.
 
 #### Befehlszeilen Eingabe
 

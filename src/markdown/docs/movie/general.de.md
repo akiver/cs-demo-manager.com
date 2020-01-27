@@ -1,6 +1,6 @@
 ### Generiere Video Datei
 
-![Generate video option](docs/movie/generate-video-options.png)
+![Generiere Video Option](docs/movie/generate-video-options.png)
 
 Wenn Sie bloss Roh-Dateien generieren möchten, können Sie dieses Kontrollkästchen abwählen.
 
@@ -8,7 +8,7 @@ Wenn Sie bloss Roh-Dateien generieren möchten, können Sie dieses Kontrollkäst
 
 ### Optionen
 
-![General options](docs/movie/general-options.png)
+![Allgemeine Optionen](docs/movie/general-options.png)
 
 #### Roh-Dateien Zielordner
 
@@ -16,7 +16,7 @@ Wenn Sie bloss Roh-Dateien generieren möchten, können Sie dieses Kontrollkäst
 
 #### Ausgabe Zielordner
 
-- Standort des Ordners in dem das Video (.avi oder .mp4) gespeichert werden.
+- Standort des Ordners in dem das Video (.avi oder .mp4) gespeichert wird.
 
 #### Ausgabe Dateiname
 
@@ -45,7 +45,7 @@ Wenn Sie bloss Roh-Dateien generieren möchten, können Sie dieses Kontrollkäst
 #### Länge
 
 - Wie lang die Aufnahme dauert. (Sekunden)
-- Man kan diese größe verändern um den Start / End Tick anzupassen.
+- Man kann diese größe verändern um den Start / End Tick anzupassen.
 
 #### Auf Spieler fokusieren
 
