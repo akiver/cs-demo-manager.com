@@ -5,11 +5,14 @@ module.exports = {
       jsx: true,
     },
   },
+  ignorePatterns: ['/*.js'],
   extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
+    'prettier/@typescript-eslint',
   ],
   plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   settings: {

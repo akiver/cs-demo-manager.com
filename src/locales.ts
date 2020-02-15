@@ -5,6 +5,4 @@ export const LOCALES: { [locale: string]: string } = {
   de: 'Deutsch',
 }
 
-export const LOCALE_PATH_REGEX = `/:locale(${Object.keys(LOCALES)
-  .map(locale => locale)
-  .join('|')})?`
+export const LOCALE_PATH_REGEX = `/:locale(${Object.keys(LOCALES).join('|')})?`

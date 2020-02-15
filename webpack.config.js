@@ -1,7 +1,7 @@
-const path = require('path') // eslint-disable-line
-const HtmlWebpackPlugin = require('html-webpack-plugin') // eslint-disable-line
-const MiniCssExtractPlugin = require('mini-css-extract-plugin') // eslint-disable-line
-const CopyPlugin = require('copy-webpack-plugin') // eslint-disable-line
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = (env, { mode = 'development' }) => {
   const isProduction = mode === 'production'
