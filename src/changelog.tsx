@@ -40,7 +40,7 @@ const Changelog = () => {
         setVersions(buildVersionsFromGithubReleases(releases))
       } catch (error) {
         const errorMessage =
-          error instanceof Error ? error.message : 'An unknown error occured while retrieving changelog'
+          error instanceof Error ? error.message : 'An unknown error occurred while retrieving changelog'
         setError(errorMessage)
       } finally {
         setIsLoading(false)
