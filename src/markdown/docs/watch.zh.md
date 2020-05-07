@@ -2,7 +2,7 @@
 
 ### 为什么我无法观看我的 高光/低谷 片段？ [#](/docs/watch#watch-highlow)
 
-您必须添加至少1个帐户，然后在设置里选择该账户作为您要关注的帐户。
+您必须添加至少 1 个帐户，然后在设置里选择该账户作为您要关注的帐户。
 
 您可以在设置或记分板里添加帐户。
 
@@ -48,7 +48,7 @@
 
 ### 观看 Demo 时出现 "AfxCppCli.dll" 错误 [#](/docs/watch#afx-cpp)
 
-您必须安装  [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)。
+您必须安装 [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)。
 
 ---
 

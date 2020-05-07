@@ -1,14 +1,14 @@
-import React from 'react'
-import { Switch, Route, Redirect, NavLink } from 'react-router-dom'
-import { LOCALE_PATH_REGEX } from '../locales'
-import { useLocalePrefix } from '../hooks/use-locale-prefix'
-import { VirtualDub } from './movie/virtualdub'
-import { Config } from './movie/config'
-import { Ffmpeg } from './movie/ffmpeg'
-import { Hlae } from './movie/hlae'
-import { General } from './movie/general'
-import { GettingStarted } from './movie/getting-started'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import { Switch, Route, Redirect, NavLink } from 'react-router-dom';
+import { LOCALE_PATH_REGEX } from '../locales';
+import { useLocalePrefix } from '../hooks/use-locale-prefix';
+import { VirtualDub } from './movie/virtualdub';
+import { Config } from './movie/config';
+import { Ffmpeg } from './movie/ffmpeg';
+import { Hlae } from './movie/hlae';
+import { General } from './movie/general';
+import { GettingStarted } from './movie/getting-started';
+import { FormattedMessage } from 'react-intl';
 
 export const Movie = () => {
   return (
@@ -62,7 +62,7 @@ export const Movie = () => {
         </Switch>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Movie
+export default Movie;

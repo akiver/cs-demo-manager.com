@@ -1,10 +1,10 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 type Props = {
-  textTranslationKey: string
-  textClassName?: string
-}
+  textTranslationKey: string;
+  textClassName?: string;
+};
 
 export const StatusText = ({ textTranslationKey, textClassName = '' }: Props) => {
   return (
@@ -13,5 +13,5 @@ export const StatusText = ({ textTranslationKey, textClassName = '' }: Props) =>
         <FormattedMessage id={textTranslationKey} />
       </p>
     </div>
-  )
-}
+  );
+};

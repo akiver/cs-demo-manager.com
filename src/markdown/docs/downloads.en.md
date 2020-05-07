@@ -42,8 +42,7 @@ You can choose to start automatically the BOT when you launch CSGO Demos Manager
 
 ![BOT settings](docs/downloads/bot-settings.png)
 
-<p class="has-text-warning">The BOT has an option to start automatically at Windows startup.</p>
----
+## <p class="has-text-warning">The BOT has an option to start automatically at Windows startup.</p>
 
 <a class="anchor" id="matches-number"></a>
 

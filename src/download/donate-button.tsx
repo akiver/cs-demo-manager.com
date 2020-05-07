@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const DonateButton = () => {
   return (
@@ -15,5 +15,5 @@ export const DonateButton = () => {
       />
       <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
     </form>
-  )
-}
+  );
+};

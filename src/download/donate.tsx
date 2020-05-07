@@ -1,6 +1,6 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import { DonateButton } from './donate-button'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { DonateButton } from './donate-button';
 
 export const Donate = () => {
   return (
@@ -13,5 +13,5 @@ export const Donate = () => {
       </h2>
       <DonateButton />
     </div>
-  )
-}
+  );
+};

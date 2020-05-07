@@ -1,16 +1,16 @@
-import React, { Suspense } from 'react'
-import { Switch, Route, Redirect } from 'react-router'
-import { DocsTabs } from './docs/docs-tabs'
-import { LOCALE_PATH_REGEX } from './locales'
-import { DocLoading } from './docs/doc-loading'
-const About = React.lazy(() => import('./docs/about'))
-const Analyze = React.lazy(() => import('./docs/analyze'))
-const General = React.lazy(() => import('./docs/general'))
-const Stats = React.lazy(() => import('./docs/stats'))
-const Watch = React.lazy(() => import('./docs/watch'))
-const Suspects = React.lazy(() => import('./docs/suspects'))
-const Downloads = React.lazy(() => import('./docs/downloads'))
-const Movie = React.lazy(() => import('./docs/movie'))
+import React, { Suspense } from 'react';
+import { Switch, Route, Redirect } from 'react-router';
+import { DocsTabs } from './docs/docs-tabs';
+import { LOCALE_PATH_REGEX } from './locales';
+import { DocLoading } from './docs/doc-loading';
+const About = React.lazy(() => import('./docs/about'));
+const Analyze = React.lazy(() => import('./docs/analyze'));
+const General = React.lazy(() => import('./docs/general'));
+const Stats = React.lazy(() => import('./docs/stats'));
+const Watch = React.lazy(() => import('./docs/watch'));
+const Suspects = React.lazy(() => import('./docs/suspects'));
+const Downloads = React.lazy(() => import('./docs/downloads'));
+const Movie = React.lazy(() => import('./docs/movie'));
 
 const Docs = () => {
   return (
@@ -32,7 +32,7 @@ const Docs = () => {
         </Switch>
       </Suspense>
     </div>
-  )
-}
+  );
+};
 
-export default Docs
+export default Docs;

@@ -1,19 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { LOCALES } from './locales'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { LOCALES } from './locales';
+import { FormattedMessage } from 'react-intl';
 
 const DocLink = () => {
   return (
-    <a
-      href="https://github.com/akiver/csgo-demos-manager.com#translation"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="https://github.com/akiver/csgo-demos-manager.com#translation" target="_blank" rel="noopener noreferrer">
       <FormattedMessage id="language.docLink" />
     </a>
-  )
-}
+  );
+};
 
 const Language = () => {
   return (
@@ -23,12 +19,12 @@ const Language = () => {
           <FormattedMessage id="language.availableLanguages" />
         </p>
         <ul>
-          {Object.keys(LOCALES).map(locale => {
+          {Object.keys(LOCALES).map((locale) => {
             return (
               <li key={`language-link-${locale}`}>
                 <Link to={`${locale === 'en' ? '/' : `/${locale}`}`}>{LOCALES[locale]}</Link>
               </li>
-            )
+            );
           })}
         </ul>
         <p className="has-text-warning">
@@ -44,7 +40,7 @@ const Language = () => {
         </p>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Language
+export default Language;

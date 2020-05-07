@@ -1,8 +1,8 @@
-import React from 'react'
-import { DocPage } from './doc-page'
+import React from 'react';
+import { DocPage } from './doc-page';
 
 const About = () => {
-  return <DocPage markdownFilePath="docs/about" />
-}
+  return <DocPage markdownFilePath="docs/about" />;
+};
 
-export default About
+export default About;

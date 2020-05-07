@@ -1,6 +1,6 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import { GitHubLink } from '../github-link'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { GitHubLink } from '../github-link';
 
 export const License = () => {
   return (
@@ -15,5 +15,5 @@ export const License = () => {
         />
       </p>
     </div>
-  )
-}
+  );
+};

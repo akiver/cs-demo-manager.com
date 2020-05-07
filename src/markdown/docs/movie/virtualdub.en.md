@@ -29,7 +29,7 @@ This script does the following:
 2. Import the audio file (`.wav`)
 3. Set the video framerate
 4. Set video / audio compression to uncompressed
-5. Save as AVI file  
+5. Save as AVI file
 
 <br />
 It basically perform the tasks that you used to do manually to generate the avi file.

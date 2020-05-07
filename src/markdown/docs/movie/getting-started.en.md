@@ -110,4 +110,3 @@ You can't use it with older branches.
 [This video](https://www.youtube.com/watch?v=83anQLF9z18) shows how to generate a video with VirtualDub but it's the same process with FFmpeg.
 
 You have to switch to FFmpeg by clicking on the toggle button at the top of the window if you want to use FFmpeg instead of VirtualDub.
-

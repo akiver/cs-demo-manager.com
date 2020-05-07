@@ -1,12 +1,12 @@
-import React, { Suspense } from 'react'
-import { Switch, Route } from 'react-router-dom'
-import { LOCALE_PATH_REGEX } from './locales'
-import { StatusText } from './status-text'
-const Home = React.lazy(() => import('./home'))
-const Docs = React.lazy(() => import('./docs'))
-const Changelog = React.lazy(() => import('./changelog'))
-const Language = React.lazy(() => import('./language'))
-const Download = React.lazy(() => import('./download'))
+import React, { Suspense } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import { LOCALE_PATH_REGEX } from './locales';
+import { StatusText } from './status-text';
+const Home = React.lazy(() => import('./home'));
+const Docs = React.lazy(() => import('./docs'));
+const Changelog = React.lazy(() => import('./changelog'));
+const Language = React.lazy(() => import('./language'));
+const Download = React.lazy(() => import('./download'));
 
 export const Routes = () => {
   return (
@@ -20,5 +20,5 @@ export const Routes = () => {
         <Route path={`${LOCALE_PATH_REGEX}/downloads`} component={Download} />
       </Switch>
     </Suspense>
-  )
-}
+  );
+};

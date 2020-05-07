@@ -1,7 +1,7 @@
-import React from 'react'
-import { Credits } from './footer/credits'
-import { TwitterLink } from './footer/twitter-link'
-import { License } from './footer/license'
+import React from 'react';
+import { Credits } from './footer/credits';
+import { TwitterLink } from './footer/twitter-link';
+import { License } from './footer/license';
 
 export const Footer = () => {
   return (
@@ -16,5 +16,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};

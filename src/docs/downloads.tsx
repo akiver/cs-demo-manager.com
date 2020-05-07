@@ -1,8 +1,8 @@
-import React from 'react'
-import { DocPage } from './doc-page'
+import React from 'react';
+import { DocPage } from './doc-page';
 
 const Downloads = () => {
-  return <DocPage markdownFilePath="docs/downloads" />
-}
+  return <DocPage markdownFilePath="docs/downloads" />;
+};
 
-export default Downloads
+export default Downloads;

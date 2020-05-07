@@ -1,57 +1,56 @@
 {
-    "news": "新闻",
-    "loading": "加载中...",
-  
-    "navbar.home": "主页",
-    "navbar.docs": "文档",
-    "navbar.changelog": "版本日志",
-    "navbar.download": "下载",
-    "navbar.language": "语言",
-  
-    "home.feature.demosAltImage": "Demo",
-    "home.feature.watchAltImage": "观看",
-    "home.feature.statsAltImage": "统计",
-    "home.feature.exportAltImage": "导出",
-    "home.feature.downloadsAltImage": "下载",
-    "home.feature.suspectsAltImage": "监管",
-    "home.feature.integrationAltImage": "积分",
-  
-    "footer.credits": "{csgoDemosManager} 由 {authorLink} 制作",
-    "footer.twitter": "关注 CSGO Demos Manager 的 twitter 账号 {twitterLink}",
-    "footer.license": "源码托管于 {githubLink} 基于 {licenseLink} 协议",
-  
-    "download.title": "下载",
-    "download.source": "安装程序托管在 {githubLink} 上, 请勿从不受信任的网站下载任何安装程序！",
-    "download.button": "下载 ({version})",
-    "download.checksum": "SHA1 校验文件在 GitHub 上可用",
-    "download.error": "检索下载连接时发生错误",
-    "download.loadingLink": "加载下载连接中...",
-    "download.compatibility": "CSGO Demos Manager 仅在 Windows 平台（Win 7+）可用，源码托管于 {githubLink}.",
-    "download.requirements": "*CSGO Demos Manager 需要 {netFrameworkLink} 与 {visualRedistributableLink}.",
-    "download.requirements.visualC++Redistributable": "适用于 Visual Studio 2015 的 Visual C++ 可再发行组件.",
-    "download.donate.title": "捐赠",
-    "download.donate": "我在业余时间创建并维护了 CSGO Demos Manager ，它是一个免费软件，并且将会永远存在。如果您觉得有用，并想表达您的谢意，请随时捐款。谢谢！",
-  
-    "changelog.loading": "加载版本更新日志中...",
-    "changelog.fetchError": "从 Github 提取版本更新日志时发生错误.",
-    "changelog.noChangelog": "尚无版本更新日志",
-  
-    "docs.tab.about": "关于",
-    "docs.tab.general": "一般内容",
-    "docs.tab.analyze": "分析",
-    "docs.tab.stats": "统计",
-    "docs.tab.watch": "观看",
-    "docs.tab.suspects": "监管",
-    "docs.tab.downloads": "下载",
-    "docs.tab.movie": "电影",
-  
-    "docs.movie.gettingStarted": "入门",
-    "docs.movie.general": "一般内容",
-    "docs.movie.cfg": "CFG",
-  
-    "language.availableLanguages": "CSGO Demos Manager 网站支持下述语言：",
-    "language.docLink": "本文件",
-    "language.missingTranslation": " 如果网站的某些部分为英文，则表示该网站尚未完全以您的语言翻译 ",
-    "language.contribute": "您可以为本网站的国际化做出贡献，请阅读 {docLink} 了解更多信息."
-  }
-  
+  "news": "新闻",
+  "loading": "加载中...",
+
+  "navbar.home": "主页",
+  "navbar.docs": "文档",
+  "navbar.changelog": "版本日志",
+  "navbar.download": "下载",
+  "navbar.language": "语言",
+
+  "home.feature.demosAltImage": "Demo",
+  "home.feature.watchAltImage": "观看",
+  "home.feature.statsAltImage": "统计",
+  "home.feature.exportAltImage": "导出",
+  "home.feature.downloadsAltImage": "下载",
+  "home.feature.suspectsAltImage": "监管",
+  "home.feature.integrationAltImage": "积分",
+
+  "footer.credits": "{csgoDemosManager} 由 {authorLink} 制作",
+  "footer.twitter": "关注 CSGO Demos Manager 的 twitter 账号 {twitterLink}",
+  "footer.license": "源码托管于 {githubLink} 基于 {licenseLink} 协议",
+
+  "download.title": "下载",
+  "download.source": "安装程序托管在 {githubLink} 上, 请勿从不受信任的网站下载任何安装程序！",
+  "download.button": "下载 ({version})",
+  "download.checksum": "SHA1 校验文件在 GitHub 上可用",
+  "download.error": "检索下载连接时发生错误",
+  "download.loadingLink": "加载下载连接中...",
+  "download.compatibility": "CSGO Demos Manager 仅在 Windows 平台（Win 7+）可用，源码托管于 {githubLink}.",
+  "download.requirements": "*CSGO Demos Manager 需要 {netFrameworkLink} 与 {visualRedistributableLink}.",
+  "download.requirements.visualC++Redistributable": "适用于 Visual Studio 2015 的 Visual C++ 可再发行组件.",
+  "download.donate.title": "捐赠",
+  "download.donate": "我在业余时间创建并维护了 CSGO Demos Manager ，它是一个免费软件，并且将会永远存在。如果您觉得有用，并想表达您的谢意，请随时捐款。谢谢！",
+
+  "changelog.loading": "加载版本更新日志中...",
+  "changelog.fetchError": "从 Github 提取版本更新日志时发生错误.",
+  "changelog.noChangelog": "尚无版本更新日志",
+
+  "docs.tab.about": "关于",
+  "docs.tab.general": "一般内容",
+  "docs.tab.analyze": "分析",
+  "docs.tab.stats": "统计",
+  "docs.tab.watch": "观看",
+  "docs.tab.suspects": "监管",
+  "docs.tab.downloads": "下载",
+  "docs.tab.movie": "电影",
+
+  "docs.movie.gettingStarted": "入门",
+  "docs.movie.general": "一般内容",
+  "docs.movie.cfg": "CFG",
+
+  "language.availableLanguages": "CSGO Demos Manager 网站支持下述语言：",
+  "language.docLink": "本文件",
+  "language.missingTranslation": " 如果网站的某些部分为英文，则表示该网站尚未完全以您的语言翻译 ",
+  "language.contribute": "您可以为本网站的国际化做出贡献，请阅读 {docLink} 了解更多信息."
+}

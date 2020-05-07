@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from 'react';
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export const FeatureBlock = ({ children }: Props) => {
   return (
@@ -13,5 +13,5 @@ export const FeatureBlock = ({ children }: Props) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

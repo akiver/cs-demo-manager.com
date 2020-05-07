@@ -1,6 +1,6 @@
-import React from 'react'
-import { DocPage } from '../doc-page'
+import React from 'react';
+import { DocPage } from '../doc-page';
 
 export const VirtualDub = () => {
-  return <DocPage markdownFilePath="docs/movie/virtualdub" />
-}
+  return <DocPage markdownFilePath="docs/movie/virtualdub" />;
+};

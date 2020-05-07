@@ -57,7 +57,9 @@ Wenn Sie bloss Roh-Dateien generieren möchten, können Sie dieses Kontrollkäst
 - Wenn diese Option Aktiviert ist, schließt sich das Spiel eigenständig sobald die Aufnahme beendet ist.
 
 #### Löschen von Roh-Dateien nach der Kodierung
+
 - Wenn diese Option Aktiviert ist, werden alle Roh-Dateien (.tga und .wav) nach der Kodierung gelöscht.
 
 #### Öffnen des Videos im Windows Explorer nach der Kodierung
+
 - Wenn diese Option Aktiviert ist, öffnet der Windows Explorer den Ordner des Videos.

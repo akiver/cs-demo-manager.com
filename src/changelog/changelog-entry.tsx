@@ -1,19 +1,19 @@
-import React from 'react'
-import { Version } from '../versions'
-import { AnchorLink } from '../anchor-link'
-import { useMarkdownLoader } from '../hooks/use-markdown-loader'
-import { useParams } from 'react-router'
-import { FormattedMessage } from 'react-intl'
-import { MarkdownRenderer } from '../markdown-renderer'
+import React from 'react';
+import { Version } from '../versions';
+import { AnchorLink } from '../anchor-link';
+import { useMarkdownLoader } from '../hooks/use-markdown-loader';
+import { useParams } from 'react-router';
+import { FormattedMessage } from 'react-intl';
+import { MarkdownRenderer } from '../markdown-renderer';
 
 type Props = {
-  version: Version
-  isLastEntry: boolean
-}
+  version: Version;
+  isLastEntry: boolean;
+};
 
 export const ChangelogEntry = ({ version, isLastEntry }: Props) => {
-  const markdown = useMarkdownLoader(`changelog/${version.number}`)
-  const { locale } = useParams()
+  const markdown = useMarkdownLoader(`changelog/${version.number}`);
+  const { locale } = useParams();
   return (
     <div className="column is-full" id={version.number}>
       <span className="title version-number">{version.number}</span>
@@ -30,5 +30,5 @@ export const ChangelogEntry = ({ version, isLastEntry }: Props) => {
       </div>
       {!isLastEntry && <hr />}
     </div>
-  )
-}
+  );
+};

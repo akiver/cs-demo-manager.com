@@ -1,34 +1,34 @@
-import React, { useEffect, useState } from 'react'
-import { FormattedMessage, useIntl } from 'react-intl'
-import { GitHubRelease } from '../github-release'
+import React, { useEffect, useState } from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { GitHubRelease } from '../github-release';
 
-const GITHUB_API_URL = 'https://api.github.com/repos/akiver/csgo-demos-manager/releases/latest'
+const GITHUB_API_URL = 'https://api.github.com/repos/akiver/csgo-demos-manager/releases/latest';
 
 export const DownloadLink = () => {
-  const [error, setError] = useState<string | undefined>()
-  const [lastVersion, setLastVersion] = useState<string | undefined>()
-  const [isLoading, setIsLoading] = useState(true)
-  const intl = useIntl()
+  const [error, setError] = useState<string | undefined>();
+  const [lastVersion, setLastVersion] = useState<string | undefined>();
+  const [isLoading, setIsLoading] = useState(true);
+  const intl = useIntl();
 
   useEffect(() => {
     const fetchLastRelease = async (): Promise<void> => {
       try {
-        const response: Response = await fetch(GITHUB_API_URL)
-        const data: GitHubRelease = await response.json()
-        setLastVersion(data.tag_name)
+        const response: Response = await fetch(GITHUB_API_URL);
+        const data: GitHubRelease = await response.json();
+        setLastVersion(data.tag_name);
       } catch (error) {
         setError(
           intl.formatMessage({
             id: 'download.error',
           })
-        )
+        );
       } finally {
-        setIsLoading(false)
+        setIsLoading(false);
       }
-    }
+    };
 
-    fetchLastRelease()
-  }, [])
+    fetchLastRelease();
+  }, []);
 
   if (isLoading) {
     return (
@@ -37,19 +37,16 @@ export const DownloadLink = () => {
           id: 'download.loadingLink',
         })}
       </p>
-    )
+    );
   }
 
   if (error !== undefined) {
-    return <p className="has-text-danger">{error}</p>
+    return <p className="has-text-danger">{error}</p>;
   }
 
   return (
     <div>
-      <a
-        className="button is-success is-large"
-        href="https://github.com/akiver/CSGO-Demos-Manager/releases/latest"
-      >
+      <a className="button is-success is-large" href="https://github.com/akiver/CSGO-Demos-Manager/releases/latest">
         <FormattedMessage
           id="download.button"
           values={{
@@ -61,5 +58,5 @@ export const DownloadLink = () => {
         <FormattedMessage id="download.checksum" />
       </p>
     </div>
-  )
-}
+  );
+};

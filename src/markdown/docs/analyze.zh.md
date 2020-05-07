@@ -36,7 +36,7 @@
 
 ### Demo 日期出错 [#](/docs/analyze#wrong-date)
 
-该日期对应 Demo 文件（ .dem ）的创建日期。对于V社的官方竞技 Demo，其使用 Demo 信息文件（ .info ）检测比赛的真实信息。如果日期出错并且该 Demo 是V社的，那是因为缺少 .info 文件。如果重命名了V社的 Demo，则也必须重命名 .info 文件。
+该日期对应 Demo 文件（ .dem ）的创建日期。对于 V 社的官方竞技 Demo，其使用 Demo 信息文件（ .info ）检测比赛的真实信息。如果日期出错并且该 Demo 是 V 社的，那是因为缺少 .info 文件。如果重命名了 V 社的 Demo，则也必须重命名 .info 文件。
 
 ---
 
@@ -44,7 +44,7 @@
 
 ### 为什么团队名称总是 "Team 1" 和 "Team 2"? [#](/docs/analyze#teams-names)
 
-仅当5个玩家在游戏中具有相同的前缀名时，团队名称才可用。但是 eBot 的 Demo 会自动为两个团队设置一个名称。
+仅当 5 个玩家在游戏中具有相同的前缀名时，团队名称才可用。但是 eBot 的 Demo 会自动为两个团队设置一个名称。
 
 ---
 
@@ -52,4 +52,4 @@
 
 ### ESEA RWS 与 ESEA 网站上显示的不同？ [#](/docs/analyze#esea-rws)
 
-由于缺乏伤害事件（ damages events ）或算法差异，RWS  与 ESEA 网站上的不完全相同。
+由于缺乏伤害事件（ damages events ）或算法差异，RWS 与 ESEA 网站上的不完全相同。

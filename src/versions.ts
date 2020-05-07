@@ -1,7 +1,7 @@
 export type Version = {
-  number: string
-  releaseDate: Date
-}
+  number: string;
+  releaseDate: Date;
+};
 
 // Hardcoded versions that may not be available on GitHub
 export const VERSIONS: Version[] = [
@@ -157,4 +157,4 @@ export const VERSIONS: Version[] = [
     number: '1.0.0',
     releaseDate: new Date('2014-06-24T10:00:00Z'),
   },
-]
+];

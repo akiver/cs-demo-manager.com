@@ -1,5 +1,5 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 export const Requirements = () => {
   return (
@@ -28,5 +28,5 @@ export const Requirements = () => {
         }}
       />
     </p>
-  )
-}
+  );
+};

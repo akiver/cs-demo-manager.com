@@ -1,10 +1,10 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import { Requirements } from './download/requirements'
-import { Donate } from './download/donate'
-import { Compatibility } from './download/compatibility'
-import { DownloadLink } from './download/download-link'
-import { Source } from './download/source'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { Requirements } from './download/requirements';
+import { Donate } from './download/donate';
+import { Compatibility } from './download/compatibility';
+import { DownloadLink } from './download/download-link';
+import { Source } from './download/source';
 
 const Download = () => {
   return (
@@ -22,7 +22,7 @@ const Download = () => {
         <Donate />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Download
+export default Download;

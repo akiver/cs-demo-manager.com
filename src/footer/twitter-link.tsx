@@ -1,5 +1,5 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 export const TwitterLink = () => {
   return (
@@ -9,12 +9,7 @@ export const TwitterLink = () => {
           id="footer.twitter"
           values={{
             twitterLink: (
-              <a
-                className=""
-                href="https://twitter.com/CSGODemoManager"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="" href="https://twitter.com/CSGODemoManager" target="_blank" rel="noopener noreferrer">
                 Twitter
               </a>
             ),
@@ -22,5 +17,5 @@ export const TwitterLink = () => {
         />
       </p>
     </div>
-  )
-}
+  );
+};

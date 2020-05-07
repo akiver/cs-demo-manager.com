@@ -2,7 +2,7 @@
 
 ### 数据是如何生成的？ [#](/docs/about#data-generation)
 
-Valve（以下简称V社）已发布了用 C++ 编写的名为 demoinfogo 的工具，该工具可解析 .dem 文件以检索大量数据。
+Valve（以下简称 V 社）已发布了用 C++ 编写的名为 demoinfogo 的工具，该工具可解析 .dem 文件以检索大量数据。
 
 CSGO Demos Manager 使用了该工具的 C# 版本，该工具由名为 DemoInfo 的项目背后的人员移植。（谢谢！）
 
@@ -20,7 +20,7 @@ CSGO Demos Manager 使用了该工具的 C# 版本，该工具由名为 DemoInfo
 
 ### 它支持 ESEA、Faceit 和其它联赛的 Demo 么？ [#](/docs/about#provider-support)
 
-目前，CSGO Demos Manager 支持 V社（竞赛/官方锦标赛）、ESEA、FaceIt、CEVO、eBot 和 PopFlash。
+目前，CSGO Demos Manager 支持 V 社（竞赛/官方锦标赛）、ESEA、FaceIt、CEVO、eBot 和 PopFlash。
 
 官方不支持使用诸如 mp_restartgame 和 tv_record 之类的命令的私人服务器上的 Demo。但是，您可以在应用程序中更改 Demo 的来源并重新分析。由于不完全支持来自私有服务器上的 Demo，因此您仍然可能得到不正确的数据。
 

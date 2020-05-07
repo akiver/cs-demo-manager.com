@@ -57,7 +57,9 @@ If you want to generate only raw files, you can uncheck this checkbox.
 - When enabled, the game is closed automatically at the end of the recording.
 
 #### Delete raw files at the end of encoding
+
 - When enabled, all raw files (.tga and .wav) will be deleted at the end of encoding.
 
 #### Open video in Windows Explorer at the end of encoding
+
 - When enabled, the folder containing the video will be open in Windows Explore.

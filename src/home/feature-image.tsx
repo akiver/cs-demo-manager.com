@@ -1,13 +1,13 @@
-import React from 'react'
-import { useIntl } from 'react-intl'
+import React from 'react';
+import { useIntl } from 'react-intl';
 
 type Props = {
-  src: string
-  altTranslationKey: string
-}
+  src: string;
+  altTranslationKey: string;
+};
 
 export const FeatureImage = ({ src, altTranslationKey }: Props) => {
-  const intl = useIntl()
+  const intl = useIntl();
   return (
     <div className="column is-8">
       <figure className="image">
@@ -19,5 +19,5 @@ export const FeatureImage = ({ src, altTranslationKey }: Props) => {
         />
       </figure>
     </div>
-  )
-}
+  );
+};

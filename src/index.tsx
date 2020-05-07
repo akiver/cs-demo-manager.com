@@ -1,6 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Root } from './root'
-require('./scss/app.scss')
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Root } from './root';
+require('./scss/app.scss');
 
-ReactDOM.render(<Root />, document.getElementById('app'))
+ReactDOM.render(<Root />, document.getElementById('app'));

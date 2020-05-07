@@ -1,7 +1,7 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import { DocTabLink } from './doc-tab-link'
-import { useLocalePrefix } from '../hooks/use-locale-prefix'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { DocTabLink } from './doc-tab-link';
+import { useLocalePrefix } from '../hooks/use-locale-prefix';
 
 export const DocsTabs = () => {
   return (
@@ -33,5 +33,5 @@ export const DocsTabs = () => {
         </DocTabLink>
       </ul>
     </div>
-  )
-}
+  );
+};

@@ -26,4 +26,4 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/camelcase': ['error', { allow: ['tag_name'] }],
   },
-}
+};

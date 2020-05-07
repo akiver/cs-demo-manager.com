@@ -24,9 +24,9 @@
 
 <a class="anchor" id="missing-ranks"></a>
 
-### 我在计分板中看不到我的段位  [#](/docs/stats#missing-ranks)
+### 我在计分板中看不到我的段位 [#](/docs/stats#missing-ranks)
 
-段位仅适用于V社的竞技 Demo。
+段位仅适用于 V 社的竞技 Demo。
 
 ---
 

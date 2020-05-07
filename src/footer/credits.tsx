@@ -1,6 +1,6 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import logoImage from '../images/logo.png'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import logoImage from '../images/logo.png';
 
 export const Credits = () => {
   return (
@@ -20,5 +20,5 @@ export const Credits = () => {
         />
       </p>
     </div>
-  )
-}
+  );
+};

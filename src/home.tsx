@@ -1,6 +1,6 @@
-import React from 'react'
-import { Logo } from './home/logo'
-import { Features } from './home/features'
+import React from 'react';
+import { Logo } from './home/logo';
+import { Features } from './home/features';
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
       <Logo />
       <Features />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

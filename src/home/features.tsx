@@ -1,14 +1,14 @@
-import React from 'react'
-import { FeatureBlock } from './feature-block'
-import { FeatureDescription } from './feature-description'
-import { FeatureImage } from './feature-image'
-import demosImage from '../images/features/demos.png'
-import watchImage from '../images/features/watch.png'
-import statsImage from '../images/features/stats.png'
-import exportImage from '../images/features/export.png'
-import downloadsImage from '../images/features/downloads.png'
-import suspectsImage from '../images/features/suspects.png'
-import integrationImage from '../images/features/integration.png'
+import React from 'react';
+import { FeatureBlock } from './feature-block';
+import { FeatureDescription } from './feature-description';
+import { FeatureImage } from './feature-image';
+import demosImage from '../images/features/demos.png';
+import watchImage from '../images/features/watch.png';
+import statsImage from '../images/features/stats.png';
+import exportImage from '../images/features/export.png';
+import downloadsImage from '../images/features/downloads.png';
+import suspectsImage from '../images/features/suspects.png';
+import integrationImage from '../images/features/integration.png';
 
 const features = [
   {
@@ -46,15 +46,15 @@ const features = [
     image: integrationImage,
     imageAlt: 'home.feature.integrationAltImage',
   },
-]
+];
 
 export const Features = () => {
   return (
     <>
       {features.map((feature, index) => {
-        const description = <FeatureDescription markdownFilePath={feature.markdownFilePath} />
-        const image = <FeatureImage src={feature.image} altTranslationKey={feature.imageAlt} />
-        const isEven = ((index + 1) & 1) === 0
+        const description = <FeatureDescription markdownFilePath={feature.markdownFilePath} />;
+        const image = <FeatureImage src={feature.image} altTranslationKey={feature.imageAlt} />;
+        const isEven = ((index + 1) & 1) === 0;
         return (
           <FeatureBlock key={feature.markdownFilePath}>
             {isEven ? (
@@ -69,8 +69,8 @@ export const Features = () => {
               </>
             )}
           </FeatureBlock>
-        )
+        );
       })}
     </>
-  )
-}
+  );
+};
