@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
-import { NavLink, match } from 'react-router-dom'
-import { Location } from 'history'
+import { NavLink, NavLinkProps } from 'react-router-dom'
 import { useLocalePrefix } from '../hooks/use-locale-prefix'
 
 const closeBurger = (): void => {
@@ -13,7 +12,7 @@ const closeBurger = (): void => {
 
 type Props = {
   path: string
-  isActive: (match: match, location: Location) => boolean
+  isActive: NavLinkProps['isActive']
   children: ReactNode
 }
 

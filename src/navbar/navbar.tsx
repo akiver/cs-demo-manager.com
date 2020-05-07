@@ -9,7 +9,7 @@ import { NavBarLink } from './navbar-link'
 
 const LOCAL_PREFIX_LENGTH = 3 // slash + 2 chars locale
 
-const isHomeRoute = (_match: match, location: Location): boolean => {
+const isHomeRoute = (_match: match | null, location: Location): boolean => {
   return location.pathname.length === 1 || location.pathname.length === LOCAL_PREFIX_LENGTH
 }
 
