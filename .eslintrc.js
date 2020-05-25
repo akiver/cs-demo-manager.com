@@ -8,7 +8,6 @@ module.exports = {
   ignorePatterns: ['/*.js', '*.md'],
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
@@ -23,7 +22,6 @@ module.exports = {
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     '@typescript-eslint/prefer-interface': 0,
-    '@typescript-eslint/explicit-function-return-type': 0,
-    '@typescript-eslint/camelcase': ['error', { allow: ['tag_name'] }],
+    '@typescript-eslint/explicit-module-boundary-types': 0,
   },
 };
