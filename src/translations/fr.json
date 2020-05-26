@@ -52,5 +52,8 @@
   "language.availableLanguages": "Le site web de CSGO Demos Manager est disponible dans les langues suivantes:",
   "language.docLink": "cette documentation",
   "language.missingTranslation": " Si certaines parties sont en Anglais, cela signifie que le site n'est pas traduit entierement dans votre langue.",
-  "language.contribute": "Vous pouvez contribuer a sa traduction, pour cela merci de lire {docLink}."
+  "language.contribute": "Vous pouvez contribuer a sa traduction, pour cela merci de lire {docLink}.",
+
+  "nextVersion.warning": "La version 3 de l'application est en cours de développement, il est peu probable que la version 2 reçoive de nouvelles fonctionnalités.",
+  "nextVersion.recommendation": "Si vous souhaitez être informé de la sortie de la version 3 beta suivez {twitterLink} sur Twitter ou visitez le site web de temps en temps."
 }

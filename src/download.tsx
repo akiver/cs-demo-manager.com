@@ -5,11 +5,13 @@ import { Donate } from './download/donate';
 import { Compatibility } from './download/compatibility';
 import { DownloadLink } from './download/download-link';
 import { Source } from './download/source';
+import { NextVersionWarning } from './next-version-warning';
 
 const Download = () => {
   return (
     <div className="container">
       <div className="column is-full">
+        <NextVersionWarning />
         <h1 className="title">
           <FormattedMessage id="download.title" />
         </h1>

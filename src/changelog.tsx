@@ -4,6 +4,7 @@ import { ChangelogEntry } from './changelog/changelog-entry';
 import { VERSIONS, Version } from './versions';
 import { GitHubRelease } from './github-release';
 import { StatusText } from './status-text';
+import { NextVersionWarning } from './next-version-warning';
 
 const GITHUB_API_URL = 'https://api.github.com/repos/akiver/csgo-demos-manager/releases';
 const FIRST_RELEASE_THROUGH_GITHUB = '2.13.8';
@@ -62,6 +63,7 @@ const Changelog = () => {
     <div className="container">
       <div className="columns is-multiline">
         <div className="column is-full content">
+          <NextVersionWarning />
           {versions.map((version, index) => {
             return (
               <ChangelogEntry
