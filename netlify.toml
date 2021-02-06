@@ -1,7 +1,26 @@
 [[redirects]]
-  from = "https://www.csgo-demos-manager.com/map-veto"
-  to = "https://csgomapveto.csgo-demos-manager.com"
+  from = "https://www.csgo-demos-manager.com"
+  to = "https://csgo-demo-manager.com"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "https://csgo-demos-manager.com"
+  to = "https://csgo-demo-manager.com"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.demo-manager.com"
+  to = "https://csgo-demo-manager.com"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://demo-manager.com"
+  to = "https://csgo-demo-manager.com"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/*"

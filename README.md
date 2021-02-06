@@ -1,6 +1,6 @@
-# csgo-demos-manager.com
+# csgo-demo-manager.com
 
-Source code of [https://csgo-demos-manager.com](https://csgo-demos-manager.com), the website of the application [CSGO Demos Manager](https://github.com/akiver/csgo-demos-manager).
+Source code of [https://csgo-demo-manager.com](https://csgo-demo-manager.com), the website of the application [CSGO Demos Manager](https://github.com/akiver/csgo-demos-manager).
 
 ## Translation
 
