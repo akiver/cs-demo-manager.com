@@ -4,8 +4,8 @@ import { Location } from 'history';
 import { FormattedMessage } from 'react-intl';
 import { ReactComponent as GitHub } from '../svg/github.svg';
 import { ReactComponent as Twitter } from '../svg/twitter.svg';
-import { Burger } from './burger';
 import { NavBarLink } from './navbar-link';
+import { useRef } from 'react';
 
 const LOCAL_PREFIX_LENGTH = 3; // slash + 2 chars locale
 
@@ -18,15 +18,30 @@ const isActiveLink = (pathname: string, path: string): boolean => {
 };
 
 export const Navbar = () => {
+  const navMenuRef = useRef<HTMLDivElement | null>(null);
+  const burgerRef = useRef<HTMLButtonElement | null>(null);
+
+  const toggleMenuVisibility = () => {
+    burgerRef.current?.classList.toggle('is-active');
+    navMenuRef.current?.classList.toggle('is-active');
+  };
+
   return (
     <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-      <Burger />
-      <div className="navbar-menu navbar-menu-centered" id="navMenu">
-        <NavBarLink path="/" isActive={isHomeRoute}>
+      <div className="navbar-brand">
+        <button ref={burgerRef} onClick={toggleMenuVisibility} className="button navbar-burger" aria-label="Burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div className="navbar-menu navbar-menu-centered" ref={navMenuRef}>
+        <NavBarLink path="/" isActive={isHomeRoute} onClick={toggleMenuVisibility}>
           <FormattedMessage id="navbar.home" />
         </NavBarLink>
         <NavBarLink
           path="/docs"
+          onClick={toggleMenuVisibility}
           isActive={(_match, location): boolean => {
             return isActiveLink(location.pathname, '/docs');
           }}
@@ -35,6 +50,7 @@ export const Navbar = () => {
         </NavBarLink>
         <NavBarLink
           path="/changelog"
+          onClick={toggleMenuVisibility}
           isActive={(_match, location): boolean => {
             return isActiveLink(location.pathname, '/changelog');
           }}
@@ -43,6 +59,7 @@ export const Navbar = () => {
         </NavBarLink>
         <NavBarLink
           path="/language"
+          onClick={toggleMenuVisibility}
           isActive={(_match, location): boolean => {
             return isActiveLink(location.pathname, '/language');
           }}
@@ -51,6 +68,7 @@ export const Navbar = () => {
         </NavBarLink>
         <NavBarLink
           path="/download"
+          onClick={toggleMenuVisibility}
           isActive={(_match, location): boolean => {
             return isActiveLink(location.pathname, '/download');
           }}
