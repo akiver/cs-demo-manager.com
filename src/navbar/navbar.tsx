@@ -2,8 +2,8 @@ import React from 'react';
 import { match } from 'react-router-dom';
 import { Location } from 'history';
 import { FormattedMessage } from 'react-intl';
-import GitHub from '../svg/github.svg';
-import Twitter from '../svg/twitter.svg';
+import { ReactComponent as GitHub } from '../svg/github.svg';
+import { ReactComponent as Twitter } from '../svg/twitter.svg';
 import { Burger } from './burger';
 import { NavBarLink } from './navbar-link';
 

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import '~bulma/sass/utilities/initial-variables.sass';
+@import '../../node_modules/bulma/sass/utilities/initial-variables.sass';
 
 @import 'colors';
 @import 'navbar';
@@ -11,19 +11,20 @@ $hr-height: 1px;
 $family-serif: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, serif;
 $family-primary: $family-serif;
 
-@import '~bulma/sass/utilities/_all';
-@import '~bulma/sass/base/_all';
-@import '~bulma/sass/elements/container';
-@import '~bulma/sass/elements/button';
-@import '~bulma/sass/elements/title';
-@import '~bulma/sass/elements/icon';
-@import '~bulma/sass/elements/image';
-@import '~bulma/sass/elements/content';
-@import '~bulma/sass/components/navbar';
-@import '~bulma/sass/components/tabs';
-@import '~bulma/sass/components/menu';
-@import '~bulma/sass/grid/columns';
-@import '~bulma/sass/layout/_all';
+@import '../../node_modules/bulma/sass/utilities/_all';
+@import '../../node_modules/bulma/sass/base/_all';
+@import '../../node_modules/bulma/sass/helpers/_all';
+@import '../../node_modules/bulma/sass/layout/_all';
+@import '../../node_modules/bulma/sass/elements/container';
+@import '../../node_modules/bulma/sass/elements/button';
+@import '../../node_modules/bulma/sass/elements/title';
+@import '../../node_modules/bulma/sass/elements/icon';
+@import '../../node_modules/bulma/sass/elements/image';
+@import '../../node_modules/bulma/sass/elements/content';
+@import '../../node_modules/bulma/sass/components/navbar';
+@import '../../node_modules/bulma/sass/components/tabs';
+@import '../../node_modules/bulma/sass/components/menu';
+@import '../../node_modules/bulma/sass/grid/columns';
 
 body {
   display: flex;
@@ -40,7 +41,7 @@ ul {
   }
 }
 
-#app {
+#root {
   display: flex;
   flex-direction: column;
   flex: auto;

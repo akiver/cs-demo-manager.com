@@ -4,4 +4,4 @@
 
 ### 嫌疑机器人
 
-CSGO Demos Manager 包含了一个机器人，可在后台检查嫌疑人是否被封禁，如果被 封禁则会发送 Windows 通知。
+CSGO Demo Manager 包含了一个机器人，可在后台检查嫌疑人是否被封禁，如果被 封禁则会发送 Windows 通知。

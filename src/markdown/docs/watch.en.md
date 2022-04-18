@@ -13,7 +13,7 @@ You can add an account from settings or from the scoreboard.
 1. Go to demo's details
 2. Right click on the player that you want to add and click on `Add to account list`
 
-![Add account from scoreboard](docs/watch/add-account-scoreboard.png)
+![Add account from scoreboard](/images/docs/watch/add-account-scoreboard.png)
 
 <a class="anchor" id="add-account-settings"></a>
 
@@ -21,11 +21,11 @@ You can add an account from settings or from the scoreboard.
 
 1. Click on `Settings` and go to the `Accounts` menu
 
-![Accounts settings](docs/watch/add-account-step1.png)
+![Accounts settings](/images/docs/watch/add-account-step1.png)
 
 2. Click on `Add account`
 
-![Add account](docs/watch/add-account-step2.png)
+![Add account](/images/docs/watch/add-account-step2.png)
 
 3. Copy paste your Steam community link (or SteamID64) and click on `OK`
 
@@ -36,11 +36,11 @@ You can add an account from settings or from the scoreboard.
 1. Click on Settings and go to the Accounts menu
 2. Select your account and click on `Use this account for watch`
 
-![Select account to focus on](docs/watch/add-account-step3.png)
+![Select account to focus on](/images/docs/watch/add-account-step3.png)
 
 <p class="has-text-warning">TIP: You can watch quickly a player's highlights / lowlights from the scoreboard.</p>
 
-![Highlights / lowlights from scoreboard](docs/watch/scoreboard-highlow.png)
+![Highlights / lowlights from scoreboard](/images/docs/watch/scoreboard-highlow.png)
 
 ---
 

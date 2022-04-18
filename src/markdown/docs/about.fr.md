@@ -4,7 +4,7 @@
 
 Valve a rendu public le programme demoinfogo écrit en C++ qui permet de récupérer les données contenu dans les fichiers .dem.
 
-CSGO Demos Manager utilise en interne une version de demoinfogo écrite en C# par les developpeurs du projet DemoInfo (Merci a eux!).
+CSGO Demo Manager utilise en interne une version de demoinfogo écrite en C# par les developpeurs du projet DemoInfo (Merci a eux!).
 
 ---
 
@@ -18,7 +18,7 @@ Les démos POV sont reconnues, c'est a dire visible dans la liste des démos sur
 
 ### Est-ce que les démos provenant de FaceIt, ESEA... sont supportées? [#](/fr/docs/about#provider-support)
 
-CSGO Demos Manager est capable d'"analyser" les démos provenant de Valve (Matchmaking / tournois officiels), ESEA, FaceIt, CEVO, eBot et PopFlash.
+CSGO Demo Manager est capable d'"analyser" les démos provenant de Valve (Matchmaking / tournois officiels), ESEA, FaceIt, CEVO, eBot et PopFlash.
 
 Les démos provenant de serveurs privés utilisant des commandes tels que mp_restartgame ou tv_record ne sont pas officiellement supportées. Il est possible de changer la source des démos depuis l'application puis l'analyser mais les données peuvent etre incorrectes car les démos provenant de serveurs privés ne sont pas supportés.
 
@@ -38,7 +38,7 @@ Depuis la version 2.2.0, l'application contient une option déstinée aux moviem
 
 ### Je rencontre un bug, que faire? [#](/fr/docs/about#bug)
 
-Si vous rencontrez un bug, merci d'envoyer un mail a `contact@csgo-demos-manager.com` en mettant en pièce jointe le fichier d'erreurs accessible depuis les options et la démo permettant de reproduire le bug.
+Si vous rencontrez un bug, merci de créer une issue sur [GitHub](https://github.com/akiver/CSGO-Demos-Manager/issues) en mettant en pièce jointe le fichier d'erreurs accessible depuis les options et la démo permettant de reproduire le bug.
 
 ---
 

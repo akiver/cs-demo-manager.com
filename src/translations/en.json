@@ -16,8 +16,8 @@
   "home.feature.suspectsAltImage": "Suspects features",
   "home.feature.integrationAltImage": "Integration features",
 
-  "footer.credits": "{csgoDemosManager} by {authorLink}",
-  "footer.twitter": "Follow CSGO Demos Manager on {twitterLink}",
+  "footer.credits": "{csgoDemoManager} by {authorLink}",
+  "footer.twitter": "Follow CSGO Demo Manager on {twitterLink}",
   "footer.license": " Source code available on {githubLink} under {licenseLink} license",
 
   "download.title": "Download",
@@ -26,11 +26,11 @@
   "download.checksum": "A SHA1 checksum file is available on GitHub.",
   "download.error": "An error occurred while retrieving the download link",
   "download.loadingLink": "Loading download link...",
-  "download.compatibility": "CSGO Demos Manager is available only on Windows (7 and later), the source code is available on {githubLink}.",
-  "download.requirements": "*CSGO Demos Manager requires {netFrameworkLink} and {visualRedistributableLink}.",
+  "download.compatibility": "CSGO Demo Manager is available only on Windows (7 and later), the source code is available on {githubLink}.",
+  "download.requirements": "*CSGO Demo Manager requires {netFrameworkLink} and {visualRedistributableLink}.",
   "download.requirements.visualC++Redistributable": "Visual C++ Redistributable for Visual Studio 2015",
   "download.donate.title": "Donate",
-  "download.donate": "I created and maintain CSGO Demos Manager during my free time, it's a free software and will always be. If you want to say thank you, please feel free to make a donation. Thank you!",
+  "download.donate": "I created and maintain CSGO Demo Manager during my free time, it's a free software and will always be. If you want to say thank you, please feel free to make a donation. Thank you!",
 
   "changelog.loading": "Loading changelog...",
   "changelog.fetchError": "An error occurred while fetching changelog from GitHub.",
@@ -49,7 +49,7 @@
   "docs.movie.general": "General",
   "docs.movie.cfg": "CFG",
 
-  "language.availableLanguages": "The CSGO Demos Manager website is available in the following languages:",
+  "language.availableLanguages": "The CSGO Demo Manager website is available in the following languages:",
   "language.docLink": "this documentation",
   "language.missingTranslation": " If parts of the website are in English it means that the website is not yet fully translated in your language.",
   "language.contribute": "You can contribute to its internationalization, please read {docLink} for more information.",

@@ -13,7 +13,7 @@
 1. 进入 Demo 的详情页。
 2. 右键单击想要添加的玩家，然后单击 `添加到账户列表`。
 
-![Add account from scoreboard](docs/watch/add-account-scoreboard.png)
+![Add account from scoreboard](/images/docs/watch/add-account-scoreboard.png)
 
 <a class="anchor" id="add-account-settings"></a>
 
@@ -21,11 +21,11 @@
 
 1. 点击 `设置` 进入 `账户` 菜单
 
-![Accounts settings](docs/watch/add-account-step1.png)
+![Accounts settings](/images/docs/watch/add-account-step1.png)
 
 2. 点击 `添加账户`
 
-![Add account](docs/watch/add-account-step2.png)
+![Add account](/images/docs/watch/add-account-step2.png)
 
 3. 复制粘贴您的 Steam 社区链接（或 SteamID 64）然后点击 `确定`
 
@@ -36,11 +36,11 @@
 1. 单击设置，然后进入账户菜单
 2. 选择您的账户，然后单击 `使用此账户进行观看`
 
-![Select account to focus on](docs/watch/add-account-step3.png)
+![Select account to focus on](/images/docs/watch/add-account-step3.png)
 
 <p class="has-text-warning">提示：您可以通过计分板快速观看玩家的 高光/低谷 片段。</p>
 
-![通过计分板查看 高光/低谷](docs/watch/scoreboard-highlow.png)
+![通过计分板查看 高光/低谷](/images/docs/watch/scoreboard-highlow.png)
 
 ---
 

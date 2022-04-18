@@ -8,7 +8,7 @@ This is the recommended choice if you just want a ready to watch video.
 
 ### Options
 
-![FFmpeg options](docs/movie/ffmpeg-options.png)
+![FFmpeg options](/images/docs/movie/ffmpeg-options.png)
 
 #### Video quality
 

@@ -2,7 +2,7 @@
 
 ### 应用程序如何下载我的 MM demo？ [#](/docs/downloads#how)
 
-CSGO Demos Manager 使用 [boiler-writter](https://github.com/akiver/boiler-writter)，一个 [Boiler](https://bitbucket.org/ACB/boiler/) 的自定义版本。感谢 _ACB_ 创建了 Boiler。
+CSGO Demo Manager 使用 [boiler-writter](https://github.com/akiver/boiler-writter)，一个 [Boiler](https://bitbucket.org/ACB/boiler/) 的自定义版本。感谢 _ACB_ 创建了 Boiler。
 
 Boiler-writter 从 Steam Game Coordinator 中检索比赛信息，将比赛信息存储到文件中，然后应用程序使用比赛信息下载 Demo 并生成其 `.info` 文件。
 
@@ -38,9 +38,9 @@ Boiler-writter 从 Steam Game Coordinator 中检索比赛信息，将比赛信�
 
 BOT 必须正在运行，而不一定是主应用程序。
 
-您可以在 `Settings` 中选择启动 CSGO Demos Manager 时选择自动启动 BOT。
+您可以在 `Settings` 中选择启动 CSGO Demo Manager 时选择自动启动 BOT。
 
-![BOT settings](docs/downloads/bot-settings.png)
+![BOT settings](/images/docs/downloads/bot-settings.png)
 
 ## <p class="has-text-warning">可以选择 BOT 在 Windows 启动时自启动。</p>
 

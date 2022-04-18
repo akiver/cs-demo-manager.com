@@ -13,7 +13,7 @@ type Props = {
 
 export const ChangelogEntry = ({ version, isLastEntry }: Props) => {
   const markdown = useMarkdownLoader(`changelog/${version.number}`);
-  const { locale } = useParams();
+  const { locale } = useParams<{ locale: string }>();
   return (
     <div className="column is-full" id={version.number}>
       <span className="title version-number">{version.number}</span>

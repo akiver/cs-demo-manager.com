@@ -8,7 +8,7 @@ export const DownloadLink = () => {
   const [error, setError] = useState<string | undefined>();
   const [lastVersion, setLastVersion] = useState<string | undefined>();
   const [isLoading, setIsLoading] = useState(true);
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
 
   useEffect(() => {
     const fetchLastRelease = async (): Promise<void> => {
@@ -18,7 +18,7 @@ export const DownloadLink = () => {
         setLastVersion(data.tag_name);
       } catch (error) {
         setError(
-          intl.formatMessage({
+          formatMessage({
             id: 'download.error',
           })
         );
@@ -28,12 +28,12 @@ export const DownloadLink = () => {
     };
 
     fetchLastRelease();
-  }, []);
+  }, [formatMessage]);
 
   if (isLoading) {
     return (
       <p>
-        {intl.formatMessage({
+        {formatMessage({
           id: 'download.loadingLink',
         })}
       </p>

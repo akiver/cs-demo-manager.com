@@ -7,10 +7,10 @@ Le bot communique avec l'application principale mais il est possible de le lance
 
 <br/>
 
-Par défaut le bot se lance avec CSGO Demos Manager et reste actif a la fermeture de l'application principale.
+Par défaut le bot se lance avec CSGO Demo Manager et reste actif a la fermeture de l'application principale.
 Vous pouvez changer se comportement depuis les options accessible en faisant un clic droit sur l'icone dans la traybar de Windows.
 
-![CSGO Suspects Bot](docs/suspects/bot.jpg)
+![CSGO Suspects Bot](/images/docs/suspects/bot.jpg)
 
 <p class="has-text-warning">Le bot est inactif lorsque CSGO est lancé.<p>
 

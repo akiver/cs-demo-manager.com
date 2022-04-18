@@ -6,7 +6,7 @@ Einer Seits bietet es viele nützliche Funktionen, die im Spiel standartmäßig 
 
 ### Optionen
 
-![HLAE Optionen](docs/movie/hlae-options.png)
+![HLAE Optionen](/images/docs/movie/hlae-options.png)
 
 #### csgo.exe Pfad
 

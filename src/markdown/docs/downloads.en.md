@@ -2,7 +2,7 @@
 
 ### How does the application download my MM demos? [#](/docs/downloads#how)
 
-CSGO Demos Manager uses [boiler-writter](https://github.com/akiver/boiler-writter), a custom version of [Boiler](https://bitbucket.org/ACB/boiler/). Thanks to _ACB_ for creating Boiler.
+CSGO Demo Manager uses [boiler-writter](https://github.com/akiver/boiler-writter), a custom version of [Boiler](https://bitbucket.org/ACB/boiler/). Thanks to _ACB_ for creating Boiler.
 
 Boiler-writter retrieves the matches information from the Steam Game Coordinator, stores it into a file then the app uses it to download the demos and generate their `.info` files.
 
@@ -38,9 +38,9 @@ The app download demos of the current Steam account logged on. You have to switc
 
 The BOT must be running, not necessarily the main application.
 
-You can choose to start automatically the BOT when you launch CSGO Demos Manager from `Settings`.
+You can choose to start automatically the BOT when you launch CSGO Demo Manager from `Settings`.
 
-![BOT settings](docs/downloads/bot-settings.png)
+![BOT settings](/images/docs/downloads/bot-settings.png)
 
 ## <p class="has-text-warning">The BOT has an option to start automatically at Windows startup.</p>
 

@@ -4,7 +4,7 @@
 
 Valve hat ein Tool namens Demoinfogo, geschrieben in C++, veröffentlicht welches .dem-Datein Analysiert un dadurch eine Menge Daten abruft.
 
-CSGO Demos Manager benutzt eine C# version von diesem Tool welche die Leute hinter DemoInfo (Thanks guys!) übertragen haben.
+CSGO Demo Manager benutzt eine C# version von diesem Tool welche die Leute hinter DemoInfo (Thanks guys!) übertragen haben.
 
 ---
 
@@ -20,7 +20,7 @@ Nein und aufgrund Technischer Gründe denke Ich das wird auch nichts mehr, sorry
 
 ### Funktioniert es bei ESEA, Faceit oder anderen Liga Demos? [#](/docs/about#provider-support)
 
-Momentan unterstützt der CSGO Demos Manager Demos von Valve (Matchmaking / Officials Turniere), ESEA, FaceIt, CEVO, eBot und PopFlash.
+Momentan unterstützt der CSGO Demo Manager Demos von Valve (Matchmaking / Officials Turniere), ESEA, FaceIt, CEVO, eBot und PopFlash.
 
 Demos von privaten Servern, die Befehle wie mp_restartgame und tv_record verwenden, werden offiziell nicht unterstützt. Man kann jedoch die Demo-Quelle in der Anwendung ändern und erneut analysieren. Möglicherweise sind jedoch noch falsche Daten vorhanden, da Demos von privaten Servern nicht vollständig unterstützt werden.
 
@@ -40,7 +40,7 @@ Seit Version 2.2.0 ist in den Einstellungen eine Option verfügbar, um das Spiel
 
 ### Ich bin auf einen Käfer getroffen, was kann ich tun? [#](/docs/about#bug)
 
-Wenn Sie auf einen Fehler gestoßen sind oder Demodaten falsch sind, senden Sie bitte eine E-Mail an contact@csgo-demos-manager.com mit der Fehlerprotokolldatei (über die Einstellungen zugänglich). Wenn es sich um eine bestimmte Demo handelt, fügen Sie bitte einen Link zum Herunterladen hinzu. Vielen Dank.
+If you encountered a bug or demos data are incorrect, please create an issue on [GitHub](https://github.com/akiver/CSGO-Demos-Manager/issues) with the errors log file (accessible from settings). If it's related to a specific demo, please attach a link to download it, thank you.
 
 ---
 

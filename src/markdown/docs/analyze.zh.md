@@ -28,7 +28,7 @@
 
 首先，请务必检查 Demo 的来源是否与其来源相对应。您可以从 Demo 列表中切换来源（右键单击 Demo）。
 
-如果来源正确，则可能是分析 Bug 或 Demo 缺少事件（这种情况下与 CSGO Demos Manager 无关）。
+如果来源正确，则可能是分析 Bug 或 Demo 缺少事件（这种情况下与 CSGO Demo Manager 无关）。
 
 ---
 
