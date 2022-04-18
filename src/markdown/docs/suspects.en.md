@@ -2,11 +2,11 @@
 
 ### What is CSGO Suspects BOT? [#](/docs/suspects#bot)
 
-The bot is a small windowless application, accessible from the systray that check if new suspects have been banned. It's an independent application so you can run it without CSGO Demos Manager.
+The bot is a small windowless application, accessible from the systray that check if new suspects have been banned. It's an independent application so you can run it without CSGO Demo Manager.
 
-By default the bot start with CSGO Demos Manager and is still running when the app is closed but you can change it from settings. It's configurable by right clicking on the systray icon and it stop working when you are ingame.
+By default the bot start with CSGO Demo Manager and is still running when the app is closed but you can change it from settings. It's configurable by right clicking on the systray icon and it stop working when you are ingame.
 
-![CSGO Suspects Bot](docs/suspects/bot.jpg)
+![CSGO Suspects Bot](/images/docs/suspects/bot.jpg)
 
 ---
 

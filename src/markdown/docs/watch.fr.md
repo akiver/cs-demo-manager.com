@@ -16,7 +16,7 @@ Il y a 2 façons d'ajouter un compte:
 1. Analysez une démo contenant votre compte et rendez-vous sur la fiche de la démo
 2. Faite un clic droit sur le joueur depuis le scoreboard et cliquez sur `Ajouter aux comptes`
 
-![Ajout compte depuis scoreboard](docs/watch/add-account-scoreboard.png)
+![Ajout compte depuis scoreboard](/images/docs/watch/add-account-scoreboard.png)
 
 <a class="anchor" id="add-account-settings"></a>
 
@@ -24,11 +24,11 @@ Il y a 2 façons d'ajouter un compte:
 
 1. Cliquez sur `Options` puis `Comptes`
 
-![Options des comptes](docs/watch/add-account-step1.png)
+![Options des comptes](/images/docs/watch/add-account-step1.png)
 
 2. Cliquez sur `Ajouter compte`
 
-![Ajouter compte](docs/watch/add-account-step2.png)
+![Ajouter compte](/images/docs/watch/add-account-step2.png)
 
 3. Copiez / collez votre lien Steam community ou votre SteamID64 et cliquez sur `OK`
 
@@ -39,11 +39,11 @@ Il y a 2 façons d'ajouter un compte:
 1. Cliquez sur `Options` puis `Comptes`
 2. Cliquez sur le compte que vous voulez puis cliquez sur `Se concentrer sur ce compte`
 
-![Selection compte cible](docs/watch/add-account-step3.png)
+![Selection compte cible](/images/docs/watch/add-account-step3.png)
 
 <p class="has-text-warning">TIP: Vous pouvez regarder les highlights / lowlights de n'importe quel joueur depuis le scoreboard.</p>
 
-![Highlights / lowlights scoreboard](docs/watch/scoreboard-highlow.png)
+![Highlights / lowlights scoreboard](/images/docs/watch/scoreboard-highlow.png)
 
 ---
 

@@ -1,4 +1,4 @@
-![cfg](docs/movie/cfg-options.png)
+![cfg](/images/docs/movie/cfg-options.png)
 
 第一个输入是只读的，在这里仅供参考。
 

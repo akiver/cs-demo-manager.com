@@ -6,13 +6,12 @@ In addition to offering useful features not available by default in the game, HL
 
 ### Options
 
-![HLAE options](docs/movie/hlae-options.png)
+![HLAE options](/images/docs/movie/hlae-options.png)
 
 #### csgo.exe path
 
 - Location to the `csgo.exe` file.
 - This is required to have HLAE working.
--
 
 #### Enable movie making config parent folder
 

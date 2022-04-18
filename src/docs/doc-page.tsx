@@ -8,13 +8,19 @@ type Props = {
 
 export const DocPage = ({ markdownFilePath }: Props) => {
   useEffect(() => {
-    if (window.location.hash === '') return;
+    if (window.location.hash === '') {
+      return;
+    }
+
     const id = window.location.hash.replace('#', '');
     setTimeout(() => {
       const element: HTMLElement | null = document.getElementById(id);
-      if (element === null) return;
+      if (element === null) {
+        return;
+      }
+
       element.scrollIntoView(true);
-    }, 500);
+    }, 0);
   }, []);
 
   const markdown = useMarkdownLoader(markdownFilePath);

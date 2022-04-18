@@ -1,6 +1,6 @@
 ### Generiere Video Datei
 
-![Generiere Video Option](docs/movie/generate-video-options.png)
+![Generiere Video Option](/images/docs/movie/generate-video-options.png)
 
 Wenn Sie bloss Roh-Dateien generieren möchten, können Sie dieses Kontrollkästchen abwählen.
 
@@ -8,7 +8,7 @@ Wenn Sie bloss Roh-Dateien generieren möchten, können Sie dieses Kontrollkäst
 
 ### Optionen
 
-![Allgemeine Optionen](docs/movie/general-options.png)
+![Allgemeine Optionen](/images/docs/movie/general-options.png)
 
 #### Roh-Dateien Zielordner
 

@@ -9,11 +9,11 @@ export const Requirements = () => {
         values={{
           netFrameworkLink: (
             <a
-              href="https://www.microsoft.com/en-us/download/details.aspx?id=30653"
+              href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net462"
               target="_blank"
               rel="noopener noreferrer"
             >
-              .NET Framework 4.5
+              .NET Framework 4.6.2
             </a>
           ),
           visualRedistributableLink: (

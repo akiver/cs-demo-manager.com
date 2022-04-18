@@ -1,4 +1,4 @@
-![cfg](docs/movie/cfg-options.png)
+![cfg](/images/docs/movie/cfg-options.png)
 
 The first input is readonly and is here only for information.
 

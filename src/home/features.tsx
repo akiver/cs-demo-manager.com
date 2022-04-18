@@ -2,48 +2,41 @@ import React from 'react';
 import { FeatureBlock } from './feature-block';
 import { FeatureDescription } from './feature-description';
 import { FeatureImage } from './feature-image';
-import demosImage from '../images/features/demos.png';
-import watchImage from '../images/features/watch.png';
-import statsImage from '../images/features/stats.png';
-import exportImage from '../images/features/export.png';
-import downloadsImage from '../images/features/downloads.png';
-import suspectsImage from '../images/features/suspects.png';
-import integrationImage from '../images/features/integration.png';
 
 const features = [
   {
     markdownFilePath: 'home/demos',
-    image: demosImage,
+    image: '/images/features/demos.png',
     imageAlt: 'home.feature.demosAltImage',
   },
   {
     markdownFilePath: 'home/watch',
-    image: watchImage,
+    image: '/images/features/watch.png',
     imageAlt: 'home.feature.watchAltImage',
   },
   {
     markdownFilePath: 'home/stats',
-    image: statsImage,
+    image: '/images/features/stats.png',
     imageAlt: 'home.feature.statsAltImage',
   },
   {
     markdownFilePath: 'home/export',
-    image: exportImage,
+    image: '/images/features/export.png',
     imageAlt: 'home.feature.exportAltImage',
   },
   {
     markdownFilePath: 'home/downloads',
-    image: downloadsImage,
+    image: '/images/features/downloads.png',
     imageAlt: 'home.feature.downloadsAltImage',
   },
   {
     markdownFilePath: 'home/suspects',
-    image: suspectsImage,
+    image: '/images/features/suspects.png',
     imageAlt: 'home.feature.suspectsAltImage',
   },
   {
     markdownFilePath: 'home/integration',
-    image: integrationImage,
+    image: '/images/features/integration.png',
     imageAlt: 'home.feature.integrationAltImage',
   },
 ];

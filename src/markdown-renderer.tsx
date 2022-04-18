@@ -1,23 +1,9 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
-
-type LinkProps = {
-  href: string;
-  children: ReactNode;
-};
-
-const Link = ({ href, children }: LinkProps) => {
-  const target = href.includes('#') ? '_self' : '_blank';
-
-  return (
-    <a href={href} target={target} rel="noopener noreferrer">
-      {children}
-    </a>
-  );
-};
+import rehypeRaw from 'rehype-raw';
 
 type Props = {
-  markdown?: string;
+  markdown: string;
   className?: string;
 };
 
@@ -25,11 +11,12 @@ export const MarkdownRenderer = ({ markdown, className }: Props) => {
   return (
     <ReactMarkdown
       className={className}
-      source={markdown}
-      escapeHtml={false}
-      renderers={{
-        link: Link,
+      rehypePlugins={[rehypeRaw]}
+      linkTarget={(href) => {
+        return href.includes('#') ? '_self' : '_blank';
       }}
-    />
+    >
+      {markdown}
+    </ReactMarkdown>
   );
 };

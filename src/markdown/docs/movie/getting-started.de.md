@@ -2,7 +2,7 @@
 
 ### Sollte man Wissen [#](/docs/movie/getting-started#must-known)
 
-CSGO Demos Manager erstellt nicht auf die selbe Art und Weise ein Video wie es Anwendungen wie Fraps oder Dxtory tun.
+CSGO Demo Manager erstellt nicht auf die selbe Art und Weise ein Video wie es Anwendungen wie Fraps oder Dxtory tun.
 
 Da diese Funktion hauptsächlich für die Videobearbeitung genutzt wird, wird die beste Qualität benötigt.
 

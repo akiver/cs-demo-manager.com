@@ -1,6 +1,6 @@
 ### Generate video file
 
-![Generate video option](docs/movie/generate-video-options.png)
+![Generate video option](/images/docs/movie/generate-video-options.png)
 
 If you want to generate only raw files, you can uncheck this checkbox.
 
@@ -8,7 +8,7 @@ If you want to generate only raw files, you can uncheck this checkbox.
 
 ### Options
 
-![General options](docs/movie/general-options.png)
+![General options](/images/docs/movie/general-options.png)
 
 #### Raw files destination folder
 

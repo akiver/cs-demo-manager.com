@@ -28,7 +28,7 @@ Some updates may need to re-analyze demos to have correct values.
 
 Firstly, always check if the demo's source correspond to its origin. You can switch between source from the demos list (right click on the demo).
 
-If the source is correct it could be an analyze bug or demo with missing events (not related to CSGO Demos Manager in this case).
+If the source is correct it could be an analyze bug or demo with missing events (not related to CSGO Demo Manager in this case).
 
 ---
 

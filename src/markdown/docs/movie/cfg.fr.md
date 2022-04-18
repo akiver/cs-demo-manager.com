@@ -1,4 +1,4 @@
-![cfg](docs/movie/cfg-options.png)
+![cfg](/images/docs/movie/cfg-options.png)
 
 Le premier champ est la à titre d'information et est en lecture seule.
 

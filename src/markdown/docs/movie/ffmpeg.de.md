@@ -8,7 +8,7 @@ Das ist auch die empfohlene Möglichkeit wenn Sie ein direkt anschaubares Video 
 
 ### Optionen
 
-![FFmpeg options](docs/movie/ffmpeg-options.png)
+![FFmpeg options](/images/docs/movie/ffmpeg-options.png)
 
 #### Video Qualität
 

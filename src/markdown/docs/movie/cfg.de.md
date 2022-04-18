@@ -1,4 +1,4 @@
-![cfg](docs/movie/cfg-options.png)
+![cfg](/images/docs/movie/cfg-options.png)
 
 Die erste Eingabe ist Schreibgeschützt und ausschließlich zur Information da.
 

@@ -16,8 +16,8 @@
   "home.feature.suspectsAltImage": "Verdächtigungs Funktionen",
   "home.feature.integrationAltImage": "Integrations Funktionen",
 
-  "footer.credits": "{csgoDemosManager} von {authorLink}",
-  "footer.twitter": "Folgt CSGO Demos Manager auf {twitterLink}",
+  "footer.credits": "{csgoDemoManager} von {authorLink}",
+  "footer.twitter": "Folgt CSGO Demo Manager auf {twitterLink}",
   "footer.license": "Der Quellcode ist verfügbar auf {githubLink} und unterliegt der {licenseLink} Lizenz",
 
   "download.title": "Herunterladen",
@@ -26,11 +26,11 @@
   "download.checksum": "Eine SHA1 Prüfsummen Datei ist auf GitHub verfügbar.",
   "download.error": "Beim abrufen des Download-Link is ein Fehler aufgetreten",
   "download.loadingLink": "Download-Link wird geladen...",
-  "download.compatibility": "CSGO Demos Manager ist nur für Windows (7 oder höher) verfügbar, der Quellcode ist verfügbar auf {githubLink}.",
-  "download.requirements": "*CSGO Demos Manager benötigt {netFrameworkLink} und {visualRedistributableLink}.",
+  "download.compatibility": "CSGO Demo Manager ist nur für Windows (7 oder höher) verfügbar, der Quellcode ist verfügbar auf {githubLink}.",
+  "download.requirements": "*CSGO Demo Manager benötigt {netFrameworkLink} und {visualRedistributableLink}.",
   "download.requirements.visualC++Redistributable": "Visual C++ Redistributable für Visual Studio 2015",
   "download.donate.title": "Spenden",
-  "download.donate": "Ich erstellte CSGO Demos Manager und hielt es während meiner Freizeit Instand, es ist ein kostenloses Programm und das wird es auch für immer bleiben. Falls Sie sich bedanken möchten, würden wir uns über eine Spende freuen. Vielen Dank!",
+  "download.donate": "Ich erstellte CSGO Demo Manager und hielt es während meiner Freizeit Instand, es ist ein kostenloses Programm und das wird es auch für immer bleiben. Falls Sie sich bedanken möchten, würden wir uns über eine Spende freuen. Vielen Dank!",
 
   "changelog.loading": "Änderungsprotokoll wird geladen...",
   "changelog.fetchError": "Beim abrufen des Änderungsprotokolles von GitHub is ein Fehler aufgetreten.",
@@ -49,7 +49,7 @@
   "docs.movie.general": "Allgemeines",
   "docs.movie.cfg": "CFG",
 
-  "language.availableLanguages": "Die CSGO Demos Manager Internetseite ist in folgenden Sprachen verfügbar:",
+  "language.availableLanguages": "Die CSGO Demo Manager Internetseite ist in folgenden Sprachen verfügbar:",
   "language.docLink": "Diese Dokumentation",
   "language.missingTranslation": "Falls Teile dieser Internetseite noch auf Englisch geschrieben sind liegt das daran, dass Sie noch nicht vollständig Übersetzt wurde.",
   "language.contribute": "Sie können zu der Internationalisierung dieser Seite beitragen, bitte lesen Sie {docLink} für mehr Informationen."
