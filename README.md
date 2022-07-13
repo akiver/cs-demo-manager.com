@@ -20,7 +20,7 @@ For example adding Español language (`es` language code):
 
 Most of translations are in markdown files, the rest are in JSON files.
 
-Markdown files are [in this markdown folder](https://github.com/akiver/csgo-demos-manager.com/blob/master/src/markdown) and JSON files in the [translations folder](https://github.com/akiver/csgo-demos-manager.com/blob/master/src/translations).
+Markdown files are [in this markdown folder](https://github.com/akiver/csgo-demos-manager.com/blob/main/src/markdown) and JSON files in the [translations folder](https://github.com/akiver/csgo-demos-manager.com/blob/main/src/translations).
 
 #### Markdown
 
@@ -34,17 +34,9 @@ You have to edit the file corresponding to your language and if it doesn't exist
 
 ## Development
 
-### Prerequisites
-
-1. [Git](https://git-scm.com/)
-2. [NodeJS](https://nodejs.org) >= 12.x version
-3. [Yarn](https://yarnpkg.com/lang/en/docs/install/)
-
-### Running locally
-
 1. `yarn`
 2. `yarn dev`
 
 ## License
 
-[MIT](https://github.com/akiver/csgo-demos-manager.com/blob/master/LICENSE)
+[MIT](https://github.com/akiver/csgo-demos-manager.com/blob/main/LICENSE)

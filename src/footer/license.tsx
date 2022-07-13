@@ -10,7 +10,7 @@ export const License = () => {
           id="footer.license"
           values={{
             githubLink: <GitHubLink />,
-            licenseLink: <GitHubLink suffixUrlPath="/blob/master/LICENSE" text="GPL v2" />,
+            licenseLink: <GitHubLink suffixUrlPath="/blob/main/LICENSE" text="GPL v2" />,
           }}
         />
       </p>
