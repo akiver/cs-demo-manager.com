@@ -46,7 +46,10 @@ export const DownloadLink = () => {
 
   return (
     <div>
-      <a className="button is-success is-large" href="https://github.com/akiver/CSGO-Demos-Manager/releases/latest">
+      <a
+        className="button is-success is-large has-text-dark"
+        href="https://github.com/akiver/CSGO-Demos-Manager/releases/latest"
+      >
         <FormattedMessage
           id="download.button"
           values={{

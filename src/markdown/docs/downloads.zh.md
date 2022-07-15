@@ -42,7 +42,7 @@ BOT 必须正在运行，而不一定是主应用程序。
 
 ![BOT settings](/images/docs/downloads/bot-settings.png)
 
-## <p class="has-text-warning">可以选择 BOT 在 Windows 启动时自启动。</p>
+<p class="has-text-warning">可以选择 BOT 在 Windows 启动时自启动。</p>
 
 <a class="anchor" id="matches-number"></a>
 

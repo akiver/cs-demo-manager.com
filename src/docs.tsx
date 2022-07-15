@@ -11,6 +11,7 @@ const Watch = React.lazy(() => import('./docs/watch'));
 const Suspects = React.lazy(() => import('./docs/suspects'));
 const Downloads = React.lazy(() => import('./docs/downloads'));
 const Movie = React.lazy(() => import('./docs/movie'));
+const Cli = React.lazy(() => import('./docs/cli'));
 
 const Docs = () => {
   return (
@@ -28,6 +29,7 @@ const Docs = () => {
           <Route path={`${LOCALE_PATH_REGEX}/docs/download`} component={Downloads} />
           <Route path={`${LOCALE_PATH_REGEX}/docs/downloads`} component={Downloads} />
           <Route path={`${LOCALE_PATH_REGEX}/docs/movie`} component={Movie} />
+          <Route path={`${LOCALE_PATH_REGEX}/docs/cli`} component={Cli} />
           <Redirect to={`${LOCALE_PATH_REGEX}/docs/about`} />
         </Switch>
       </Suspense>

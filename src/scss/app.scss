@@ -128,18 +128,33 @@ ul {
 }
 
 .doc-page {
-  h3 {
+  padding-bottom: 0.75rem;
+  .doc-title {
     @extend .title;
-    @extend .is-4;
     color: $light-green;
     margin-right: 10px;
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+
+  h1 {
+    @extend .doc-title;
+  }
+
+  h2 {
+    @extend .doc-title;
+    @extend .is-4;
+  }
+
+  h3 {
+    @extend .doc-title;
+    @extend .is-5;
   }
 
   h4 {
-    color: $light-green;
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
+    @extend .doc-title;
+    @extend .is-6;
   }
 
   ol {

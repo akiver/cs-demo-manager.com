@@ -31,6 +31,9 @@ export const DocsTabs = () => {
         <DocTabLink to={useLocalePrefix('/docs/movie')}>
           <FormattedMessage id="docs.tab.movie" />
         </DocTabLink>
+        <DocTabLink to={useLocalePrefix('/docs/cli')}>
+          <FormattedMessage id="docs.tab.cli" />
+        </DocTabLink>
       </ul>
     </div>
   );

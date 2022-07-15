@@ -1,8 +1,11 @@
 <a class="anchor" id="hltv-rating"></a>
 
-### Any chance to add HLTV rating 2.0? [#](/docs/analyze#hltv-rating)
+### HLTV rating 2.0 accuracy [#](/docs/analyze#hltv-rating)
 
-No, HLTV decided to keep their formula private as stated in this [news](https://www.hltv.org/news/20695/introducing-rating-20).
+The HLTV 2.0 rating added in the version 2.14.0 use the formula from [this post](https://flashed.gg/posts/reverse-engineering-hltv-rating/).
+
+Please note that it's an **estimated value** and may not be 100% accurate as the official HLTV formula is
+[private](https://www.hltv.org/news/20695/introducing-rating-20).
 
 ---
 

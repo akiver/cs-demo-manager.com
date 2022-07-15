@@ -44,6 +44,7 @@
   "docs.tab.suspects": "Suspects",
   "docs.tab.downloads": "Téléchargements",
   "docs.tab.movie": "Vidéo",
+  "docs.tab.cli": "CLI",
 
   "docs.movie.gettingStarted": "Introduction",
   "docs.movie.general": "Général",
