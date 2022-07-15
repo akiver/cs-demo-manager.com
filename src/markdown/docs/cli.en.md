@@ -136,6 +136,7 @@ Usage:
 - The `--output` argument specify the directory where output files will be saved.
 - The `--source` argument force the analysis logic of the demo analyzer. Available values: `valve`,`esea`,`ebot`,`faceit`,`cevo`.
 - The `--single` argument generates a single XLSX file instead of one per demo.
+- The `--steamid` argument makes data in some sheets focusing on the player with the given SteamID (works with `--single` only).
 - The `--force-analyze` argument force re-analyzing demos that have already been analyzed.
 
 <br />
