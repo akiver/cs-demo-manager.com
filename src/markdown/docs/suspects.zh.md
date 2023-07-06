@@ -23,3 +23,14 @@
 ### 嫌疑人被封禁了，却仍然可以玩 CSGO [#](/docs/suspects#still-playing)
 
 VAC 封禁并不意味着不能玩 CSGO。Steam API 并不会阻止玩家玩游戏。
+
+---
+
+<a class="anchor" id="steam-api-key"></a>
+
+### Using a custom Steam API key [#](/docs/suspects#steam-api-key)
+
+1. Generate a key from [Steam](https://steamcommunity.com/dev/apikey)
+2. Copy/paste your key in the text field from the settings (in the "Misc" tab)
+3. Click on "Apply"
+4. If you don't have any error message, your key will be used for the next requests

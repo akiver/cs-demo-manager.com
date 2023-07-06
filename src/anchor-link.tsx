@@ -26,7 +26,7 @@ export const AnchorLink = ({ to }: Props) => {
     setTimeout(() => {
       element.scrollIntoView(true);
       window.scrollBy(0, -NAVBAR_HEIGHT);
-    }, 0);
+    }, 10);
   }, [to]);
 
   return (

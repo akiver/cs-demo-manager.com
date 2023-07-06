@@ -32,3 +32,14 @@ Si le bot est lancé et qu'il détecte un ban alors il enverra une notification 
 
 Un bannissement VAC ne veut pas toujours signifier un bannissement CSGO.
 L'API de Steam n'indique pas pour quel jeu le compte a été banni.
+
+---
+
+<a class="anchor" id="steam-api-key"></a>
+
+### Using a custom Steam API key [#](/docs/suspects#steam-api-key)
+
+1. Generate a key from [Steam](https://steamcommunity.com/dev/apikey)
+2. Copy/paste your key in the text field from the settings (in the "Misc" tab)
+3. Click on "Apply"
+4. If you don't have any error message, your key will be used for the next requests

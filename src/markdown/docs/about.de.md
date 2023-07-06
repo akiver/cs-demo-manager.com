@@ -12,7 +12,10 @@ CSGO Demo Manager benutzt eine C# version von diesem Tool welche die Leute hinte
 
 ### Funktionieren POV Demos? [#](/docs/about#pov-support)
 
-Nein und aufgrund Technischer Gründe denke Ich das wird auch nichts mehr, sorry.
+Yes but keep in mind that:
+
+- Demos must have been recorded while playing on a server from a [supported provider](/docs/about#provider-support)
+- It's important to start recording before the match starts to get the best results
 
 ---
 

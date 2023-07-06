@@ -20,7 +20,7 @@ export const DocPage = ({ markdownFilePath }: Props) => {
       }
 
       element.scrollIntoView(true);
-    }, 0);
+    }, 10);
   }, []);
 
   const markdown = useMarkdownLoader(markdownFilePath);

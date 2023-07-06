@@ -12,7 +12,10 @@ CSGO Demo Manager utilise en interne une version de demoinfogo écrite en C# par
 
 ### Est-ce que les démos POV sont supportées? [#](/fr/docs/about#pov-support)
 
-Les démos POV sont reconnues, c'est a dire visible dans la liste des démos sur votre disque dur mais il n'est pas possible de les "analyser". Pour des raisons techniques il est peu probable que cela change.
+Oui mais il est important de noter que:
+
+- Les démos doivent avoir été enregistrées en jouant sur un serveur d'un [provider supporté](/fr/docs/about#provider-support)
+- Il est important de commencer l'enregistrement avant le début du match pour avoir les meilleurs résultats
 
 <a class="anchor" id="provider-support"></a>
 

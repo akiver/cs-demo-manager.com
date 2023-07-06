@@ -12,7 +12,10 @@ CSGO Demo Manager 使用了该工具的 C# 版本，该工具由名为 DemoInfo 
 
 ### 可以与 POV Demo 一起使用么？ [#](/docs/about#pov-support)
 
-抱歉，出于技术原因我认为不可以。
+Yes but keep in mind that:
+
+- Demos must have been recorded while playing on a server from a [supported provider](/docs/about#provider-support)
+- It's important to start recording before the match starts to get the best results
 
 ---
 

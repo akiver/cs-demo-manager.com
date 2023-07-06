@@ -23,3 +23,14 @@ The number of new suspects banned since the last time you used the application i
 ### A suspect has been banned but he still can play CSGO [#](/docs/suspects#still-playing)
 
 VAC ban doesn't mean necessary a CSGO ban. The Steam API doesn't indicates on which games a player has been banned.
+
+---
+
+<a class="anchor" id="steam-api-key"></a>
+
+### Using a custom Steam API key [#](/docs/suspects#steam-api-key)
+
+1. Generate a key from [Steam](https://steamcommunity.com/dev/apikey)
+2. Copy/paste your key in the text field from the settings (in the "Misc" tab)
+3. Click on "Apply"
+4. If you don't have any error message, your key will be used for the next requests
