@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { GitHubRelease } from '../github-release';
 
-const GITHUB_API_URL = 'https://api.github.com/repos/akiver/csgo-demos-manager/releases/latest';
+const GITHUB_API_URL = 'https://api.github.com/repos/akiver/cs-demo-manager/releases/latest';
 
 export const DownloadLink = () => {
   const [error, setError] = useState<string | undefined>();
@@ -48,7 +48,7 @@ export const DownloadLink = () => {
     <div>
       <a
         className="button is-success is-large has-text-dark"
-        href="https://github.com/akiver/CSGO-Demos-Manager/releases/latest"
+        href="https://github.com/akiver/cs-demo-manager/releases/latest"
       >
         <FormattedMessage
           id="download.button"

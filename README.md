@@ -20,7 +20,7 @@ For example adding Español language (`es` language code):
 
 Most of translations are in markdown files, the rest are in JSON files.
 
-Markdown files are [in this markdown folder](https://github.com/akiver/csgo-demos-manager.com/blob/main/src/markdown) and JSON files in the [translations folder](https://github.com/akiver/csgo-demos-manager.com/blob/main/src/translations).
+Markdown files are [in this markdown folder](https://github.com/akiver/cs-demo-manager.com/blob/main/src/markdown) and JSON files in the [translations folder](https://github.com/akiver/cs-demo-manager.com/blob/main/src/translations).
 
 #### Markdown
 
@@ -39,4 +39,4 @@ You have to edit the file corresponding to your language and if it doesn't exist
 
 ## License
 
-[MIT](https://github.com/akiver/csgo-demos-manager.com/blob/main/LICENSE)
+[MIT](https://github.com/akiver/cs-demo-manager.com/blob/main/LICENSE)

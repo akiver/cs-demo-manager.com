@@ -94,4 +94,4 @@
 
 这主要是因为 Steam 正以管理员权限运行。您必须以普通用户权限运行 Steam。
 
-查看这个 [错误的原因](https://github.com/akiver/CSGO-Demos-Manager/issues/376)。
+查看这个 [错误的原因](https://github.com/akiver/cs-demo-manager/issues/376)。

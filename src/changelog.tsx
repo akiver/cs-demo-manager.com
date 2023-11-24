@@ -6,7 +6,7 @@ import { GitHubRelease } from './github-release';
 import { StatusText } from './status-text';
 import { NextVersionWarning } from './next-version-warning';
 
-const GITHUB_API_URL = 'https://api.github.com/repos/akiver/csgo-demos-manager/releases';
+const GITHUB_API_URL = 'https://api.github.com/repos/akiver/cs-demo-manager/releases';
 const FIRST_RELEASE_THROUGH_GITHUB = '2.13.8';
 
 const buildVersionFromGitHubRelease = (release: GitHubRelease): Version => {

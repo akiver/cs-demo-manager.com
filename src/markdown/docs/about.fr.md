@@ -41,7 +41,7 @@ Depuis la version 2.2.0, l'application contient une option déstinée aux moviem
 
 ### Je rencontre un bug, que faire? [#](/fr/docs/about#bug)
 
-Si vous rencontrez un bug, merci de créer une issue sur [GitHub](https://github.com/akiver/CSGO-Demos-Manager/issues) en mettant en pièce jointe le fichier d'erreurs accessible depuis les options et la démo permettant de reproduire le bug.
+Si vous rencontrez un bug, merci de créer une issue sur [GitHub](https://github.com/akiver/cs-demo-manager/issues) en mettant en pièce jointe le fichier d'erreurs accessible depuis les options et la démo permettant de reproduire le bug.
 
 ---
 

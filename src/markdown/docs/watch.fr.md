@@ -106,4 +106,4 @@ Quand `Activer HLAE` est coché, le jeu se lance en utilisant [Half Life Advance
 
 C'est certainement parce que Steam a été lancé avec les droits administrateur. Il faut lancer Steam sans les droits d'administrateur.
 
-Voir cette [issue pour plus d'informations](https://github.com/akiver/CSGO-Demos-Manager/issues/376).
+Voir cette [issue pour plus d'informations](https://github.com/akiver/cs-demo-manager/issues/376).

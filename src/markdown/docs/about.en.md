@@ -43,7 +43,7 @@ Since version 2.2.0 there is an option available from settings to start the game
 
 ### I encountered a bug, what can I do? [#](/docs/about#bug)
 
-If you encountered a bug or demos data are incorrect, please create an issue on [GitHub](https://github.com/akiver/CSGO-Demos-Manager/issues) with the errors log file (accessible from settings). If it's related to a specific demo, please attach a link to download it, thank you.
+If you encountered a bug or demos data are incorrect, please create an issue on [GitHub](https://github.com/akiver/cs-demo-manager/issues) with the errors log file (accessible from settings). If it's related to a specific demo, please attach a link to download it, thank you.
 
 ---
 

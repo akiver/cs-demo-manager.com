@@ -94,4 +94,4 @@ When `Enable HLAE` is checked, the game is launched using [Half Life Advanced Ef
 
 This is mostly because Steam is running with admin rigths. You must run Steam without admin rights.
 
-See this [issue for details](https://github.com/akiver/CSGO-Demos-Manager/issues/376).
+See this [issue for details](https://github.com/akiver/cs-demo-manager/issues/376).

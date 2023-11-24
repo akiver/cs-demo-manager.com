@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 
 const DocLink = () => {
   return (
-    <a href="https://github.com/akiver/csgo-demos-manager.com#translation" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/akiver/cs-demo-manager.com#translation" target="_blank" rel="noopener noreferrer">
       <FormattedMessage id="language.docLink" />
     </a>
   );

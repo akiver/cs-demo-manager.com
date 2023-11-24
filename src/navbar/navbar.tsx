@@ -77,7 +77,7 @@ export const Navbar = () => {
         </NavBarLink>
         <a
           className="navbar-item"
-          href="https://github.com/akiver/csgo-demos-manager"
+          href="https://github.com/akiver/cs-demo-manager"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"

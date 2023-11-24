@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const GitHubLink = ({ text, suffixUrlPath = '' }: Props) => (
-  <a href={`https://github.com/akiver/csgo-demos-manager${suffixUrlPath}`} target="_blank" rel="noopener noreferrer">
+  <a href={`https://github.com/akiver/cs-demo-manager${suffixUrlPath}`} target="_blank" rel="noopener noreferrer">
     {text !== undefined ? text : 'GitHub'}
   </a>
 );
