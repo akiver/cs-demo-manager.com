@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/inter.woff2') format('woff2');
+  font-display: swap;
+}
+
+:root {
+  --ifm-color-content: #ebebeb !important;
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-font-family-base: 'Inter';
+  --ifm-color-primary: #ebebeb;
+  --ifm-color-primary-dark: #ebebeb;
+  --ifm-color-primary-darker: #ebebeb;
+  --ifm-color-primary-darkest: #ebebeb;
+  --ifm-color-primary-light: #ebebeb;
+  --ifm-color-primary-lighter: #ebebeb;
+  --ifm-color-primary-lightest: #ebebeb;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #000000 !important;
+  --ifm-navbar-background-color: #000000;
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(255, 255, 255, 0.2);
+  --ifm-dropdown-background-color: #1f1f1f;
+  --ifm-navbar-link-color: rgba(235, 235, 235, 0.6);
+  --ifm-breadcrumb-item-background-active: #1f1f1f;
+  --ifm-link-color: #4b9cf5;
+  --ifm-code-background: #3d3d3d !important;
+}
+
+.navbar__title {
+  color: var(--ifm-color-primary);
+}
+
+.footer {
+  display: none;
+}
+
+.button {
+  transition: all 0.2s;
+}
+
+.button.button--primary {
+  background-color: #0d66d0;
+  border-color: #0d66d0;
+  color: white;
+}
+
+.button.button--primary:hover {
+  background-color: #095aba;
+  border-color: #095aba;
+}
+
+.button.button--secondary {
+  background-color: #000;
+  color: #b8b8b8;
+  border: 1px solid #3d3d3d;
+}
+
+.button.button--secondary:hover {
+  color: #ebebeb;
+  border: 1px solid #ebebeb;
+}
+
+.header-github-link:hover {
+  opacity: 0.6;
+}
+
+.header-github-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+.header-twitter-link:hover {
+  opacity: 0.6;
+}
+
+.header-twitter-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' fill='%231D9BF0'%3E%3Cpath d='M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z' /%3E%3C/svg%3E%0A")
+    no-repeat;
+}

@@ -1,53 +1,51 @@
 {
-  "name": "csgo-demo-manager.com",
-  "version": "2.0.0",
-  "homepage": "https://cs-demo-manager.com",
-  "repository": {
-    "url": "https://github.com/akiver/cs-demo-manager.com"
-  },
-  "description": "Website of the application CSGO Demo Manager",
-  "author": "AkiVer",
-  "license": "MIT",
+  "name": "cs-demo-manger.com",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
+    "build": "docusaurus build",
+    "clear": "docusaurus clear",
+    "compile": "tsc --noEmit",
+    "deploy": "docusaurus deploy",
+    "dev": "docusaurus start",
+    "docusaurus": "docusaurus",
     "format": "prettier --write \"**\"",
-    "lint": "eslint \"**\"",
-    "preview": "vite preview",
-    "tsc": "tsc"
+    "serve": "docusaurus serve",
+    "swizzle": "docusaurus swizzle",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "write-translations": "docusaurus write-translations"
   },
   "dependencies": {
+    "@docusaurus/core": "3.0.0",
+    "@docusaurus/preset-classic": "3.0.0",
+    "@docusaurus/theme-mermaid": "3.0.0",
+    "@mdx-js/react": "3.0.0",
+    "prism-react-renderer": "2.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-intl": "6.2.1",
-    "react-markdown": "8.0.3",
-    "react-router-dom": "5.3.1",
-    "rehype-raw": "6.1.1",
-    "semver": "7.3.8"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.8",
-    "@types/react-router-dom": "5.3.3",
-    "@types/semver": "7.3.13",
-    "@typescript-eslint/eslint-plugin": "5.42.1",
-    "@typescript-eslint/parser": "5.42.1",
-    "@vitejs/plugin-react": "2.2.0",
-    "bulma": "0.9.4",
-    "eslint": "8.27.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-react": "7.31.10",
-    "eslint-plugin-react-hooks": "4.6.0",
-    "prettier": "2.7.1",
-    "sass": "1.56.1",
-    "typescript": "4.8.4",
-    "vite": "3.2.3",
-    "vite-plugin-svgr": "2.2.2"
+    "@docusaurus/module-type-aliases": "3.0.0",
+    "@docusaurus/tsconfig": "3.0.0",
+    "autoprefixer": "10.4.16",
+    "postcss": "8.4.31",
+    "prettier": "3.1.0",
+    "tailwindcss": "3.3.5",
+    "typescript": "5.3.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "engines": {
-    "yarn": ">=1.22.x",
-    "node": ">=16.x"
+    "node": ">=18"
   }
 }
