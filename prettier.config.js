@@ -1,4 +1,4 @@
-/** @type {import("@types/prettier").Options */
+/** @type {import("@types/prettier").Options} */
 module.exports = {
   singleQuote: true,
   printWidth: 120,
