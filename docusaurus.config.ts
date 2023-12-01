@@ -4,7 +4,7 @@ import { themes } from 'prism-react-renderer';
 
 const config: Config = {
   title: 'CS Demo Manager',
-  tagline: 'A demo manager for Counter-Strike',
+  tagline: 'Companion application for your Counter-Strike demos.',
   favicon: 'img/favicon.ico',
 
   url: 'https://cs-demo-manager.com',
