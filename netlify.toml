@@ -35,6 +35,12 @@
   force = true
 
 [[redirects]]
+  from = "https://cs-demo-manager.com/docs/about"
+  to = "https://cs-demo-manager.com/docs"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

@@ -1,0 +1,48 @@
+---
+slug: announcing-v3
+authors: [akiver]
+tags: [version]
+---
+
+# Announcing CS:DM V3
+
+Hi :wave:, I'm happy to announce that CS Demo Manager V3 is out! :tada:
+
+{/* truncate */}
+
+This version is a complete application rewrite with **new features**, **improvements**, and **CS2 support**.  
+It was a long journey - I started to prototype it around 2018 and worked on it on and off during my free time since then.
+
+## Main changes
+
+- **CS2 support** - the application now supports **CS2**. Please note that as of today, there are some
+  [limitations](/docs/cs2) with CS2 compared to CSGO.
+- **Cross-platform** - the application now works on Windows, Linux, and macOS.
+- **Performance** - it was the main V2 issue, data are now stored in a database instead of JSON files. Retrieving data is now much faster.
+- **Demos download** - the application can automatically download your last MM demos and has a dedicated UI.
+- **Demo analyzer** - the application now uses a [separate program](https://github.com/akiver/cs-demo-analyzer)
+  for demo analysis. You can use it without CS:DM if you want to.
+- **New UI** - the old-school lime green UI is replaced with a modern dark/light theme.
+
+There are other changes that you may notice. The V3 _should_ offer the same features as the V2.
+
+## Links
+
+:::warning
+The V3 requires a database - you have to install PostgreSQL on your machine to use it.  
+Please read the [installation](/docs/installation) guide for instructions.
+:::
+
+- [Installation](/docs/installation)
+- [User manual](/docs/guides/demos-analysis)
+- [Developer manual](/docs/development/architecture)
+- [Contributing](/docs/contributing)
+
+## Acknowledgments
+
+CS:DM relies on some Counter-Strike related open-source projects that at some point helped me.  
+Big thanks to [@dtugend](https://github.com/advancedfx/advancedfx),
+[@LaihoE](https://github.com/LaihoE/demoparser),
+[@markus-wa](https://github.com/markus-wa/demoinfocs-golang),
+[@saul](https://github.com/saul/demofile-net),
+[@xPaw](https://github.com/SteamRE/SteamKit).

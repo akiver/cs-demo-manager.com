@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "CS Demo Manager",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "CS Demo Manager",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Download": {
+    "message": "Download",
+    "description": "Navbar item with label Download"
+  },
+  "item.label.Changelog": {
+    "message": "Changelog",
+    "description": "Navbar item with label Changelog"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  }
+}
