@@ -87,6 +87,7 @@ This step explains how to add `psql` to your `PATH` environment variable so that
    :::caution
    If you changed the default PostgreSQL installation path (`C:\Program Files\PostgreSQL\VERSION\bin`), you have to select the correct folder.
 8. Click on `OK`
+9. Restart the application. **Make sure to quit it entirely from the tray icon.**
 
 </TabItem>
 
@@ -105,6 +106,7 @@ This step explains how to add `psql` to your `PATH` environment variable so that
      If you are using another shell, you have to replace `~/.zshrc` with the correct configuration file.
 4. Quit completely the `Terminal` application.
 5. Repeat the first step, this time the output should be something like `psql (PostgreSQL) XX.XX`.
+6. Restart the application. **Make sure to quit it entirely from the status bar menu.**
 
 </TabItem>
 
