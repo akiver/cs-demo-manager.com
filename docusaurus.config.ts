@@ -144,6 +144,12 @@ const config: Config = {
         content: 'AkiVer',
       },
     ],
+
+    algolia: {
+      appId: 'BS3WMY8SEV',
+      apiKey: '1d35305514314e630daabcda039559d3',
+      indexName: 'crawler_cs-demo-manager',
+    },
   } satisfies Preset.ThemeConfig,
 };
 

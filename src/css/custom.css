@@ -41,6 +41,10 @@
   --ifm-code-background: #3d3d3d !important;
 }
 
+[data-theme='dark'] .DocSearch .DocSearch-Hit[aria-selected='true'] a {
+  background-color: #1f1f1f;
+}
+
 .navbar__title {
   color: var(--ifm-color-primary);
 }
