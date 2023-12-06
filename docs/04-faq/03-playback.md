@@ -10,16 +10,15 @@ hide_title: true
 
 ## CS2 demo playback doesn't start or crashes
 
-CS2 updates may break playback for demos generated from previous CS2 versions, leading to playback not starting or the game crashing.
-
-To detect if it's a CS2 or CS:DM issue, you should try to play the demo **from the game rather than CS:DM** and check if the playback starts **and** the game doesn't crash during the playback (it can happen).  
-If it doesn't work in the game either, that's probably because the demo was recorded with an older CS2 version and is incompatible with the latest version.
-
-Valve sometimes creates a "branch" (available from the game properties in Steam) to allow playing on a previous game version.  
-As a last resort, you can try to find a compatible CS2 branch by selecting it from the CS2 properties in Steam and then try to play the demo again.
-
-CS:DM starts the currently installed version of CS2 so if it doesn't work in the game, it won't work in CS:DM either.  
-If the issue happens only when playing the demo from CS:DM, please create a [new issue](https://github.com/akiver/cs-demo-manager/issues/new).
+1. Steam must be running without admin rights.
+2. Close any anticheat software (FaceIt, ESEA, etc.).
+3. CS2 updates may break playback for demos generated from previous CS2 versions, leading to playback not starting or the game crashing.  
+   To detect if it's a CS2 or CS:DM issue, you should try to play the demo **from the game rather than CS:DM** and check if the playback starts **and** the game doesn't crash during the playback (it can happen).  
+   If it doesn't work in the game either, that's probably because the demo was recorded with an older CS2 version and is incompatible with the latest version.  
+   Valve sometimes creates a "_branch_" (available from the game properties in Steam) to allow playing on a previous game version.  
+   As a last resort, you can try to find a compatible CS2 branch by selecting it from the CS2 properties in Steam and then try to play the demo again.  
+   CS:DM starts the currently installed version of CS2 so if it doesn't work in the game, it won't work in CS:DM either.  
+   If the issue happens only when playing the demo from CS:DM, please create a [new issue](https://github.com/akiver/cs-demo-manager/issues/new).
 
 ## Can I watch CSGO demos?
 
