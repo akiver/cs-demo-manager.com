@@ -20,4 +20,4 @@ The Steam API doesn't indicate which games a player has been banned from.
 ## I got a too many requests error
 
 If you see an error **Steam API returned a 429 status code** it means that the Steam API key used by the application has reached its rate limit.  
-That's why it's recommended to use your [own Steam API key](/docs/guides/third-party#using-a-custom-steam-api-key).
+That's why it's recommended to use your [own Steam API key](/docs/guides/settings#third-party-api-keys).
