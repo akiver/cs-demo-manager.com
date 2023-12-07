@@ -8,7 +8,7 @@ We appreciate all contributions, large and small.
 
 ## Help fellow users
 
-Answering a question for a fellow user on GitHub [discussions](https://cs-demo-manager/discussions) or [issues](https://cs-demo-manager/issues) is considered a valuable contribution.
+Answering a question for a fellow user on GitHub [discussions](https://github.com/akiver/cs-demo-manager/discussions) or [issues](https://github.com/akiver/cs-demo-manager/issues) is considered a valuable contribution.
 
 ## Contribute code
 
@@ -29,3 +29,8 @@ Translation is a great way to contribute to the project.
 Translations are managed on [Crowdin](https://crowdin.com/project/cs-demo-manager). You will need a [Crowdin](https://crowdin.com) account and join the project to contribute.
 
 Translations are synced twice a day with the GitHub repository.
+
+## Financial contribution
+
+[Financial contributions](https://cs-demo-manager.com/download/#donate) are welcome - CS:DM is free and open source but it takes time and effort to maintain and improve it.  
+Thank you for your support!
