@@ -20,6 +20,23 @@ hide_title: true
    CS:DM starts the currently installed version of CS2 so if it doesn't work in the game, it won't work in CS:DM either.  
    If the issue happens only when playing the demo from CS:DM, please create a [new issue](https://github.com/akiver/cs-demo-manager/issues/new).
 
+## Counter-Strike executable not found
+
+It can happen if you have multiple drives on Steam (where games are installed) and CS installed or _partially_ installed
+on different drives. It has been reported [here](https://github.com/akiver/cs-demo-manager/issues/648).
+
+1. Right-click on **CS2** in your Steam library, go to **Manage** and click on **Browse local files**.
+2. Note the path where CS is installed (example: `D:\games\steamapps\common\Counter-Strike Global Offensive`).
+3. Open the Steam settings and go to the **Storage** tab.
+4. For each drive except the one where CS is installed, check if a folder `steamapps\common\Counter-Strike Global Offensive` exists and delete it.
+
+Example:
+
+- You have 4 Steam drives `D:\`, `E:\`, `F:\` and `G:\`
+- CS is installed on `D:\games\steamapps\common\Counter-Strike Global Offensive`
+- The `G:\` drive contains a `G:\steamapps\common\Counter-Strike Global Offensive` folder
+- You have to delete the `G:\steamapps\common\Counter-Strike Global Offensive` folder
+
 ## Can I watch CSGO demos?
 
 Yes, please follow this [documentation](/docs/guides/playback#watching-csgo-demos).
