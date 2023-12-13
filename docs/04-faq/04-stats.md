@@ -3,11 +3,29 @@ title: 'Stats'
 hide_title: true
 ---
 
+## The demo source is not supported
+
+This message is displayed when:
+
+1. The demo's source has not been detected automatically.  
+   In this case, the **Source** column in the list shows a `?` icon.  
+   ![Unknown source](/img/documentation/stats/unknown-source.png)  
+   You have to update the demo's source to the correct one and analyze it again.
+2. The application does not support the demo's source.
+   See the [table below](/docs/faq/stats#what-are-the-supported-demo-sources) for the list of supported sources.  
+   You can change the demo's source to a supported source and analyze it, **but it may not work correctly if the demos come from a non-supported source**.  
+   You can vote for the next source you would like to see supported [here](https://github.com/akiver/cs-demo-manager/discussions/674).
+
+:::tip
+To change a demo's source, right-click on it in the demos list and click on **Change source**.
+:::
+
 ## What are the supported demo sources?
 
 | Source         | CSGO | CS2 | Comment                                                                                                                 |
 | -------------- | ---- | --- | ----------------------------------------------------------------------------------------------------------------------- |
 | CEVO           | ❌   | ❌  | Dead platform but demos are still detected in the app                                                                   |
+| Challengermode | ✅   | ✅  |                                                                                                                         |
 | eBot           | ✅   | ✅  |                                                                                                                         |
 | ESL            | ✅   | ✅  | ESL is now FACEIT, newer demos from ESL events should use the FACEIT analyzer.                                          |
 | ESEA           | ✅   | ❌  | ESEA is now FACEIT, their platform is almost dead and I didn't find any CS2 demos recorded with their plugin            |
