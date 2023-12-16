@@ -66,11 +66,11 @@ You can setup the database using [Docker](/docs/development/setup#database-in-do
 
 ## Database in Docker
 
-### Installing psql
-
 :::warning
 While the PostgreSQL process can be run in a Docker container, the `psql` CLI **must be installed on the host machine**!
 :::
+
+### Installing psql
 
 To install only `psql`:
 

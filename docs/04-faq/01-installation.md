@@ -1,5 +1,9 @@
 # Installation
 
+## Can I use a remote database?
+
+Yes, see the [documentation](/docs/guides/database#using-a-remote-database).
+
 ## PSQL binary not found
 
 If you have the error message "**PSQL binary not found**" it means that the PostgreSQL `psql` program is not in your `PATH` environment variable.  
