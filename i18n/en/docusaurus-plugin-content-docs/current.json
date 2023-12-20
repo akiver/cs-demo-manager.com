@@ -18,5 +18,13 @@
   "sidebar.docs.category.installation": {
     "message": "Installation",
     "description": "The label for category installation in sidebar docs"
+  },
+  "sidebar.docs.category.Documentation": {
+    "message": "Documentation",
+    "description": "The label for category Documentation in sidebar docs"
+  },
+  "sidebar.docs.category.FAQ": {
+    "message": "FAQ",
+    "description": "The label for category FAQ in sidebar docs"
   }
 }

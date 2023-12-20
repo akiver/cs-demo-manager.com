@@ -1,0 +1,71 @@
+:::info
+CS Demo Manager is a free and open-source software not backed by any corporate entity.  
+You can support the project by [contributing](/docs/contributing) or [donating](/download/#donate).
+:::
+
+## v3.0.7
+
+- fix(demos): challenger mode demos not recognized as analyzable
+- fix(cli): missing possible demo source values in help output
+
+## v3.0.6
+
+- feat: add Perfect World demo source
+- feat: detect more game modes
+- feat: allow to search by server/client name in demos/matches tables
+- feat(demos): improve loading performance when scanning demos in a folder containing many sub directories
+- feat(settings): add clear demos cache option
+- fix(dl): possible crash when loading last FACEIT matches when there is only 1 team
+- fix: stop background tasks on database disconnection
+- fix: missing Chinese translations in date picker
+
+## v3.0.5
+
+- feat(analyze): an error code and a link to the [error documentation](https://cs-demo-manager.com/docs/guides/demos-analysis#analysis-errors) are now displayed when an error occurs during an analysis
+- fix(video): raw files may be deleted too early, resulting in an encoder software error
+
+## v3.0.4
+
+- feat(demos): add a link to the [documentation](https://cs-demo-manager.com/docs/faq/stats#the-demo-source-is-not-supported) when a demo's source is not supported
+- fix(heatmap): drawing not working since last update
+- fix(dl): corrupted demos are now deleted automatically
+
+## v3.0.3
+
+- feat(analyze): add support for demos from [Challengermode](https://www.challengermode.com)
+- feat: improve Counter-Strike folder installation location detection
+- feat(playback): skip to next round when player died
+- feat(video): do not try to run encoder software if raw files are missing (probably because CS2 crashed)
+- feat(dl): add a "Corrupted demo" warning when a downloaded demo file is incomplete (same as the game)
+- fix(analyze): more accurate suicide detection
+- fix(analyze): possible incorrect round start tick
+- fix(match): wrong wallbang kills column values
+- fix(dl): possible downloading error due to redirection
+
+## v3.0.2
+
+- fix: settings removed when updating the application
+  :::warning
+  The issue is fixed but you will have to reconfigure your settings one last time when updating to this version.
+  :::
+- feat(match): add watch player rounds
+- feat(playback): show notification with doc link when game crashes
+- feat(ui): add Chinese Simplified. You can help translating the [application too](https://cs-demo-manager.com/docs/contributing#translate-application)!
+- fix(video): error when demo path contains spaces
+- fix(demos): fetch unique demos by file path to avoid duplicates
+- fix(analyze): incorrect team names in first round
+
+## v3.0.1
+
+- feat(playback): preserve user CS2 cfg when starting the game
+- feat(match): add teams economy type in round panel
+- feat(match): add bombsite letter in round panel
+- feat(dl): add copy demo link button
+- feat(xlsx): add team_name column in players sheet
+- fix: match insertion error when the db password contains special chars
+- fix: bomb exploded round end reason may not be detected
+- fix(demos): allow refreshing the table on error
+
+## v3.0.0
+
+See [blog post](/blog/announcing-v3)

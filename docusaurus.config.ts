@@ -52,15 +52,6 @@ const config: Config = {
   ],
 
   plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'changelog',
-        path: 'changelog',
-        routeBasePath: 'changelog',
-        sidebarPath: require.resolve('./changelogSidebars.js'),
-      },
-    ],
     async function myPlugin(context, options) {
       return {
         name: 'docusaurus-tailwindcss',
