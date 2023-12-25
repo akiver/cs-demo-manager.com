@@ -43,6 +43,19 @@ Demos from private server are not supported however you can change the demo's so
 it but you may have incorrect data.
 :::
 
+## Players names are "Player 1", "Player 2", etc. and avatars are missing
+
+When you go to the demo's details page of a demo from Valve with a `.dem` and a `.info` file, the application reads the
+`.info` file to generate a minimal scoreboard similar to the game shows.  
+The `.info` file contains only players' Steam IDs - we retrieve players' names and avatars from the Steam WEB API.  
+In the case of **matches** (i.e., analyzed demos), we only need to retrieve players avatars as names are available when parsing the `.dem`
+file.
+
+If you see _"Player 1"_, _"Player 2"_… on a demo's scoreboard or avatars are missing on both demos or matches scoreboard,
+it means the Steam API key used by the application has reached its rate limit, and we can't retrieve players' names and
+avatars.  
+You should use your [own Steam API key](/docs/guides/settings#third-party-api-keys) to avoid this issue.
+
 ## Demos date are wrong
 
 The date corresponds to the creation date of the demo file.  
