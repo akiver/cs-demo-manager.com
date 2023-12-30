@@ -1,7 +1,28 @@
+## v3.1.0
+
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download/#donate).
 :::
+
+- feat(match): add a "**Duels**" tab with opening duels stats and an interactive map to find out where opening kills
+  happened
+- feat: add support for [FASTCUP](https://fastcup.net/) demos
+- feat: add support for exporting players' voices from CS2 demos (it was possible only for CSGO demos).
+  Thanks to [DandrewsDev](https://github.com/DandrewsDev) for his open-source [project](https://github.com/DandrewsDev/CS2VoiceData).
+  :::danger  
+   Valve Matchmaking demos (CS2 and CSGO) do not contain voice audio data hence there is nothing to extract from MM demos.  
+   You can extract voices only from demos recorded from a server that includes voice data.
+  :::
+- feat: add "**Export players voice**" in the matches table context menu (it was possible only from the demos table).  
+  It requires the `.dem` file on your filesystem otherwise you will have a "**Demo not found**" warning.
+- feat: the application should now receive fewer rate limit errors from the Steam API, but using
+  [your own Steam API key](/docs/guides/settings#using-a-custom-steam-api-key) is still recommended.
+- feat(demos): add a checkbox to include subfolders for the current folder from the demos table
+- feat(demo): avoid doing calls to the Steam API if possible when going to a demo page
+- feat(video): turn off spellcheck in CFG input
+- feat(ui): improve filtering menu layout
+- fix(video): generating more than 9 sequences resulting in a "**Raw files not found**" error
 
 ## v3.0.7
 
