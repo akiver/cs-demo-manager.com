@@ -29,3 +29,46 @@ If you are already connected to a database, you must first disconnect from it by
 If you have a **PSQL binary not found** error, please follow this [guide](/docs/development/setup?os=windows#installing-psql)
 to install **only** the `psql` CLI.
 :::
+
+## Exporting the database
+
+You can export the database using `pg_dump`.
+
+```bash
+pg_dump -h host -p port -U username -d db_name > backup.sql
+```
+
+Example with the default values:
+
+```bash
+pg_dump -h 127.0.0.1 -p 5432 -U postgres -d csdm > backup.sql
+```
+
+Positions take a lot of space, you can exclude them from the backup using the `--exclude-table-data` option:
+
+```bash
+pg_dump -h 127.0.0.1 -p 5432 -U postgres -d csdm --exclude-table-data='*positions*' > backup.sql
+```
+
+See the [official documentation](https://www.postgresql.org/docs/16/app-pgdump.html) for advanced usage.
+
+## Importing the database
+
+You can import the database using `psql`.
+
+```bash
+psql -h host -p port -U username -d db_name -f backup.sql
+```
+
+Example with the default values:
+
+```bash
+psql -h 127.0.0.1 -p 5432 -U postgres -d csdm -f backup.sql
+```
+
+:::warning
+You must have created a fresh database before importing it.
+
+1. `DROP DATABASE IF EXISTS db_name;`
+2. `CREATE DATABASE db_name;`
+   :::
