@@ -11,8 +11,11 @@ hide_title: true
 ## CS2 demo playback doesn't start or crashes
 
 1. Steam must be running without admin rights.
-2. Close any anticheat software (FaceIt, ESEA, etc.).
-3. CS2 updates may break playback for demos generated from previous CS2 versions, leading to playback not starting or the game crashing.  
+2. The demo's path must contains only [Basic Latin characters](<https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)>).
+   Counter-Strike can't play demos with non-Basic Latin characters in the path.  
+   The solution is to move your demos in a folder with only Basic Latin characters in its path.
+3. Close any anticheat software (FaceIt, ESEA, etc.).
+4. CS2 updates may break playback for demos generated from previous CS2 versions, leading to playback not starting or the game crashing.  
    To detect if it's a CS2 or CS:DM issue, you should try to play the demo **from the game rather than CS:DM** and check if the playback starts **and** the game doesn't crash during the playback (it can happen).  
    If it doesn't work in the game either, that's probably because the demo was recorded with an older CS2 version and is incompatible with the latest version.  
    Valve sometimes creates a "_branch_" (available from the game properties in Steam) to allow playing on a previous game version.  
