@@ -50,7 +50,7 @@ the plugin when CS2 is launched.
 It does the following:
 
 1. The plugin binary is copied from the `static` folder to the `game\csgo\csdm\bin` CS2 folder.
-2. A reference to the plugin is added to the file `game\csgo\gameingo.gi`:
+2. A reference to the plugin is added to the file `game\csgo\gameinfo.gi`:
 
 ```diff
 SearchPaths
