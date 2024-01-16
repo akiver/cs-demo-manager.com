@@ -14,6 +14,7 @@ You can optimize the database (reduce disk usage, query time…) from the applic
    - `Delete positions`: This will delete all positions used for the 2D viewer - It **strongly** reduces disk usage.
    - `Delete demos that are not on the filesystem anymore`: This will delete demos references **in the database only**
      known by the application that doesn't exist on the filesystem anymore.
+   - `Clear demos cache`: This will delete all demos references **in the database only** known by the application.
 5. Confirm and wait for the process to finish.
 
 ## Using a remote database

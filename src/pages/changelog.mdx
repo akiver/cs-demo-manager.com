@@ -1,9 +1,32 @@
-## v3.1.0
+## v3.2.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download/#donate).
 :::
+
+- feat: add support for [5EPlay](https://www.5eplay.com/) demos [#727](https://github.com/akiver/cs-demo-manager/issues/727)
+- feat: allow to change players' spectate keyboard key, see this [documentation](/docs/faq/playback#the-camera-doesnt-focus-on-the-player) for details. [#685](https://github.com/akiver/cs-demo-manager/issues/685)
+- feat(video): add an option to show/hide X-Ray per sequence [#715](https://github.com/akiver/cs-demo-manager/discussions/715)
+- feat(db): deleting positions from the database now forces the database to free up disk space
+- feat(match): hide chat tab for CS2 demos as chat messages are currently not present in CS2 demos
+- feat: show message when trying to play a demo that contains chars unsupported by CS in its path [#728](https://github.com/akiver/cs-demo-manager/discussions/728)
+- feat: add partial Portuguese (Brazil) translation. Thanks to [@tiagotriques](https://crowdin.com/profile/tiagotriques).  
+  You can help translating the [application too](/docs/contributing#translate-application)!
+- fix: auto start not working on Windows when username contains spaces [#726](https://github.com/akiver/cs-demo-manager/issues/726)
+- fix(video): wrong sequence's ticks comparison resulting in a "End tick must be greater than start tick" error [#730](https://github.com/akiver/cs-demo-manager/issues/730)
+- fix(ui): error codes documentation link not opening in the browser
+- fix(analyze): possible error when analyzing demos that contain bots
+- fix(analyze): possible incorrect weapon in kill events due to a weird CS2 string encoding issue
+- fix(analyze): handle possible invalid UTF8 hex byte sequences in strings [#735](https://github.com/akiver/cs-demo-manager/issues/735) and maybe [#657](https://github.com/akiver/cs-demo-manager/issues/657)
+
+:::warning
+If you encountered the issue [#735](https://github.com/akiver/cs-demo-manager/issues/735) with some of your demos, you
+will have to clear the demos cache from the [settings](/docs/guides/database#optimizing-the-database) before analyzing
+affected demos again!
+:::
+
+## v3.1.0
 
 - feat(match): add a "**Duels**" tab with opening duels stats and an interactive map to find out where opening kills
   happened

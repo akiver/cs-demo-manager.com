@@ -24,6 +24,7 @@ To change a demo's source, right-click on it in the demos list and click on **Ch
 
 | Source         | CSGO | CS2 | Comment                                                                                                                 |
 | -------------- | ---- | --- | ----------------------------------------------------------------------------------------------------------------------- |
+| 5EPlay         | ✅   | ✅  |                                                                                                                         |
 | CEVO           | ❌   | ❌  | Dead platform but demos are still detected in the app                                                                   |
 | Challengermode | ✅   | ✅  |                                                                                                                         |
 | eBot           | ✅   | ✅  |                                                                                                                         |

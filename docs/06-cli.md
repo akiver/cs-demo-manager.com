@@ -170,11 +170,11 @@ Analyze demos and persist them in the database.
 csdm analyze [demoPaths...] [--source] [--force]
 ```
 
-| Name      | Default | Mandatory | Description                                                                                                                                |
-| --------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| demoPaths |         | Yes       | Demos paths, can be either a `.dem` files path or a directory. It can be relative or absolute.                                             |
-| --source  |         | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,faceit,perfectworld,popflash,valve,fastcup` |
-| --force   | `false` | No        | Force demos analyzes even if they are already in the database.                                                                             |
+| Name      | Default | Mandatory | Description                                                                                                                                       |
+| --------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| demoPaths |         | Yes       | Demos paths, can be either a `.dem` files path or a directory. It can be relative or absolute.                                                    |
+| --source  |         | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,faceit,5eplay,fastcup,perfectworld,popflash,valve` |
+| --force   | `false` | No        | Force demos analyzes even if they are already in the database.                                                                                    |
 
 ### Examples
 
@@ -204,14 +204,14 @@ Analyze and export demos to either a single or multiple XLSX files.
 csdm xlsx demoPaths... [--output-folder] [--source] [--single] [--sheets] [--force-analyze]
 ```
 
-| Name            | Default           | Mandatory | Description                                                                                                                                |
-| --------------- | ----------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| demoPaths       |                   | Yes       | Demos paths, can be either a `.dem` files path or a directory. It can be relative or absolute.                                             |
-| --source        |                   | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,faceit,perfectworld,popflash,valve,fastcup` |
-| --output-folder | Current directory | No        | Directory where output files will be saved.                                                                                                |
-| --single        | `false`           | No        | Generates a single XLSX file instead of one per demo.                                                                                      |
-| --sheets        | All sheets        | No        | Includes only sheets identified by its name. Available values: [general,players,rounds,kills].                                             |
-| --force-analyze | `false`           | No        | Force demos analyzes even if they are already in the database.                                                                             |
+| Name            | Default           | Mandatory | Description                                                                                                                                       |
+| --------------- | ----------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| demoPaths       |                   | Yes       | Demos paths, can be either a `.dem` files path or a directory. It can be relative or absolute.                                                    |
+| --source        |                   | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,faceit,5eplay,fastcup,perfectworld,popflash,valve` |
+| --output-folder | Current directory | No        | Directory where output files will be saved.                                                                                                       |
+| --single        | `false`           | No        | Generates a single XLSX file instead of one per demo.                                                                                             |
+| --sheets        | All sheets        | No        | Includes only sheets identified by its name. Available values: [general,players,rounds,kills].                                                    |
+| --force-analyze | `false`           | No        | Force demos analyzes even if they are already in the database.                                                                                    |
 
 ### Examples
 
