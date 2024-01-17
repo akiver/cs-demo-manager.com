@@ -30,4 +30,4 @@ If you are using a remote database, ensure the server is running, and the IP **a
 ## The app tray icon is missing
 
 On RedHat-based Linux distributions the system tray is not enabled by default.  
-You have to install the "Gnome extensions app" and enable it to see the tray icon as mentioned in the [installation instructions](/docs/installation#step-3-the-application?os=linux).
+You have to install the "Gnome extensions app" and enable it to see the tray icon as mentioned in the [installation instructions](/docs/installation?os=linux#step-3-the-application).

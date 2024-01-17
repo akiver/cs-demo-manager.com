@@ -15,7 +15,7 @@ You can watch the following videos to see the installation steps:
 - [macOS](https://www.youtube.com/watch?v=Q5RaSjo0DbQ)
 - [Linux](https://www.youtube.com/watch?v=DLLwfNajSoY)
 
-## Step 1: The database
+## Step 1\: The database
 
 A [PostgreSQL](https://www.postgresql.org/) database is required to use CS Demo Manager, the application will show the following screen until a connection has been established:
 
@@ -69,7 +69,7 @@ Once PostgreSQL is installed (run `psql --version` to make sure it's installed),
 </TabItem>
 </Tabs>
 
-## Step 2: Setup psql
+## Step 2\: Setup psql
 
 The `psql` program is the PostgreSQL command-line interface used by CS Demo Manager to create the database automatically.  
 This step explains how to add `psql` to your `PATH` environment variable so that the application can find it and invoke it.
@@ -117,7 +117,7 @@ It's automatically done during the PostgreSQL installation.
 </TabItem>
 </Tabs>
 
-## Step 3: The application
+## Step 3\: The application
 
 <Tabs groupId="os" queryString>
 <TabItem value="windows" label="Windows">

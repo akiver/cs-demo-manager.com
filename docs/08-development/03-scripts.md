@@ -10,12 +10,12 @@ Scripts must be run using the `npm run` command.
 - [dev](/docs/development/scripts#dev)
 - [dev:cli](/docs/development/scripts#devcli)
 - [format](/docs/development/scripts#format)
-- [i18n:extract](/docs/development/scripts#i18n)
+- [i18n:extract](/docs/development/scripts#i18nextract)
 - [lint](/docs/development/scripts#lint)
 - [package](/docs/development/scripts#package)
-- [package:dir](/docs/development/scripts#package-1)
+- [package:dir](/docs/development/scripts#packagedir)
 - [test](/docs/development/scripts#test)
-- [test:watch](/docs/development/scripts#test-1)
+- [test:watch](/docs/development/scripts#testwatch)
 
 ## build
 
@@ -54,7 +54,7 @@ HMR is enabled for the **renderer process**.
 npm run dev
 ```
 
-## dev:cli
+## dev\:cli
 
 It builds and watches the CLI source code.  
 You can then use the bash script for you OS in the `scripts` to run the CLI.
@@ -72,7 +72,7 @@ This script is executed by the CI system when a pull request is opened.
 npm run format
 ```
 
-## i18n:extract
+## i18n\:extract
 
 It extracts the strings to translate from the source code and generates the `.po`/`.json` files.  
 This script is executed by the CI system when a pull request is opened.
@@ -99,7 +99,7 @@ You should run the `build` script before running this script.
 npm run package
 ```
 
-## package:dir
+## package\:dir
 
 It packages the application into an executable file for the current platform.  
 You should run the `build` script before running this script.
@@ -116,7 +116,7 @@ It runs the tests.
 npm run test
 ```
 
-## test:watch
+## test\:watch
 
 It runs the tests in watch mode.
 
