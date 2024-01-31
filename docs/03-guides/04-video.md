@@ -2,13 +2,8 @@
 title: Video
 ---
 
-## Introduction
-
 CS:DM allows you to generate videos and raw files (images and audio) from demos.  
-The feature is accessible by clicking on the **Video** link from a match page.
-
-You have to select one or more **sequences** (a part of the demo you want to record).  
-You can then decide to merge all sequences into 1 video or generate 1 video per sequence.
+This feature is accessible by clicking on the **Video** tab from a match.
 
 ## Compatibility
 
@@ -20,29 +15,355 @@ You can then decide to merge all sequences into 1 video or generate 1 video per 
 
 About CS2 compatibility, see [CS2 limitations](/docs/cs2#video-generation) for details.
 
-## How does it work?
+## Introduction
 
-To get the best result, CS:DM uses the game's `startmovie` command to record sequences.  
-This command generates many images (**.tga**) and an audio file (**.wav**).
+### How does it work?
 
-Once done, the application uses [FFmpeg](https://ffmpeg.org) or [VirtualDub](https://www.virtualdub.org) to generate the
-video(s) from the raw files.
+CS:DM uses the Counter-Strike `startmovie` command to get the best result.  
+The application will start Counter-Strike, play the demo, and execute the `startmovie` command.  
+When the `startmovie` command is executed, many image files (**.tga**) and an audio file (**.wav**) are generated.
 
-## Must know
+Once the recording ends and Counter-Strike is closed, the application uses [FFmpeg](https://ffmpeg.org) or
+[VirtualDub](https://www.virtualdub.org) to generate the video(s) from the raw files.
 
-The number of images depends on the framerate you chose and the total duration of the sequences.  
-For example, with a framerate set to `60` and a duration of `20` seconds, you will have `20 * 60 = 1200` images.
+### Tick
+
+Ticks are a unit of time the game uses; you can think of it as seconds.  
+For CS2, 1 second corresponds to `64` ticks. For CS:GO, it depends on the server's tick rate (usually `64` or `128`).  
+Because seconds are more accessible for humans, the application allows you to edit the duration in seconds and converts
+it automatically to ticks.
+
+### Sequence
+
+A **sequence** is a part of the demo you want to record defined by a **start tick** and an **end tick**.  
+You need to add one or more **sequences**, which you can merge into a single video or generate one video per sequence.
+
+### Timelines
+
+The application shows timelines to help you add sequences based on round events and visualize the final sequences.  
+Timelines are interactive. You can click and drag to move on the timeline, use the mouse wheel to zoom in/out, and
+right-click to open a context menu.
+
+![Timeline](/img/documentation/guides/video/timeline.gif)
+
+## Generating video(s)
+
+To generate a video, go to the **Video** tab from a match.  
+You will see the following window:
+
+![Video generation window](/img/documentation/guides/video/video.png)
+
+1. Button to start adding a sequence from a dedicated window.
+2. General options (resolution, encoder software, etc.).
+3. HLAE options (Windows only).
+4. Encoder software options.
+5. Match's comment.
+6. Sequences timeline.
+
+### Steps
+
+The steps to generate a video are:
+
+1. Install/update required software if needed.
+2. Add one or more sequences.
+3. Set the general options (optional).
+4. Set the HLAE options (Optional and Windows only).
+5. Set the encoder software options (optional).
+6. Click on the **Generate** button and wait.
+
+## Installing/Updating software
+
+### HLAE
+
+[HLAE](https://github.com/advancedfx/advancedfx) is a **Windows-only** tool that adds movie-making features to
+Counter-Strike. The death notices edition, for example, relies on HLAE.  
+To install or update HLAE, click on the corresponding button from the HLAE options.
+
+![HLAE installation](/img/documentation/guides/video/hlae-installation.png)
 
 :::warning
-Raw files can take a lot of disk space. The application warns you if the amount exceeds 20GB.
+Updating HLAE is strongly recommended as game updates may break HLAE compatibility!  
+Please note that HLAE compatibility updates may take some time to be released after a breaking game update.
 :::
 
-To define the interval which you want to record, you have to enter a start tick and an end tick.  
-Ticks are a unit of time the game uses; you can think of it as seconds, for example.  
-For CS2, 1 seconds correspond to `64` ticks, for CS:GO, it depends of server's tickrate (usually `64` or `128`).  
-Because it's easier for humans to use seconds, the application allows you to edit the duration in seconds and convert
-automatically to ticks.
+#### Custom location
+
+You can use a custom HLAE build by going to **Settings** -> **Video**.  
+From the **HLAE** section, click on **Enable custom location** and select the path to the **HLAE.exe** file.
+
+### FFmpeg
+
+[FFmpeg](https://ffmpeg.org) is a software used to generate the video(s) from the raw files.  
+To install or update FFmpeg, click on the corresponding button from the FFmpeg options.
+
+![FFmpeg installation](/img/documentation/guides/video/ffmpeg-installation.png)
+
+#### Custom location
+
+You can use a custom FFmpeg build by going to **Settings** -> **Video**.  
+From the **FFmpeg** section, click on **Enable custom location** and select the path to the **ffmpeg.exe** file.
+
+:::warning
+When using a custom FFmpeg build, the auto-update feature is disabled - you will have to update it manually.
+:::
+
+### VirtualDub
+
+[VirtualDub](https://www.virtualdub.org) is a **Windows-only** software used to generate the video(s) from the raw
+files.  
+To install VirtualDub, click on the corresponding button from the VirtualDub options.
+
+![VirtualDub installation](/img/documentation/guides/video/virtualdub-installation.png)
+
+## Adding a sequence
+
+Click on the **Add sequence** button to open the following window:
+
+![New sequence window](/img/documentation/guides/video/add-sequence.png)
+
+1. The inputs to set the sequence start/end ticks. You would probably not type the ticks manually but use the rounds
+   timeline below.
+2. Camera options.
+3. Indicates how long the sequence is in seconds and how much space raw files will take on your disk.
+4. Game commands executed when the sequence starts.
+5. Rounds timeline.
+
+### Steps
+
+1. Set the start/end ticks.
+2. Set the camera options (optional).
+3. Set the death notices (Optional and Windows only).
+4. Set the CFG (optional).
+5. Click on the button **Add**.
+
+### Start/end ticks
+
+To define the start/end tick of the sequence, you have 2 options:
+
+1. Type the ticks manually in the inputs.
+2. Use the timeline's context menu.
+
+You could use the timeline as it's easier to use.  
+For example, if you right-click on a round, you will see the following menu that lets you change the ticks quickly:
+
+![Round context menu](/img/documentation/guides/video/round-context-menu.png)
+
+### Camera options
+
+![Camera options](/img/documentation/guides/video/camera-options.png)
+
+#### Show X-Ray
+
+It turns on/off the Counter-Strike X-Ray mode.  
+When enabled, you can see all players through walls:  
+![X-Ray mode](/img/documentation/guides/video/x-ray.png)
+
+#### Focus camera on player
+
+When enabled, the camera will focus on the selected player.  
+To select a player, you have 2 options:
+
+- Select it from the dropdown.
+- Use the timeline's context menu - for example, if you right-click on a kill icon, you will see the following menu that
+  allows you to focus the camera on the killer or the victim:  
+  ![Kill context menu](/img/documentation/guides/video/kill-context-menu.png)
+
+#### Spectate key
+
+:::info
+This option is available only for CS2 and will be removed once CS2 has a command to focus the camera on a player by
+SteamID, like CS:GO.
+:::
+
+The **spectate key** corresponds to the keyboard key (0 to 9) used to focus the camera on the player during playback.  
+You should change it only if you notice that the camera doesn't focus on the correct player.
+
+To find a player's key, you have to watch the demo and find the key that matches the player by pressing your
+keyboard number keys until the camera is focused on the player.  
+Once you find the key, you can update the player's key using this option.
+
+:::warning
+This option exists because the key for a given player can change during playback.  
+It means that if you add a sequence at round 1 and another at round 20, the key for a player can be different in both
+sequences.  
+In that case, you should record the sequences individually and update the key before the recording to ensure the camera
+focuses on the correct player.
+:::
+
+### Death notices
+
+This option allows you to customize the death notices displayed at the top right of the screen.
+
+:::warning
+Death notices edition is available only on Windows for CS:GO demos, as this feature relies on an HLAE command currently
+unavailable for CS2.
+:::
+
+![Death notices](/img/documentation/guides/video/deathnotices.png)
+
+For each player, you can:
+
+1. Change the player's name
+2. Hide/show the player's kills
+3. Force highlight the player's kills (the notices will have red borders in-game)
+
+### CFG
+
+Game commands that will be executed when the sequence starts.  
+Each command must be on a new line.
+
+:::tip
+You can also put HLAE commands (`mirv_`) here on Windows.
+:::
+
+## General options
+
+![General options](/img/documentation/guides/video/general-options.png)
+
+### Encoder software
+
+Set the encoder software that will be used to generate the video(s).  
+You can choose between [FFmpeg](https://ffmpeg.org/) and [VirtualDub](https://www.virtualdub.org/) (Windows only).
+
+**VirtualDub** generates **uncompressed videos**. It's recommended only for editing the video with video editing
+software.
+
+### Generate only raw files
+
+If enabled, the application will generate only raw files.
+
+### Close the game when recording is done
+
+If enabled, the application will automatically close the game at the end of the recording.
+
+### Delete raw files after encoding
+
+If enabled, the application will automatically delete the raw files at the end of the video(s) generation.
+
+### Show only death notices
+
+If enabled, only death notices will be shown in-game.
+
+### Width
+
+Set the video width.
+
+### Height
+
+Set the video height.
+
+### Frame rate
+
+Set the video frame rate.
+
+### Raw files folder
+
+Set the folder where the raw files will be saved.  
+The default location is the folder where the demo is located. If you change it, the application will remember and use it
+for the next recordings.
+
+:::warning
+For CS2, the raw files are always created in the game installation folder and moved into the selected folder at the end
+of the recording.  
+Ensure enough space on the game installation drive is available before starting the recording!
+:::
+
+### Output folder
+
+Set the folder where the video(s) will be saved.  
+The default location is the folder where the demo is located. If you change it, the application will remember and use it
+for the next recordings.
+
+## HLAE options
+
+![HLAE options](/img/documentation/guides/video/hlae-options.png)
+
+### Config folder
+
+From the HLAE [documentation](https://github.com/advancedfx/advancedfx/wiki/Your-first-recording-in-CS%3AGO#hlae-launch-settings-for-csgo):
+
+> **(Optional, but recommended)** This creates a fresh config folder for your custom config(s) and video settings. If the folder doesn't already exist, HLAE will create it for you when you launch the game. After the folder (and files) have been created, you can add your custom config(s) in the cfg folder (the same place as the config.cfg).  
+> **Note**: If you don't use this feature, HLAE will use the same settings as your regular gaming config and video settings, and if you make any config, command, or graphics changes, those may carry over to your gaming config, and vice versa.
+
+### Parameters
+
+Additional parameters that will be passed to HLAE.  
+See the [HLAE documentation](https://github.com/advancedfx/advancedfx/wiki/HLAE-Interfaces#command-line-parameters) for
+more information.
+
+## FFmpeg options
+
+![FFmpeg options](/img/documentation/guides/video/ffmpeg-options.png)
+
+### Audio codec
+
+Set the audio codec corresponding to the `-acodec` FFmpeg option.  
+The default codec is `libmp3lame`.  
+For detailed information, refer to the [FFmpeg documentation](https://ffmpeg.org/ffmpeg-codecs.html#toc-Audio-Encoders).
+
+### Audio bitrate
+
+Set the audio bitrate corresponding to the `-b:a` FFmpeg option.
+
+### Video codec
+
+Set the video codec corresponding to the `-vcodec` FFmpeg option.  
+The default codec is `libx264`.  
+For detailed information, refer to the [FFmpeg documentation](https://ffmpeg.org/ffmpeg-codecs.html#toc-Video-Encoders).
+
+### Quality
+
+Set the video quality for the selected video codec corresponding to the `-crf` FFmpeg option.  
+A lower value generally leads to higher quality but larger file sizes.
+
+### Input parameters
+
+Set additional FFmpeg input parameters.  
+It corresponds to `input_file_options` in the FFmpeg command line [synopsis](https://ffmpeg.org/ffmpeg.html#Synopsis).
+
+### Output parameters
+
+Set additional FFmpeg output parameters.  
+It corresponds to `output_file_options` in the FFmpeg command line [synopsis](https://ffmpeg.org/ffmpeg.html#Synopsis).
+
+## Starting the generation
+
+:::danger
+Always check how much disk space is required before starting the recording, and ensure your disk has enough space!  
+![Disk space](/img/documentation/guides/video/disk-space.png)
+:::
+
+Once you have completed all the [steps](#steps), click the **Generate** button to start generation of the video(s).  
+It will start the game, record the sequences, and generate the video(s) from the raw files.
+
+:::warning
+With CS2 demos, if the camera is focused on a player in one of the sequences, you must keep the game window focused
+during the recording. Otherwise, the camera may not focus on the player.
+:::
+
+Once done, you will see the following window:  
+![Video generation done](/img/documentation/guides/video/generation-done.png)
+
+Click on the **Reveal output folder** button to open the folder where the video(s) have been generated.
+
+## Editing a sequence
+
+To edit a sequence, right-click on it from the sequence timeline and click **Edit**.  
+![Sequence context menu](/img/documentation/guides/video/sequence-context-menu.png)
+
+You can also delete it by clicking **Delete**.
+
+## Generating player's kills sequences
+
+The application lets you quickly generate sequences that will result in a video showing a player's kills.  
+To do so, you can:
+
+- Click the **Generate player's kill sequences** button from the **Video** tab.
+- Click on **Generate kills video** from a match's scoreboard context menu.  
+  ![Scoreboard context menu](/img/documentation/guides/video/scoreboard-context-menu.png)
 
 ## FAQ
 
-See the [FAQ](/docs/faq/video) page.
+### I have an error when the game starts
+
+Make sure to update HLAE - game updates may break HLAE compatibility.
