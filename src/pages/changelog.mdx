@@ -1,9 +1,28 @@
-## v3.2.0
+## v3.2.1
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+- feat: Analyzing demos created after the last CS2 major update is temporarily turned off until the demo parser supports
+  the demo format changes
+  :::warning
+  The current status of the support is tracked on this [GitHub issue](https://github.com/akiver/cs-demo-manager/issues/753).  
+   Please understand that it's not an easy task and it may take time.
+  :::
+- fix(dl): the last CS2 major update broke the MM demo download feature, it's now fixed
+- fix: CS2 executable may not be found on Linux since the last CS2 major update
+- feat: the configuration folder location now follows the XDG Base Directory Specification on Linux
+  :::warning
+  There is no backward compatibility, you will have to reconfigure your settings.  
+  You can also safely remove the old configuration folder at `~/csdm`.
+  :::
+- fix(analyze): possible missing players
+- fix(settings): database connection window ignoring mouse/keyboard inputs after disconnection
+- feat(ui): more Portuguese (Brazil) translations
+
+## v3.2.0
 
 - feat: add support for [5EPlay](https://www.5eplay.com/) demos [#727](https://github.com/akiver/cs-demo-manager/issues/727)
 - feat: allow to change players' spectate keyboard key, see this [documentation](/docs/faq/playback#the-camera-doesnt-focus-on-the-player) for details. [#685](https://github.com/akiver/cs-demo-manager/issues/685)
