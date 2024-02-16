@@ -13,8 +13,7 @@ This message is displayed when:
    You have to update the demo's source to the correct one and analyze it again.
 2. The application does not support the demo's source.
    See the [table below](/docs/faq/stats#what-are-the-supported-demo-sources) for the list of supported sources.  
-   You can change the demo's source to a supported source and analyze it, **but it may not work correctly if the demos come from a non-supported source**.  
-   You can vote for the next source you would like to see supported [here](https://github.com/akiver/cs-demo-manager/discussions/674).
+   You can change the demo's source to a supported source and analyze it, **but it may not work correctly if the demos come from a non-supported source**.
 
 :::tip
 To change a demo's source, right-click on it in the demos list and click on **Change source**.
