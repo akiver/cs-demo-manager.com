@@ -1,9 +1,19 @@
-## v3.2.3
+## v3.3.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+- feat(analyze): add support for [Esportal](https://esportal.com/en/home) demos
+- feat: the camera focus will now **always** be on the correct player when watching highlights/lowlights or generating a video
+  It internally uses the `spec_lock_to_accountid` command added in the 14/02/2024 CS2 update.
+  :::warning
+  It also means the camera focus will not work when using an old CS2 branch with CS:DM v3.3.0 or later.
+  :::
+- fix: reduce possible risk of game crash when demo playback starts
+
+## v3.2.3
 
 - feat(analyze): demos from Blast events are now detected as FACEIT demos
 - feat(cli): add a `json` command to export demos to a JSON file
