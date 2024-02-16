@@ -5,14 +5,9 @@ hide_title: true
 
 ## The camera doesn't focus on the player
 
-- On **Linux and CS2 demos** it's [not yet supported](/docs/cs2#demo-playback). You have to focus the camera manually.
-- On **Windows and CS2 demos** you have to keep the [CS2 window focused](/docs/cs2#demo-playback).  
-  If the camera focuses on the wrong player, it's probably because the player's spectate keyboard key sent to CS2 is incorrect.  
-  It can happen with demos that include players disconnection or teams switching.  
-  To fix it, you have to:
-  1. Watch the demo and press the number keys until the camera is on the player you want - **note the key**.
-  2. Go to the match's scoreboard, right-click on the player, and click on **Update spectate key**.
-  3. Select the key you noted in step 1 and click on **Confirm**.
+The camera focus relies on the CS2 command `spec_lock_to_accountid` that was added to the game in the 14/02/2024 update
+and used by CS:DM since version 3.3.0.  
+It means you must use a CS2 branch released after this date and use CS:DM version 3.3.0 or later.
 
 ## CS2 demo playback doesn't start or crashes
 

@@ -168,28 +168,6 @@ To select a player, you have 2 options:
   allows you to focus the camera on the killer or the victim:  
   ![Kill context menu](/img/documentation/guides/video/kill-context-menu.png)
 
-#### Spectate key
-
-:::info
-This option is available only for CS2 and will be removed once CS2 has a command to focus the camera on a player by
-SteamID, like CS:GO.
-:::
-
-The **spectate key** corresponds to the keyboard key (0 to 9) used to focus the camera on the player during playback.  
-You should change it only if you notice that the camera doesn't focus on the correct player.
-
-To find a player's key, you have to watch the demo and find the key that matches the player by pressing your
-keyboard number keys until the camera is focused on the player.  
-Once you find the key, you can update the player's key using this option.
-
-:::warning
-This option exists because the key for a given player can change during playback.  
-It means that if you add a sequence at round 1 and another at round 20, the key for a player can be different in both
-sequences.  
-In that case, you should record the sequences individually and update the key before the recording to ensure the camera
-focuses on the correct player.
-:::
-
 ### Death notices
 
 This option allows you to customize the death notices displayed at the top right of the screen.
@@ -335,11 +313,6 @@ Always check how much disk space is required before starting the recording, and 
 
 Once you have completed all the [steps](#steps), click the **Generate** button to start generation of the video(s).  
 It will start the game, record the sequences, and generate the video(s) from the raw files.
-
-:::warning
-With CS2 demos, if the camera is focused on a player in one of the sequences, you must keep the game window focused
-during the recording. Otherwise, the camera may not focus on the player.
-:::
 
 Once done, you will see the following window:  
 ![Video generation done](/img/documentation/guides/video/generation-done.png)
