@@ -232,3 +232,33 @@ Export all demos in a directory using the ESL analyzer and save it in a custom d
 ```bash
 csdm xlsx "C:\Users\username\Desktop\MyFolder" --output-folder "C:\Users\username\Documents" --source esl
 ```
+
+## Export demos to JSON
+
+Analyze and export demos into JSON files.
+
+```bash
+csdm json demoPaths... [--output-folder] [--source] [--minify] [--force-analyze]
+```
+
+| Name            | Default           | Mandatory | Description                                                                                                                                                |
+| --------------- | ----------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| demoPaths       |                   | Yes       | Demos paths, can be either a `.dem` files path or a directory. It can be relative or absolute.                                                             |
+| --source        |                   | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,esportal,faceit,fastcup,5eplay,perfectworld,popflash,valve` |
+| --output-folder | Current directory | No        | Directory where output files will be saved.                                                                                                                |
+| --minify        | `false`           | No        | Minify the JSON files.                                                                                                                                     |
+| --force-analyze | `false`           | No        | Force demos analyzes even if they are already in the database.                                                                                             |
+
+### Examples
+
+Export 1 demo:
+
+```bash
+csdm json "C:\Users\username\Desktop\demo.dem"
+```
+
+Export multiple demos in a custom directory and minify the JSON files:
+
+```bash
+csdm xlsx "C:\Users\username\Desktop\demo.dem" "C:\Users\username\Desktop\demo2.dem" --output-folder "C:\Users\username\Documents" --minify
+```
