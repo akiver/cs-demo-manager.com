@@ -29,7 +29,7 @@ To change a demo's source, right-click on it in the demos list and click on **Ch
 | eBot           | ✅   | ✅  |                                                                                                                         |
 | ESL            | ✅   | ✅  | ESL is now FACEIT, newer demos from ESL events should use the FACEIT analyzer.                                          |
 | ESEA           | ✅   | ❌  | ESEA is now FACEIT, their platform is almost dead and I didn't find any CS2 demos recorded with their plugin            |
-| Esportal       | ❌   | ❌  | ATM CS2 demos from Esportal (dathost.net) have a bug that require an (ugly) workaround to analyze them                  |
+| Esportal       | ✅   | ✅  |                                                                                                                         |
 | FACEIT         | ✅   | ✅  |                                                                                                                         |
 | FASTCUP        | ✅   | ✅  |                                                                                                                         |
 | Gamers Club    | ❌   | ❌  |                                                                                                                         |
