@@ -17,7 +17,7 @@ You can watch the following videos to see the installation steps:
 
 ## Step 1\: The database
 
-A [PostgreSQL](https://www.postgresql.org/) database is required to use CS Demo Manager, the application will show the following screen until a connection has been established:
+A [PostgreSQL](https://www.postgresql.org/) database **version 16** or later is required to use CS Demo Manager, the application will show the following screen until a connection has been established:
 
 ![Database connection](/img/documentation/installation/database-connection.png)
 
