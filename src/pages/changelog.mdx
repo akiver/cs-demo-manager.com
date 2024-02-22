@@ -1,9 +1,21 @@
-## v3.3.0
+## v3.3.1
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+- feat: player's voice extraction is now possible for demos created after the Arms Race update
+- feat(ban): add option to ignore bans that happened before players were first seen in a match (enabled by default) [#760](https://github.com/akiver/cs-demo-manager/discussions/760)
+- feat(ban): add a context menu item on the scoreboard to add/remove a player from ignored Steam accounts [#760](https://github.com/akiver/cs-demo-manager/discussions/760)
+- feat: detect and warn about possible anti-cheat software that prevent starting the game [#684](https://github.com/akiver/cs-demo-manager/issues/684)
+- feat(match): add context menu item on scoreboard to generate player rounds video [#759](https://github.com/akiver/cs-demo-manager/discussions/759)
+- fix(analyze): support for recent [Esportal](https://esportal.com) demos
+- fix(analyze): force UTF8 encoding when inserting demos into the database [#765](https://github.com/akiver/cs-demo-manager/issues/765)
+- fix(download): tied game shown as victory or defeat in sidebar [#768](https://github.com/akiver/cs-demo-manager/issues/768)
+- fix(download): possible reversed teams scores and players teams in scoreboard
+
+## v3.3.0
 
 - feat(analyze): add support for [Esportal](https://esportal.com/en/home) demos
 - feat: the camera focus will now **always** be on the correct player when watching highlights/lowlights or generating
