@@ -39,8 +39,8 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center order-1 md:order-2 relative my-16">
-            <Logo className="w-44 h-44 text-white z-10" />
-            <div className="absolute left-1/2 top-1/2 rounded-full w-44 h-44 -translate-x-1/2 -translate-y-1/2 bg-gradient-home blur-[82px]" />
+            <Logo className="size-44 text-white z-10" />
+            <div className="absolute left-1/2 top-1/2 rounded-full size-44 -translate-x-1/2 -translate-y-1/2 bg-gradient-home blur-[82px]" />
           </div>
         </div>
         <div className="flex flex-wrap mt-4 mb-16 px-4 lg:px-32 mx-auto">
