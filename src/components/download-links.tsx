@@ -10,8 +10,7 @@ export function DownloadLinks() {
 
   useEffect(() => {
     const fetchRelease = async () => {
-      // TODO Update URL when the repo is renamed to cs-demo-manager
-      const response = await fetch(`https://api.github.com/repos/akiver/csgo-demos-manager/releases/latest`);
+      const response = await fetch(`https://api.github.com/repos/akiver/cs-demo-manager/releases/latest`);
       const lastRelease: GitHubRelease = await response.json();
       const date = new Intl.DateTimeFormat().format(new Date(lastRelease.published_at));
 
