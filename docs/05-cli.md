@@ -128,7 +128,7 @@ csdm dl-valve --output "C:\Users\username\Downloads"
 ## Download FACEIT demos
 
 :::danger
-This command is currrently disabled, see [here](/docs/faq/download#why-faceit-downloads-are-disabled) for details.
+This command is currrently disabled, see [here](/docs/guides/downloads#why-faceit-downloads-are-disabled) for details.
 :::
 
 Download the last 8 demos of the current FACEIT account set in the application or from its nickname.

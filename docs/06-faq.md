@@ -1,5 +1,5 @@
 ---
-title: 'General'
+title: 'FAQ'
 hide_title: true
 ---
 
