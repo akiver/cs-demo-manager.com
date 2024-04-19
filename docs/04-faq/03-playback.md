@@ -41,6 +41,11 @@ Example:
 - The `G:\` drive contains a `G:\steamapps\common\Counter-Strike Global Offensive` folder
 - You have to delete the `G:\steamapps\common\Counter-Strike Global Offensive` folder
 
+:::warning
+On **Linux** this can happen if Steam has been installed using [Flatpak](https://flatpak.org/).  
+It's not supported yet, so please install Steam using the native installer.
+:::
+
 ## Can I watch CSGO demos?
 
 Yes, please follow this [documentation](/docs/guides/playback#watching-csgo-demos).
