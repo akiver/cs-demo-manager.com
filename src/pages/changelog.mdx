@@ -1,9 +1,24 @@
-## v3.4.0
+## v3.5.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+- feat(match): add players duels matrix accessible from the `Duels` tab [#803](https://github.com/akiver/cs-demo-manager/discussions/803)
+- feat(settings): add playback option to start CS through HLAE [#746](https://github.com/akiver/cs-demo-manager/discussions/746)
+- feat: import CS:DM V2 data (comment/status) from a V2 JSON backup file (accessible from the database settings) [#804](https://github.com/akiver/cs-demo-manager/discussions/804)
+- feat(video): add `-afxDisableSteamStorage` launch option to HLAE added in [v2.157.0](https://github.com/advancedfx/advancedfx/releases/tag/v2.157.0)
+- feat(download): update FACEIT warning message [#793](https://github.com/akiver/cs-demo-manager/discussions/793)
+- feat(playback): notification when trying to watch highlights/lowlights of a player that didn't have kills/deaths
+- feat(playback): detect and warn about unsupported Steam installation through Flatpak on Linux [#798](https://github.com/akiver/cs-demo-manager/issues/798)
+- feat(video): do not try to concatenate sequences when there is a single sequence
+- feat(video): set all `cl_hud_telemetry_x_show` commands to `0` when recording
+- fix(player): wrong win percentage calculation per side [#799](https://github.com/akiver/cs-demo-manager/issues/799)
+- fix(2d): use CS2 map images instead of CSGO ones [#801](https://github.com/akiver/cs-demo-manager/issues/801)
+- fix(playback): camera may not focus on player with non Valve demos [#808](https://github.com/akiver/cs-demo-manager/issues/808)
+
+## v3.4.0
 
 - feat: tags can now be added to rounds
 - feat(analyze): demos with an incomplete last round are now analyzable. The data of the last round are not available. [#786](https://github.com/akiver/cs-demo-manager/issues/786)

@@ -5,9 +5,9 @@ hide_title: true
 
 ## Why FACEIT downloads are disabled?
 
-FACEIT restricted demos download through a [private API](https://docs.faceit.com/getting-started/Guides/download-api)
-that prevents us from downloading demos from CS:DM.  
-A request has been submitted to allow CS:DM. In the meantime, you have to download demos from your browser.
+FACEIT restricted demo downloads through a [private API](https://docs.faceit.com/getting-started/Guides/download-api) and recently gave us a server-side API key with the maximum rate limit.  
+You don't have to ask FACEIT for an API key. It requires some work, but demo downloads will be back in a near future.  
+In the meantime, you have to download demos from your browser.
 
 ## My last demos are not downloaded automatically?
 
