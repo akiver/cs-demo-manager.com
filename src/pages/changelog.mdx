@@ -1,9 +1,33 @@
-## v3.5.3
+## v3.6.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+- feat: add teams page [#832](https://github.com/akiver/cs-demo-manager/issues/732)
+- feat: add team's page similar to player's page [#832](https://github.com/akiver/cs-demo-manager/issues/732)  
+  It allows to see stats and generate heatmaps for a given team identified by its name.
+- feat(matches): add team names edition from the right-click context menu [#832](https://github.com/akiver/cs-demo-manager/issues/732)
+- feat(video): wait before recording to make sure the loading screen is not visible [#834](https://github.com/akiver/cs-demo-manager/issues/834)
+- feat(search): add tazer in select option label [#841](https://github.com/akiver/cs-demo-manager/issues/841)
+- feat(2d): speed and selected player are now persisted between navigation
+- feat(playback): add option to listen player voices during playback (doesn't work with MM demos) [#800](https://github.com/akiver/cs-demo-manager/discussions/800)
+- feat(playback): automatically hide the CS2 demo playback UI (happens since the 23/05/2024 update)
+- feat(json): add grenades destroyed events [#850](https://github.com/akiver/cs-demo-manager/issues/850)
+- feat(video): remove `-pix_fmt` FFmpeg flag
+- feat(analyze): demos from the PGL major CS2 are now detected as coming from ChallengerMode (needs to clear demos cache from the settings)
+- fix(video): generation not working with FFmpeg since 23/05/2024 CS2 update [#849](https://github.com/akiver/cs-demo-manager/issues/849)
+- fix: incorrect taskbar title after navigation [#831](https://github.com/akiver/cs-demo-manager/issues/831)
+- fix(analyze): possible negative values in player hurt events
+- fix(analyze): missing hostage picked up events [#839](https://github.com/akiver/cs-demo-manager/issues/839)
+- fix(2d): invert speed slider direction
+- fix(match): full width labels
+- fix(video): correct output container extension when concatenating sequences
+- fix(table): moving columns not working when some are hidden [#832](https://github.com/akiver/cs-demo-manager/issues/832)
+- fix(settings): allow to set 0 seconds before kill delay
+
+## v3.5.3
 
 - feat(playback): allow focusing camera on other players after initial focus [#813](https://github.com/akiver/cs-demo-manager/issues/813)
 - feat(2d): add elapsed timer next to remaining timer [#830](https://github.com/akiver/cs-demo-manager/issues/830)
