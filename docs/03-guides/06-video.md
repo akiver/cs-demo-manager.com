@@ -340,3 +340,11 @@ To do so, you can:
 ### I have an error when the game starts
 
 Make sure to update HLAE - game updates may break HLAE compatibility.
+
+### I can't play the video
+
+If you have a black screen or the video playback doesn't start when opening it in your video player, that's probably
+because your video player doesn't have the required audio/video codecs.
+
+This can happens especially on Windows when using **Windows Media Player**.  
+The solution is to use a video player such as [VLC](https://www.videolan.org/) that includes required codecs.
