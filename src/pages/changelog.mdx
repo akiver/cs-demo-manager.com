@@ -1,9 +1,23 @@
-## v3.6.3
+## v3.7.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+- feat: built-in support for the new maps added in the 26/06/2024 CS2 update [#884](https://github.com/akiver/cs-demo-manager/issues/884)
+- feat(video): queue system to schedule multiple video generation tasks [#826](https://github.com/akiver/cs-demo-manager/issues/826)
+- feat(players): allow to tag players and filter by tags from players page [#865](https://github.com/akiver/cs-demo-manager/discussions/865)
+- feat(playback): add option to include 40+ health damage action in highlights/lowlights [#869](https://github.com/akiver/cs-demo-manager/issues/869)
+- feat(ui): scrollable filter panel
+- fix(playback): focus camera not working with non Valve demos due to a CS2 bug [#775](https://github.com/akiver/cs-demo-manager/issues/775)
+  :::danger
+  Demos analyzed before v3.6.0 have to be re-analyzed otherwise the camera may not focus properly.
+  :::
+- fix(match): empty scoreboard when players didn't have kills
+- fix(ui): hide context menu on navigation
+
+## v3.6.3
 
 - feat(demos): allow to sort demos by status [#867](https://github.com/akiver/cs-demo-manager/discussions/867)
 - feat(matches): add 5K/4K/3K and HLTV 2.0 columns [#866](https://github.com/akiver/cs-demo-manager/discussions/866)
