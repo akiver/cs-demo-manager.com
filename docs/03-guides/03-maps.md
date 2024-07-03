@@ -42,7 +42,7 @@ Follow the instructions below to find the files:
 <TabItem value="cs2" label="CS2">
 
 1. Download and launch [Source 2 viewer](https://valveresourceformat.github.io/)
-2. Open the file `pak01_dir.vpk` located in the CS2 folder installation (`C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo`)
+2. If it's an official Valve map, open the file `pak01_dir.vpk` located in the CS2 folder installation (`C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo`) otherwise open the `vpk` file of the map in `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\maps\map_name.vpk`
 3. Reveal the content of the folder `resource/overviews`
 4. Double click on the text file of the map that you want to open it and get the values
 
@@ -72,6 +72,35 @@ There are 2 radar images, the upper and lower radars.
 They are used for features such as heatmap and 2D replay and are both optional.  
 The lower radar should be filled if the map has 2 levels like `de_nuke`.  
 Images must be in `PNG` format, and their resolution must be `1024x1024` pixels.
+
+Follow the instructions below to get the radar images:
+
+<Tabs groupId="game">
+<TabItem value="cs2" label="CS2">
+
+1. Download and launch [Source 2 viewer](https://valveresourceformat.github.io/)
+2. If it's an official Valve map, open the file `pak01_dir.vpk` located in the CS2 folder installation (`C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo`) otherwise open the `vpk` file of the map in `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\maps\map_name.vpk`
+3. Reveal the content of the folder `panorama/images/overheadmaps`
+4. Right click on the file `map_name_(lower)_radar.ctex_c` and click on `Decompile and export` to export it as a `PNG` image
+
+</TabItem>
+
+<TabItem value="csgo" label="CS:GO">
+
+1. Go to the folder `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\resource\overviews`
+2. Convert the `.dds` file to a `PNG` image using either [GIMP](https://www.gimp.org/downloads/), [Paint.NET](https://www.getpaint.net/), or an online converter.
+
+:::warning
+All official Counter-Strike maps have this file, but custom maps may not have it.  
+If that's the case you will have to contact the map maker to get the values.
+:::
+
+:::danger
+Make sure to install your image editor plugin to support the `.dds` format.
+:::
+
+</TabItem>
+</Tabs>
 
 ## Resetting default maps
 
