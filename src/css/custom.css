@@ -19,6 +19,7 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-code-padding-horizontal: 0.3rem;
 }
 
 [data-theme='dark'] {

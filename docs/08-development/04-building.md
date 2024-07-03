@@ -4,6 +4,10 @@ title: 'Building'
 
 ## Packaging the application
 
+:::danger
+You probably want to [build the application](/docs/development/scripts#build) before creating executables.
+:::
+
 To package the application and create an installer:
 
 `npm run package`
