@@ -50,4 +50,4 @@
   [headers.values]
     Permissions-Policy = "interest-cohort=()"
     X-Frame-Options = "DENY"
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' https://api.github.com; img-src 'self' data: https://github.com https://avatars.githubusercontent.com;"
