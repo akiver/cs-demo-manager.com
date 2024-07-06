@@ -49,3 +49,5 @@
   for = "/*"
   [headers.values]
     Permissions-Policy = "interest-cohort=()"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'self'"
