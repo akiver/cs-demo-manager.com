@@ -51,4 +51,4 @@
     Permissions-Policy = "interest-cohort=()"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com; connect-src https://api.github.com https://*.algolia.net https://*.algolianet.com https://*.algolia.io"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; object-src 'self'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com; connect-src https://api.github.com https://*.algolia.net https://*.algolianet.com https://*.algolia.io"
