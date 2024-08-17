@@ -5,8 +5,12 @@ slug: /cs2
 description: Known limitations of CS:DM with CS2
 ---
 
-Because CS2 has missing console commands or different behaviors compared to CSGO, some features are not yet available or partially available with CS2.  
-This page lists the current limitations of CS:DM with CS2.
+Because **CS2** has missing console commands or different behaviors compared to **CS:GO**, some features are not yet available or partially available with **CS2**.  
+This page lists the current limitations of **CS:DM** with **CS2**.
+
+:::danger
+**CS2** is not available on **macOS** which means features that require the CS2 client will not be visible on macOS!
+:::
 
 ## Demo playback
 
@@ -15,11 +19,6 @@ This page lists the current limitations of CS:DM with CS2.
   As a workaround, CS:DM uses a "**server plugin**" loaded when the game is launched that should be transparent for the user. You can find more information about this plugin [here](/docs/development/cs2-server-plugin).
 - Watching a player "as a suspect" is not available because the `anonsuspect` argument of the `playdemo` command is not yet available in CS2.
 - Watching a specific round from the **Player's round performance** section in the **Downloads** page is not available because the `startround:number_number` argument of the `playdemo` command is not yet available in CS2.
-
-## Video generation
-
-- Video generation is currently available only on Windows because the `startmovie` command is not "officially available" yet and requires HLAE to work.
-- Death notice edition (players name, duration...) is not available because **HLAE** doesn't support it yet for CS2.
 
 ## Analyze
 
