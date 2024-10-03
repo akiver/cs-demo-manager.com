@@ -1,9 +1,28 @@
-## v3.8.1
+## v3.9.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+- fix: support for the "Armory" CS2 update [#939](https://github.com/akiver/cs-demo-manager/issues/939)
+- feat: support markdown in comments [#916](https://github.com/akiver/cs-demo-manager/issues/916)
+- feat(analyze): improved performance when analyzing demos
+- feat(video): generate video even if there is no audio file (see warning below)
+- feat(video): detect CS process crash when launching it through HLAE [#920](https://github.com/akiver/cs-demo-manager/issues/920)
+- feat(ui): add Deutch translation. You can help translating the [application too](/docs/contributing#translate-application)!
+- fix(analyze): possible error with some demos [#12](https://github.com/akiver/cs-demo-analyzer/issues/12) and [#567](https://github.com/markus-wa/demoinfocs-golang/issues/567)
+- fix(match): update demo location not updated until app restart [#925](https://github.com/akiver/cs-demo-manager/issues/925)
+- fix (2d): grenade effects not rendering
+- fix(2d): playback speed a bit slower than realtime [#924](https://github.com/akiver/cs-demo-manager/issues/924)
+- fix(dl): cs_office games shown as de_assembly [#935](https://github.com/akiver/cs-demo-manager/issues/935)
+- fix(video): possible raw files not found error [#920](https://github.com/akiver/cs-demo-manager/issues/920)
+
+:::danger
+Due to a CS2 bug since the "Armory" update, the audio when generating videos is not available!
+:::
+
+## v3.8.1
 
 - fix(analyze): incorrect match's date [#915](https://github.com/akiver/cs-demo-manager/discussions/915)
 - fix(ui): ignore keyboard navigation shortcuts from comment inputs [#913](https://github.com/akiver/cs-demo-manager/discussions/913)
