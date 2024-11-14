@@ -6,7 +6,7 @@ CS:DM allows you to export essential data, such as kills, players, rounds, etc, 
 While this is enough for most users, you may want to export more specific data.
 
 Because it would be impossible to fit everyone's needs, you can benefit from data being stored in a database and creating custom exports using **SQL**.  
-If you are unfamiliar with SQL, you can use the [W3Schools course](https://www.w3schools.com/sql/default.asp) to learn the basics.
+If you are unfamiliar with SQL, you can read the [W3Schools course](https://www.w3schools.com/sql/default.asp) to learn the basics.
 
 Here is an example of a query that returns the most bought rifles per map:
 
