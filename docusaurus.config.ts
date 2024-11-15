@@ -141,6 +141,10 @@ const config: Config = {
       apiKey: '1d35305514314e630daabcda039559d3',
       indexName: 'crawler_cs-demo-manager',
     },
+
+    future: {
+      experimental_faster: true,
+    },
   } satisfies Preset.ThemeConfig,
 };
 
