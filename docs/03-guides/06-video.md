@@ -10,11 +10,9 @@ Video jobs are added to a queue allowing you to schedule multiple videos to be g
 
 | OS      | CSGO | CS2 | Death notice edition (HLAE) | Encoding software |
 | ------- | ---- | --- | --------------------------- | ----------------- |
-| Windows | ✅   | ✅  | ⚠️ CS:GO only               | FFmpeg/VirtualDub |
-| Linux   | ✅   | ❌  | ❌                          | FFmpeg            |
+| Windows | ✅   | ✅  | ✅                          | FFmpeg/VirtualDub |
+| Linux   | ✅   | ✅  | ❌                          | FFmpeg            |
 | macOS   | ✅   | -   | ❌                          | FFmpeg            |
-
-About CS2 compatibility, see [CS2 limitations](/docs/cs2#video-generation) for details.
 
 ## Introduction
 
