@@ -1,9 +1,30 @@
-## v3.9.1
+## v3.10.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+- feat: add maps from 13/11/2024 CS2 update
+- feat: auto install updates on Linux
+  :::warning
+  While it should work on other distributions, It has been tested only on Ubuntu and Fedora!
+  :::
+- feat(match): show more economy stats in round details [#937](https://github.com/akiver/cs-demo-manager/issues/937)
+- feat(demos): improved performance when scanning demos in a folder containing sub directories
+- feat(playback): use WS connection to communicate with **CS:GO**, see this [doc](/docs/development/cs-server-plugin) for details
+- feat(playback): avoid initial demo playback blocked by the CS:GO legacy popup at startup
+- feat(playback): the playback option to enable/disable players voices now works with CS:GO
+- feat(video): add an option to enable/disable players voices per sequence
+- feat: detect Steam Snap installation on Linux
+- fix(video): detect when raw files are missing
+- fix(video): "process not found" on Windows when recording CS:GO videos [#951](https://github.com/akiver/cs-demo-manager/issues/951)
+- fix(ui): kill/death diff column sort not working [#961](https://github.com/akiver/cs-demo-manager/issues/961)
+- fix(team): click on Details from the teams table context menu redirects to player's page instead of team's page
+- fix: wrong players and teams k/d stat calculation (it was an average) [#960](https://github.com/akiver/cs-demo-manager/issues/960)
+- fix(ui): missing translations
+
+## v3.9.1
 
 - fix(video): audio is now recorded when generating videos
 

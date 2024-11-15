@@ -133,3 +133,17 @@ From the root project folder:
 
 This error occurs when `Python 3` or the `Desktop development with C++` Visual Studio component are not installed.  
 Please make sure to install all [required dependencies](/docs/development/setup#requirements).
+
+### chrome-sandbox error (Linux)
+
+On Ubuntu >= 20.04, you might encounter the following error:
+
+```bash
+You need to make sure that /electron/dist/chrome-sandbox is owned by root and has mode 4755.
+```
+
+The quick fix is to run the following command to disable the sandbox:
+
+```bash
+sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+```
