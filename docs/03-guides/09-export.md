@@ -2,6 +2,8 @@
 title: 'SQL export'
 ---
 
+## Introduction
+
 CS:DM allows you to export essential data, such as kills, players, rounds, etc, into **JSON** or **XLSX** files.  
 While this is enough for most users, you may want to export more specific data.
 
@@ -40,3 +42,48 @@ To make it easier, it's recommended to use a database tool such as [DBeaver](htt
 You should only read from the database, not modify it!  
 It could create potential issues in the application, please do not open an issue in that case.
 :::
+
+## SQL recipes
+
+### Find quick multi-kills
+
+This query will list all 5K that happened in less than 20 seconds.
+
+```sql
+SELECT
+	"k1"."killer_steam_id",
+	"k1"."killer_name",
+	"matches"."map_name",
+	"matches"."date",
+	(MAX("k1"."tick") - MIN("k1"."tick")) / "matches"."tickrate" AS "duration",
+	"matches"."demo_path"
+FROM
+	"kills" AS "k1"
+	INNER JOIN "kills" AS "k2" ON "k1"."match_checksum" = "k2"."match_checksum"
+	AND "k1"."round_number" = "k2"."round_number"
+	AND "k1"."killer_steam_id" = "k2"."killer_steam_id"
+	INNER JOIN "matches" ON "k1"."match_checksum" = "matches"."checksum"
+GROUP BY
+	"k1"."killer_steam_id",
+	"k1"."killer_name",
+	"k1"."round_number",
+	"k1"."match_checksum",
+	"matches"."map_name",
+	"matches"."demo_path",
+	"matches"."date",
+	"matches"."tickrate"
+HAVING
+	COUNT(DISTINCT "k1"."id") = 5 -- Replace with the number of multi-kills you want to filter
+	AND (MAX("k1"."tick") - MIN("k1"."tick")) / "matches"."tickrate" < 20 -- Replace with the desired duration
+ORDER BY
+	"matches"."date" DESC,
+	"k1"."match_checksum",
+	"k1"."killer_name",
+	"k1"."round_number";
+```
+
+Example result:
+
+| killer_steam_id   | killer_name | map_name | date                   | duration | demo_path           |
+| ----------------- | ----------- | -------- | ---------------------- | -------- | ------------------- |
+| 76561198000000000 | Player1     | de_dust2 | 2024-06-21 07:31:21+00 | 15       | C:\path\to\demo.dem |
