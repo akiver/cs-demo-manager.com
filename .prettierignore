@@ -9,6 +9,7 @@ LICENSE
 *.ico
 *.jpg
 *.png
+*.gif
 *.toml
 .node-version
 .nojekyll
