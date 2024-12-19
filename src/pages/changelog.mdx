@@ -1,9 +1,30 @@
-## v3.10.1
+## v3.11.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+- feat: add support for [MatchZy](https://github.com/shobhit-pathak/MatchZy) demos [#751](https://github.com/akiver/cs-demo-manager/issues/751)
+- feat(video): allow overlapping sequences [#953](https://github.com/akiver/cs-demo-manager/issues/953)
+- feat(video): multiple cameras per sequence [#923](https://github.com/akiver/cs-demo-manager/issues/923). This feature also means:
+  - allow to set camera focus on any player at any tick
+  - add a "Generate cameras" button to generate cameras for the current sequence
+  - add "focus camera on player" in sub context menus
+  - add camera markers on timeline
+  - add camera color indicators per player
+  - add a table to edit cameras quickly
+- feat(video): increase max zoom
+- feat(video): the "show only death notices" option is now configurable per sequence
+- feat(video): add input to change seconds delay before/after round start/end [#927](https://github.com/akiver/cs-demo-manager/issues/927)
+- feat(video): initial start/end ticks are now set to the first round start/end ticks
+- feat(video): open sequence edition on double click on the sequences timeline
+- feat(video): add a button to pause/resume the video queue [#967](https://github.com/akiver/cs-demo-manager/issues/967)
+- feat(search): add how long it took for a multi kill event to happen in results [#977](https://github.com/akiver/cs-demo-manager/issues/977)
+- feat(doc): introduce [SQL recipes](/docs/guides/export#sql-recipes)
+- fix: selected date range filter not highlighted when interacting with date picker
+
+## v3.10.1
 
 - feat(search): add `Round start` event to filter on rounds [#964](https://github.com/akiver/cs-demo-manager/issues/964)
 - fix(playback): first action of highlight/lowlights ignored [#963](https://github.com/akiver/cs-demo-manager/issues/963)
@@ -323,12 +344,12 @@ affected demos again!
 
 ## v3.0.5
 
-- feat(analyze): an error code and a link to the [error documentation](https://cs-demo-manager.com/docs/guides/demos-analysis#analysis-errors) are now displayed when an error occurs during an analysis
+- feat(analyze): an error code and a link to the [error documentation](/docs/guides/demos-analysis#analysis-errors) are now displayed when an error occurs during an analysis
 - fix(video): raw files may be deleted too early, resulting in an encoder software error
 
 ## v3.0.4
 
-- feat(demos): add a link to the [documentation](https://cs-demo-manager.com/docs/faq/stats#the-demo-source-is-not-supported) when a demo's source is not supported
+- feat(demos): add a link to the [documentation](/docs/faq/stats#the-demo-source-is-not-supported) when a demo's source is not supported
 - fix(heatmap): drawing not working since last update
 - fix(dl): corrupted demos are now deleted automatically
 
@@ -352,7 +373,7 @@ affected demos again!
   :::
 - feat(match): add watch player rounds
 - feat(playback): show notification with doc link when game crashes
-- feat(ui): add Chinese Simplified. You can help translating the [application too](https://cs-demo-manager.com/docs/contributing#translate-application)!
+- feat(ui): add Chinese Simplified. You can help translating the [application too](/docs/contributing#translate-application)!
 - fix(video): error when demo path contains spaces
 - fix(demos): fetch unique demos by file path to avoid duplicates
 - fix(analyze): incorrect team names in first round
