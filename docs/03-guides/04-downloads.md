@@ -26,6 +26,14 @@ retrieve your last matches.
 The application downloads demos of the current Steam account logged on.  
 You have to switch to your other accounts on Steam.
 
+## Steam is closing when I refresh my last matches?
+
+Your Steam account is currently in-game on another computer, you have to:
+
+1. Close the game on that computer.
+2. Restart Steam on your computer.
+3. Refresh your last matches on your computer.
+
 ## I can only see my last 8 games?
 
 The message from the Steam Game Coordinator contains only the last 8 matches.  
