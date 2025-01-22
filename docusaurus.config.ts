@@ -108,12 +108,6 @@ const config: Config = {
           'aria-label': 'GitHub repository',
         },
         {
-          href: 'https://twitter.com/CSGODemoManager',
-          position: 'right',
-          className: 'header-twitter-link',
-          'aria-label': 'CS:DM Twitter account',
-        },
-        {
           type: 'localeDropdown',
           position: 'right',
         },
