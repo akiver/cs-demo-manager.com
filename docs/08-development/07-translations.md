@@ -26,6 +26,38 @@ It allows us to [create a PR per language](https://github.com/akiver/cs-demo-man
 Workflows can also be triggered manually from GitHub but it's possible only from maintainers.
 :::
 
+### Crowdin post-export processor
+
+The Crowdin project has the application [Crowdin post-export processor](https://store.crowdin.com/custom-post-export-processor) enabled and has the following script:
+
+```js
+let newContent = content.split('\n');
+newContent = newContent.map((line) => {
+  return line.startsWith('"PO-Revision-Date:') ? '"PO-Revision-Date: \\n"' : line;
+});
+
+while (newContent[newContent.length - 1] === '') {
+  newContent.pop();
+}
+
+const lastLine = newContent[newContent.length - 1];
+if (lastLine !== '') {
+  newContent.push('');
+}
+content = newContent.join('\n');
+```
+
+It does 2 things:
+
+- Ensure there is only 1 blank line at the end of each file
+- Ensure the `PO-Revision-Date` line is always the same
+
+The reason we ensure only 1 line at the end of the file is because when we extract messages with the **Lingui CLI**
+there is only 1 blank line but when we download translations from **Crowdin** there are 2 blank lines.  
+The `PO-Revision-Date` field is updated by Crowdin even if the messages of the language didn't change.
+
+This script avoids unnecessary changes in the `.po` files and so unnecessary PRs.
+
 ## Adding a new language
 
 ### Developer or maintainer steps
