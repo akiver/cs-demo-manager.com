@@ -51,7 +51,7 @@ Positions take a lot of space, you can exclude them from the backup using the `-
 pg_dump -h 127.0.0.1 -p 5432 -U postgres -d csdm --exclude-table-data='*positions*' > backup.sql
 ```
 
-See the [official documentation](https://www.postgresql.org/docs/16/app-pgdump.html) for advanced usage.
+See the [official documentation](https://www.postgresql.org/docs/current/app-pgdump.html) for advanced usage.
 
 ## Importing the database
 

@@ -17,7 +17,7 @@ You can watch the following videos to see the installation steps:
 
 ## Step 1\: The database
 
-A [PostgreSQL](https://www.postgresql.org/) database **version 16** or later is required to use CS Demo Manager, the application will show the following screen until a connection has been established:
+A [PostgreSQL](https://www.postgresql.org/) database **version 17** or later is required to use CS Demo Manager, the application will show the following screen until a connection has been established:
 
 ![Database connection](/img/documentation/installation/database-connection.png)
 
@@ -83,7 +83,7 @@ This step explains how to add `psql` to your `PATH` environment variable so that
 4. Click on `Advanced system settings`.
 5. Click on `Environment Variables...`
 6. Select the `Path` variable from the `User variables` panel at the top and click on `Edit`
-7. Click on `Browse` and select the folder `C:\Program Files\PostgreSQL\16\bin`.
+7. Click on `Browse` and select the folder `C:\Program Files\PostgreSQL\17\bin`.
    :::caution
    If you changed the default PostgreSQL installation path (`C:\Program Files\PostgreSQL\VERSION\bin`), you have to select the correct folder.
 8. Click on `OK`
@@ -98,7 +98,7 @@ This step explains how to add `psql` to your `PATH` environment variable so that
    If the output is something like `psql (PostgreSQL) XX.XX`, **you can skip this step**, otherwise continue.
 3. Still from the `Terminal` application, type the following command and press `Enter`:
    ```shell
-   echo '\nexport PATH="/Library/PostgreSQL/16/bin:$PATH"' >> ~/.zshrc
+   echo '\nexport PATH="/Library/PostgreSQL/17/bin:$PATH"' >> ~/.zshrc
    ```
    :::caution
    - If you changed the default PostgreSQL installation path (`/Library/PostgreSQL/VERSION/bin`), you have to adjust the above command accordingly.
