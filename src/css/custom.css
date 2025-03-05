@@ -97,3 +97,8 @@
   border: 1px solid #2f2f2f;
   border-radius: 8px;
 }
+
+.theme-doc-markdown.markdown img {
+  border: 1px solid #2f2f2f;
+  border-radius: 8px;
+}
