@@ -15,13 +15,17 @@ A **match** results from a demo analysis and contains all the information about 
 | eBot           | ✅   | ✅  |                                                                                                                         |
 | ESL            | ✅   | ✅  | ESL is now FACEIT, newer demos from ESL events should use the FACEIT analyzer.                                          |
 | ESEA           | ✅   | ❌  | ESEA is now FACEIT, their platform is almost dead and I didn't find any CS2 demos recorded with their plugin            |
+| Esplay         | -    | ❌  | [See progress](https://github.com/akiver/cs-demo-manager/issues/1067)                                                   |
 | Esportal       | ✅   | ✅  |                                                                                                                         |
+| Esportligaen   | -    | ❌  | [See progress](https://github.com/akiver/cs-demo-manager/issues/846)                                                    |
 | FACEIT         | ✅   | ✅  |                                                                                                                         |
 | FASTCUP        | ✅   | ✅  |                                                                                                                         |
 | Gamers Club    | ❌   | ❌  |                                                                                                                         |
+| MatchZy        | -    | ✅  |                                                                                                                         |
 | Perfect World  | ✅   | ✅  |                                                                                                                         |
 | PopFlash       | ⚠️   | ❌  | Demo analysis is enabled for CSGO demos but it may not work. Need some recent demos to update it.                       |
 | Private server | ❌   | ❌  | Demos recorded without the built-in match system or a server plugin, i.e. running commands such as `tv_record` manually |
+| Renown         | -    | ❌  | [See progress](https://github.com/akiver/cs-demo-manager/issues/1065)                                                   |
 | Valve (MM)     | ✅   | ✅  |                                                                                                                         |
 
 :::warning
