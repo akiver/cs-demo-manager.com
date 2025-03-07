@@ -1,9 +1,99 @@
-## v3.11.0
+## v3.12.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### UI
+
+- Added a changelog that will be displayed when the app has been updated.  
+  You can also access it from the settings in the "About" tab.
+- Comment columns are now sortable, and the comment is displayed in a tooltip when the icon is hovered over.
+- Updated de_cache radar and thumbnail images.
+
+#### ANALYZE
+
+- Added support for [Renown](https://renown.gg/) demos.
+
+#### PLAYBACK
+
+- Added CS2 aliases that you can type into the game's console or bind it to a keyboard key to listen to specific team/player's voices when watching an analyzed demo from the app.  
+  The following aliases are available:
+
+  - <code>voice_all</code>: listen to all players
+  - <code>voice_ct</code>: listen to players that **STARTED** as CT
+  - <code>voice_t</code>: listen to players that **STARTED** as T
+  - <code>voice_STEAMID64</code>: listen to a specific player. Replace <code>STEAMID64</code> by the player's SteamID64.
+    Example: <code>voice_76561198000697560</code>.
+
+  **It's important to note that for teams aliases it's the starting side, not the current one!**
+
+#### VIDEO
+
+- It's now possible to generate videos using the HLAE sampling system that "streams" the game frames directly to FFmpeg.  
+  It means that you don't need a lot of disk space as images are not saved on the disk anymore and the generation is faster.  
+  Please see the updated [documentation](/docs/guides/video) for details.  
+  **This feature requires HLAE so it's available only on Windows!**
+- Added an option to select the "recording system". **Counter-Strike** (<code>startmovie</code> command) or HLAE (<code>mirv_streams</code> command).
+- Added an option to select the output format (**Images**, **Images + video**, or **Video**).  
+  It also means that the checkboxes "Generate only raw files" and "Delete raw files after encoding" are gone.
+- Removed the option to define the folder where raw files are saved.  
+  It's now directly saved in the output folder when using HLAE or moved to the output folder otherwise.  
+  It didn't really make sens because the raw files were actually saved on the disk where CS is installed and then moved (the <code>startmovie</code> command doesn't allow to define the output).
+- Allow to set seconds before/after each kill/round to start/stop sequences through a dialog.
+- Added a checkbox "Show only death notices" in sequences edition dialog.
+- Added checkboxes in the players table to enable/disable players' voices.
+- It's now possible to change the death notices duration per sequence.
+- Default recording settings are now configurable from the app settings.
+- It's now possible to install FFmpeg without installing HLAE first on Windows.
+
+#### MATCH
+
+- Added search input in chat tab to filter messages.
+
+#### MATCHES
+
+- Added context-menu item to export chat messages.
+
+#### SEARCH
+
+- Added no scope kills event.
+
+#### PLAYER
+
+- Added utilities and opening duels stats panel.
+- Added "Export players voice" in matches table context-menu.
+
+#### DOWNLOAD
+
+- Added support for downloading demos from 5EPlay.
+- Improved error message when retrieving last MM matches while your Steam account is in-game on another device.
+
+#### DEMOS
+
+- Added a UI option to redirect to the match page (instead of the demo page) when opening an analyzed demo. It's disabled by default.
+
+### Fixes
+
+#### ANALYZE
+
+**Requires re-analyzing demos!**
+
+- Incorrect trade kill/death detection.
+- Missing chat messages.
+
+#### MATCH
+
+- Possible wrong duels matrix values.
+
+#### VIDEO
+
+- New FFmpeg major/minor version not detected on Windows.
+
+## v3.11.0
 
 - feat: add support for [MatchZy](https://github.com/shobhit-pathak/MatchZy) demos [#751](https://github.com/akiver/cs-demo-manager/issues/751)
 - feat(video): allow overlapping sequences [#953](https://github.com/akiver/cs-demo-manager/issues/953)
