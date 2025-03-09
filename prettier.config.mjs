@@ -1,5 +1,8 @@
-/** @type {import("@types/prettier").Options} */
-module.exports = {
+/**
+ * @see https://prettier.io/docs/configuration
+ * @type {import("prettier").Config}
+ */
+const config = {
   singleQuote: true,
   printWidth: 120,
   overrides: [
@@ -11,3 +14,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;
