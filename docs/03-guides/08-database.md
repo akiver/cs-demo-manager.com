@@ -31,6 +31,16 @@ If you have a **PSQL binary not found** error, please follow this [guide](/docs/
 to install **only** the `psql` CLI.
 :::
 
+:::warning
+You may encounter the following error (see [the issue](https://github.com/akiver/cs-demo-manager/issues/1083)):
+
+```
+connection is insecure (try using sslmode=require)
+```
+
+In this case, you have to set the environment variable `PGSSLMODE` to `require` and restart the application.
+:::
+
 ## Exporting the database
 
 You can export the database using `pg_dump`.
