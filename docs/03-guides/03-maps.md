@@ -42,7 +42,7 @@ Follow the instructions below to find the files:
 <TabItem value="cs2" label="CS2">
 
 1. Download and launch [Source 2 viewer](https://valveresourceformat.github.io/)
-2. If it's an official Valve map, open the file `pak01_dir.vpk` located in the CS2 folder installation (`C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo`) otherwise open the `vpk` file of the map in `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\maps\map_name.vpk`
+2. If it's an official Valve map, open the file `pak01_dir.vpk` located in the CS2 folder installation (`C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo`) otherwise open the `vpk` file of the map in `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo_community_addons\map_name\map_name_dir.vpk`
 3. Reveal the content of the folder `resource/overviews`
 4. Double click on the text file of the map that you want to open it and get the values
 
@@ -79,7 +79,7 @@ Follow the instructions below to get the radar images:
 <TabItem value="cs2" label="CS2">
 
 1. Download and launch [Source 2 viewer](https://valveresourceformat.github.io/)
-2. If it's an official Valve map, open the file `pak01_dir.vpk` located in the CS2 folder installation (`C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo`) otherwise open the `vpk` file of the map in `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\maps\map_name.vpk`
+2. If it's an official Valve map, open the file `pak01_dir.vpk` located in the CS2 folder installation (`C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo`) otherwise open the `vpk` file of the map in `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo_community_addons\map_name\map_name_dir.vpk`
 3. Reveal the content of the folder `panorama/images/overheadmaps`
 4. Right click on the file `map_name_(lower)_radar.ctex_c` and click on `Decompile and export` to export it as a `PNG` image
 
