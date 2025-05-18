@@ -25,7 +25,7 @@ A **match** results from a demo analysis and contains all the information about 
 | Perfect World  | ✅   | ✅  |                                                                                                                         |
 | PopFlash       | ⚠️   | ❌  | Demo analysis is enabled for CSGO demos but it may not work. Need some recent demos to update it.                       |
 | Private server | ❌   | ❌  | Demos recorded without the built-in match system or a server plugin, i.e. running commands such as `tv_record` manually |
-| Renown         | -    | ❌  | [See progress](https://github.com/akiver/cs-demo-manager/issues/1065)                                                   |
+| Renown         | -    | ✅  |                                                                                                                         |
 | Valve (MM)     | ✅   | ✅  |                                                                                                                         |
 
 :::warning
