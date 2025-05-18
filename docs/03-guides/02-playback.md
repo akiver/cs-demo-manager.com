@@ -2,6 +2,21 @@
 title: Demo playback
 ---
 
+## Player voices filtering
+
+CS:DM adds convenient console aliases for **CS2** (not CS:GO) that you can use in the game's console or bind to a key, allowing you to listen to specific teams or players' voices while watching an **analyzed demo**.
+
+**Available aliases:**
+
+- `voice_all`: Listen to all players
+- `voice_ct`: Listen to players who **started** as Counter-Terrorists
+- `voice_t`: Listen to players who **started** as Terrorists
+- `voice_STEAMID64`: Listen to a specific player (replace `STEAMID64` with the player's actual SteamID64, e.g., `voice_76561198000697560`)
+
+:::warning
+Team-based aliases (`voice_ct` and `voice_t`) always refer to the starting side of each player, not their current side in the demo.
+:::
+
 ## CS2 demo playback doesn't start or crashes
 
 1. Steam must be running without admin rights.
