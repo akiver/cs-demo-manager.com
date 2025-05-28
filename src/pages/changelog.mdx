@@ -1,9 +1,88 @@
-## v3.12.0
+## v3.13.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### Maps
+
+- Support for the new maps added in the May 9, 2025 CS2 update.
+
+#### Demos/Matches
+
+- Added an export mode selection dialog when exporting players' voices. You can now choose between:
+
+  - One file per player (no silence, only voice)
+  - One file per player (with silence, demo length)
+  - Single file (all players voices are mixed together in one audio file, with silence, demo length)
+
+#### Team
+
+- Added a "**Performance**" tab in the team page that shows side, bomb, and round outcomes stats.
+
+#### Analyze
+
+- Added support for [Esplay](https://esplay.com) demos.
+
+#### Search
+
+- Added a "**Through smoke kills**" event to find kills made through smoke.
+
+#### Players
+
+- Added a context menu item and a button to export players to XLSX from the list/player's page.
+
+#### Playback
+
+- Counter-Strike launch parameters defined in the playback settings are now passed to the game when using HLAE through its `-customLaunchOptions` parameter.
+- Added HLAE command-line parameters input in the app video settings. It's passed to HLAE when watching a demo.
+
+#### Demos
+
+- Added back the context menu item to export players voices from the list.
+
+#### Video
+
+- It's now possible to add multiple sequences with the same start/end ticks.
+
+#### Match
+
+- Added a "**Round outcomes by economy type**" chart in the "**Economy**" tab.
+
+#### 2D viewer
+
+- The bomb is now drawn when it's dropped.
+
+### Fixes
+
+#### Download
+
+- Crash when loading last MM matches and a game was played on _cs_agency_.
+
+#### UI
+
+- Column sorting now takes case into account.
+
+#### Match
+
+- Wallbang/no scope kills always 0 in scoreboard
+
+#### Players
+
+- Error when loading more than 65536 players
+
+#### Video
+
+- Properly detect FFmpeg executables that use a git based version.
+
+#### Analyze
+
+- Fixed possible errors.
+
+## v3.12.0
 
 ### New features and improvements
 
