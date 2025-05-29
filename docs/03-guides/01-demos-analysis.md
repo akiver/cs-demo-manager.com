@@ -15,7 +15,7 @@ A **match** results from a demo analysis and contains all the information about 
 | eBot           | ✅   | ✅  |                                                                                                                         |
 | ESL            | ✅   | ✅  | ESL is now FACEIT, newer demos from ESL events should use the FACEIT analyzer.                                          |
 | ESEA           | ✅   | ❌  | ESEA is now FACEIT, their platform is almost dead and I didn't find any CS2 demos recorded with their plugin            |
-| Esplay         | -    | ❌  | [See progress](https://github.com/akiver/cs-demo-manager/issues/1067)                                                   |
+| Esplay         | -    | ✅  |                                                                                                                         |
 | Esportal       | ✅   | ✅  |                                                                                                                         |
 | Esportligaen   | -    | ❌  | [See progress](https://github.com/akiver/cs-demo-manager/issues/846)                                                    |
 | FACEIT         | ✅   | ✅  |                                                                                                                         |
