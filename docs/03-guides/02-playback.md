@@ -26,13 +26,37 @@ Team-based aliases (`voice_ct` and `voice_t`) always refer to the starting side 
 3. Close any anticheat software (FaceIt, ESEA, etc.).
 4. If the Counter-Strike official servers are down, the playback won't start the first time, you will have to click a
    second time to start the playback. See [#992](https://github.com/akiver/cs-demo-manager/issues/992).
-5. CS2 updates may break playback for demos generated from previous CS2 versions, leading to playback not starting or the game crashing.  
-   To detect if it's a CS2 or CS:DM issue, you should try to play the demo **from the game rather than CS:DM** and check if the playback starts **and** the game doesn't crash during the playback (it can happen).  
-   If it doesn't work in the game either, that's probably because the demo was recorded with an older CS2 version and is incompatible with the latest version.  
-   Valve sometimes creates a "_branch_" (available from the game properties in Steam) to allow playing on a previous game version.  
-   As a last resort, you can try to find a compatible CS2 branch by selecting it from the CS2 properties in Steam and then try to play the demo again.  
+5. There may be an incompatibility between your CS2 version and the internal [CS:DM plugin](/docs/development/cs-server-plugin).  
+   See [CS2 plugin compatibility](#cs2-plugin-compatibility) for more information.
+
+## CS2 plugin compatibility
+
+CS:DM uses a ['plugin'](/docs/development/cs-server-plugin) to communicate with CS2 and control demo playback.  
+This plugin is closely tied to the game build, so if CS2 is updated or your installed CS2 version is incompatible with the plugin, playback may not start, or the game may crash.
+
+The application bundles several versions of the plugin to ensure compatibility with different CS2 builds.  
+You can select the plugin version in the **Playback** settings.
+
+![CS2 plugin version](/img/documentation/guides/playback/cs2-plugin-version.png)
+
+:::danger
+You should use this option only if you want to watch old demos that are not compatible with the latest CS2 version.  
+If you do so, you must also ensure that the CS2 version you have installed is compatible with the selected plugin version.  
+You can change the CS2 version by selecting a branch in the CS2 properties in Steam.
+:::
+
+If you encounter issues with demo playback such as game crash or playback not starting, please follow these troubleshooting steps:
+
+1. Make sure the demo you are trying to play is compatible with your current setup, that is:
+
+   - CS2 version: from the **'Betas'** tab in the CS2 properties in your Steam library.
+   - CS:DM plugin version: from the **Playback** settings in CS:DM. When you select a version other than **latest**, it will display compatible demos date ranges.
+   - On **Windows only** and if you want to generate videos, your HLAE version must be compatible with the CS2 version.  
+     You can download older versions of HLAE from [GitHub](https://github.com/advancedfx/advancedfx/releases) and select it from the **Video** settings in CS:DM.
+
+2. As a last resort, to determine if it's a CS2 or CS:DM issue, try to play the demo **from the game rather than CS:DM** and check if the playback starts **and** the game doesn't crash during the playback (it can happen).  
    CS:DM starts the currently installed version of CS2 so if it doesn't work in the game, it won't work in CS:DM either.  
-   If the issue happens only when playing the demo from CS:DM, please create a [new issue](https://github.com/akiver/cs-demo-manager/issues/new).
+   If the issue occurs only when playing the demo from CS:DM, please create a [new issue](https://github.com/akiver/cs-demo-manager/issues/new).
 
 ## Counter-Strike executable not found
 
@@ -58,7 +82,7 @@ It's not supported yet, so please install Steam using the native installer.
 
 ## Watching CSGO demos
 
-In order to watch **CSGO** demos, you have to select the **csgo_legacy** branch.  
+In order to watch **CSGO** demos, you have to select the **csgo_legacy** branch from your Steam library.  
 To do so, follow these steps:
 
 1. Right click on **CS2** in your Steam library and click on **Properties**.
