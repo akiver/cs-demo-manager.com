@@ -148,6 +148,8 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 
 - Fixed possible errors.
 
+---
+
 ## v3.12.0
 
 ### New features and improvements
@@ -238,6 +240,8 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 
 - New FFmpeg major/minor version not detected on Windows.
 
+---
+
 ## v3.11.0
 
 - feat: add support for [MatchZy](https://github.com/shobhit-pathak/MatchZy) demos [#751](https://github.com/akiver/cs-demo-manager/issues/751)
@@ -259,10 +263,14 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 - feat(doc): introduce [SQL recipes](/docs/guides/export#sql-recipes)
 - fix: selected date range filter not highlighted when interacting with date picker
 
+---
+
 ## v3.10.1
 
 - feat(search): add `Round start` event to filter on rounds [#964](https://github.com/akiver/cs-demo-manager/issues/964)
 - fix(playback): first action of highlight/lowlights ignored [#963](https://github.com/akiver/cs-demo-manager/issues/963)
+
+---
 
 ## v3.10.0
 
@@ -285,9 +293,13 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 - fix: wrong players and teams k/d stat calculation (it was an average) [#960](https://github.com/akiver/cs-demo-manager/issues/960)
 - fix(ui): missing translations
 
+---
+
 ## v3.9.1
 
 - fix(video): audio is now recorded when generating videos
+
+---
 
 ## v3.9.0
 
@@ -308,10 +320,14 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 Due to a CS2 bug since the "Armory" update, the audio when generating videos is not available!
 :::
 
+---
+
 ## v3.8.1
 
 - fix(analyze): incorrect match's date [#915](https://github.com/akiver/cs-demo-manager/discussions/915)
 - fix(ui): ignore keyboard navigation shortcuts from comment inputs [#913](https://github.com/akiver/cs-demo-manager/discussions/913)
+
+---
 
 ## v3.8.0
 
@@ -330,6 +346,8 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix(analyze): possible error when analyzing demos [#904](https://github.com/akiver/cs-demo-manager/issues/904)
 - fix(video): preserve raw files / output folder path on retry
 
+---
+
 ## v3.7.1
 
 - feat(video): add option to generate player's deaths sequences [#892](https://github.com/akiver/cs-demo-manager/issues/892)
@@ -341,6 +359,8 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - feat(player): show most played map first in the list
 - fix: psql process not terminating on connection timeout [#890](https://github.com/akiver/cs-demo-manager/issues/890)
 - fix: error when inserting a huge amount of steam accounts in a single query [#890](https://github.com/akiver/cs-demo-manager/issues/890)
+
+---
 
 ## v3.7.0
 
@@ -356,11 +376,15 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix(match): empty scoreboard when players didn't have kills
 - fix(ui): hide context menu on navigation
 
+---
+
 ## v3.6.3
 
 - feat(demos): allow to sort demos by status [#867](https://github.com/akiver/cs-demo-manager/discussions/867)
 - feat(matches): add 5K/4K/3K and HLTV 2.0 columns [#866](https://github.com/akiver/cs-demo-manager/discussions/866)
 - fix: database error on fresh installation since v3.6.2 [#873](https://github.com/akiver/cs-demo-manager/discussions/873)
+
+---
 
 ## v3.6.2
 
@@ -368,9 +392,13 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix: support for the 31/05/2024 CS2 update (affecting playback, highlights, video...)
 - fix: support voice extraction for demos after the 31/05/2024 CS2 update
 
+---
+
 ## v3.6.1
 
 - fix(analyze): support for the 29/05/2024 CS2 update
+
+---
 
 ## v3.6.0
 
@@ -396,6 +424,8 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix(table): moving columns not working when some are hidden [#832](https://github.com/akiver/cs-demo-manager/issues/832)
 - fix(settings): allow to set 0 seconds before kill delay
 
+---
+
 ## v3.5.3
 
 - feat(playback): allow focusing camera on other players after initial focus [#813](https://github.com/akiver/cs-demo-manager/issues/813)
@@ -408,6 +438,8 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix(demo): previous/next buttons not working when using the context menu to see demo's details
 - fix(analyze): demos network protocol not updated in database
 
+---
+
 ## v3.5.2
 
 - feat(match): add dropdown to hide/show scoreboard columns
@@ -415,10 +447,14 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix: support voice extraction for demos after the 25/04/2024 CS2 update
 - fix: demos possibly ignored when importing from a V2 backup file
 
+---
+
 ## v3.5.1
 
 - fix(analyze): 25/04/2024 CS2 update support
 - fix: error `relation "tags" does not exist` on fresh installation [#811](https://github.com/akiver/cs-demo-manager/discussions/811)
+
+---
 
 ## v3.5.0
 
@@ -434,6 +470,8 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix(player): wrong win percentage calculation per side [#799](https://github.com/akiver/cs-demo-manager/issues/799)
 - fix(2d): use CS2 map images instead of CSGO ones [#801](https://github.com/akiver/cs-demo-manager/issues/801)
 - fix(playback): camera may not focus on player with non Valve demos [#808](https://github.com/akiver/cs-demo-manager/issues/808)
+
+---
 
 ## v3.4.0
 
@@ -454,12 +492,16 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix(match): weapons tables not properly filtering stats [#791](https://github.com/akiver/cs-demo-manager/issues/786)
 - fix(xlsx): use single match export when only 1 match is selected
 
+---
+
 ## v3.3.2
 
 - feat: an `AppImage` package is now available for Linux users [#640](https://github.com/akiver/cs-demo-manager/issues/640)
 - feat(2d): remove sounds [#669](https://github.com/akiver/cs-demo-manager/discussions/669)
 - fix(analyze): possible error [#774](https://github.com/akiver/cs-demo-manager/issues/774)
 - fix: players' voice extraction not working with players that have non ASCII characters in their name [#777](https://github.com/akiver/cs-demo-manager/issues/777)
+
+---
 
 ## v3.3.1
 
@@ -473,6 +515,8 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix(download): tied game shown as victory or defeat in sidebar [#768](https://github.com/akiver/cs-demo-manager/issues/768)
 - fix(download): possible reversed teams scores and players teams in scoreboard
 
+---
+
 ## v3.3.0
 
 - feat(analyze): add support for [Esportal](https://esportal.com/en/home) demos
@@ -484,6 +528,8 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
   :::
 - fix: reduce possible risk of game crash when demo playback starts
 
+---
+
 ## v3.2.3
 
 - feat(analyze): demos from Blast events are now detected as FACEIT demos
@@ -491,10 +537,14 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix(cli): `--force-analyze` not working with the `xlsx` command
 - fix: crash when launching CS2 since the 13/02/2024 update
 
+---
+
 ## v3.2.2
 
 - feat(analyze): support for demos created after the last CS2 major update
 - fix(cli): re-enable the `download` command
+
+---
 
 ## v3.2.1
 
@@ -514,6 +564,8 @@ Due to a CS2 bug since the "Armory" update, the audio when generating videos is 
 - fix(analyze): possible missing players
 - fix(settings): database connection window ignoring mouse/keyboard inputs after disconnection
 - feat(ui): more Portuguese (Brazil) translations
+
+---
 
 ## v3.2.0
 
@@ -538,6 +590,8 @@ will have to clear the demos cache from the [settings](/docs/guides/database#opt
 affected demos again!
 :::
 
+---
+
 ## v3.1.0
 
 - feat(match): add a "**Duels**" tab with opening duels stats and an interactive map to find out where opening kills
@@ -561,10 +615,14 @@ affected demos again!
 - fix(analyze): possible errors with CS2 demos
 - fix(analyze): possible missing bomb defused events with CSGO demos
 
+---
+
 ## v3.0.7
 
 - fix(demos): challenger mode demos not recognized as analyzable
 - fix(cli): missing possible demo source values in help output
+
+---
 
 ## v3.0.6
 
@@ -577,16 +635,22 @@ affected demos again!
 - fix: stop background tasks on database disconnection
 - fix: missing Chinese translations in date picker
 
+---
+
 ## v3.0.5
 
 - feat(analyze): an error code and a link to the [error documentation](/docs/guides/demos-analysis#analysis-errors) are now displayed when an error occurs during an analysis
 - fix(video): raw files may be deleted too early, resulting in an encoder software error
+
+---
 
 ## v3.0.4
 
 - feat(demos): add a link to the documentation when a demo's source is not supported
 - fix(heatmap): drawing not working since last update
 - fix(dl): corrupted demos are now deleted automatically
+
+---
 
 ## v3.0.3
 
@@ -599,6 +663,8 @@ affected demos again!
 - fix(analyze): possible incorrect round start tick
 - fix(match): wrong wallbang kills column values
 - fix(dl): possible downloading error due to redirection
+
+---
 
 ## v3.0.2
 
@@ -613,6 +679,8 @@ affected demos again!
 - fix(demos): fetch unique demos by file path to avoid duplicates
 - fix(analyze): incorrect team names in first round
 
+---
+
 ## v3.0.1
 
 - feat(playback): preserve user CS2 cfg when starting the game
@@ -623,6 +691,8 @@ affected demos again!
 - fix: match insertion error when the db password contains special chars
 - fix: bomb exploded round end reason may not be detected
 - fix(demos): allow refreshing the table on error
+
+---
 
 ## v3.0.0
 
