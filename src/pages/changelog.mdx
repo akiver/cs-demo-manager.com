@@ -1,9 +1,59 @@
-## v3.13.1
+## v3.14.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### 2D Viewer
+
+- You can now play an audio file in the 2D viewer during playback. See the [documentation](/docs/guides/2d-viewer) for usage instructions.
+
+#### Matches
+
+- A filter to export voices of only specific players is available in the export context-menu.
+
+#### Match
+
+- Added melee weapons (knife, taser) stats in the weapons tab.
+
+#### Settings
+
+- Added a playback option to use older internal [CS2 'plugin'](/docs/guides/playback#cs2-plugin-compatibility). This allows to watch old demos not supported by the last CS2 build in combination of using an older CS2 Steam beta branch.
+- Non-existent demos folders are now preserved on app startup.
+
+#### Download
+
+- The date of the match when downloading non-Valve demos is now more accurate. We retrieve it from the third-party service.
+
+#### Video
+
+- Added a player filter in the **'Generate players' sequence'** dialog to generate sequences for multiple players.
+- Added a round filter in the **'Generate players' sequence'** dialog to generate sequences only for specific rounds.
+- Added an option to preserve existing sequences in the **'Generate players' sequence'** dialog.
+- Options requiring HLAE are hidden if the recording system is not HLAE.
+- The app now uses the HLAE command `mirv_replace_name` (added in version 2.184.0) to replace player names.
+
+### Fixes
+
+#### General
+
+- Support for the 28th July 2025 CS2 update.
+
+#### 2D Viewer
+
+- Flashbang icons in the players overview now match the number of flashbangs a player has.
+
+#### Video
+
+- Last player not visible in the table from the section 'Override player options' of the **'Edit sequences settings'** dialog.
+- Possible single frame in the video when using HLAE with 128 tickrate **CS:GO** demos.
+
+---
+
+## v3.13.1
 
 ### New features and improvements
 
@@ -16,6 +66,8 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 #### General
 
 - Fix crash on fresh installation
+
+---
 
 ## v3.13.0
 
