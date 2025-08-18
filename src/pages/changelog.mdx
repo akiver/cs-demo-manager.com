@@ -1,3 +1,5 @@
+[comment]: # 'If the last changelog contains links to domains not in the connect-src CSP of the app, they have to be added in https://github.com/akiver/cs-demo-manager/blob/main/src/ui/index.html, otherwise clicking on the links from the app will not work!'
+
 ## v3.14.2
 
 :::info
@@ -226,11 +228,11 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 - Added CS2 aliases that you can type into the game's console or bind it to a keyboard key to listen to specific team/player's voices when watching an analyzed demo from the app.  
   The following aliases are available:
 
-  - <code>voice_all</code>: listen to all players
-  - <code>voice_ct</code>: listen to players that **STARTED** as CT
-  - <code>voice_t</code>: listen to players that **STARTED** as T
-  - <code>voice_STEAMID64</code>: listen to a specific player. Replace <code>STEAMID64</code> by the player's SteamID64.
-    Example: <code>voice_76561198000697560</code>.
+  - `voice_all`: listen to all players
+  - `voice_ct`: listen to players that **STARTED** as CT
+  - `voice_t`: listen to players that **STARTED** as T
+  - `voice_STEAMID64`: listen to a specific player. Replace `STEAMID64` by the player's SteamID64.
+    Example: `voice_76561198000697560`.
 
   **It's important to note that for teams aliases it's the starting side, not the current one!**
 
@@ -240,12 +242,12 @@ You can support the project by [contributing](/docs/contributing) or [donating](
   It means that you don't need a lot of disk space as images are not saved on the disk anymore and the generation is faster.  
   Please see the updated [documentation](/docs/guides/video) for details.  
   **This feature requires HLAE so it's available only on Windows!**
-- Added an option to select the "recording system". **Counter-Strike** (<code>startmovie</code> command) or HLAE (<code>mirv_streams</code> command).
+- Added an option to select the "recording system". **Counter-Strike** (`startmovie` command) or HLAE (`mirv_streams` command).
 - Added an option to select the output format (**Images**, **Images + video**, or **Video**).  
   It also means that the checkboxes "Generate only raw files" and "Delete raw files after encoding" are gone.
 - Removed the option to define the folder where raw files are saved.  
   It's now directly saved in the output folder when using HLAE or moved to the output folder otherwise.  
-  It didn't really make sens because the raw files were actually saved on the disk where CS is installed and then moved (the <code>startmovie</code> command doesn't allow to define the output).
+  It didn't really make sens because the raw files were actually saved on the disk where CS is installed and then moved (the `startmovie` command doesn't allow to define the output).
 - Allow to set seconds before/after each kill/round to start/stop sequences through a dialog.
 - Added a checkbox "Show only death notices" in sequences edition dialog.
 - Added checkboxes in the players table to enable/disable players' voices.
