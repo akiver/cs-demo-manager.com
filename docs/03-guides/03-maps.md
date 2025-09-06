@@ -71,7 +71,7 @@ It's optional and must be in `PNG` format with a maximum resolution of `600x340`
 There are 2 radar images, the upper and lower radars.  
 They are used for features such as heatmap and 2D replay and are both optional.  
 The lower radar should be filled if the map has 2 levels like `de_nuke`.  
-Images must be in `PNG` format, and their resolution must be `1024x1024` pixels.
+Images must be in `PNG` format and square (1:1 aspect ratio).
 
 Follow the instructions below to get the radar images:
 
@@ -101,6 +101,10 @@ Make sure to install your image editor plugin to support the `.dds` format.
 
 </TabItem>
 </Tabs>
+
+:::tip
+[Simple Radar](https://readtldr.gg/simpleradar) offers high-quality radar images.
+:::
 
 ## Resetting default maps
 
