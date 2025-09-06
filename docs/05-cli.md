@@ -260,5 +260,69 @@ csdm json "C:\Users\username\Desktop\demo.dem"
 Export multiple demos in a custom directory and minify the JSON files:
 
 ```bash
-csdm xlsx "C:\Users\username\Desktop\demo.dem" "C:\Users\username\Desktop\demo2.dem" --output-folder "C:\Users\username\Documents" --minify
+csdm json "C:\Users\username\Desktop\demo.dem" "C:\Users\username\Desktop\demo2.dem" --output-folder "C:\Users\username\Documents" --minify
+```
+
+## Generate videos
+
+Generate videos from demos.
+
+```bash
+csdm video demoPath startTick endTick [options]
+```
+
+:::warning
+See the [video documentation](/docs/guides/video) for more information about options.  
+Third-party software will be downloaded automatically if not present!
+:::
+
+| Name                                  | Default        | Mandatory | Description                                                         |
+| ------------------------------------- | -------------- | --------- | ------------------------------------------------------------------- |
+| demoPath                              |                | Yes       | Path to the `.dem` file to record from.                             |
+| startTick                             |                | Yes       | Start tick of the sequence to record.                               |
+| endTick                               |                | Yes       | End tick of the sequence to record.                                 |
+| --framerate \<number\>                | CS:DM settings | No        | Output frame rate.                                                  |
+| --width \<number\>                    | CS:DM settings | No        | Output width in pixels.                                             |
+| --height \<number\>                   | CS:DM settings | No        | Output height in pixels.                                            |
+| --close-game-after-recording          | CS:DM settings | No        | Close the game when recording finishes.                             |
+| --no-close-game-after-recording       | CS:DM settings | No        | Do not close the game after recording.                              |
+| --concatenate-sequences               | CS:DM settings | No        | Concatenate recorded sequences into a single video.                 |
+| --no-concatenate-sequences            | CS:DM settings | No        | Export each recorded sequence separately.                           |
+| --encoder-software \<string\>         | CS:DM settings | No        | Encoding backend. Allowed values: `FFmpeg`, `VirtualDub`.           |
+| --recording-system \<string\>         | CS:DM settings | No        | Recording system. Allowed values: `HLAE`, `CS`.                     |
+| --recording-output \<string\>         | CS:DM settings | No        | Output type. Allowed values: `video`, `images`, `images-and-video`. |
+| --ffmpeg-crf \<number\>               | CS:DM settings | No        | FFmpeg CRF (quality). Lower = higher quality (between 0 and 51).    |
+| --ffmpeg-audio-bitrate \<number\>     | CS:DM settings | No        | FFmpeg audio bitrate in kbps.                                       |
+| --ffmpeg-video-codec \<string\>       | CS:DM settings | No        | FFmpeg video codec (e.g., `libx264`, `libx265`).                    |
+| --ffmpeg-audio-codec \<string\>       | CS:DM settings | No        | FFmpeg audio codec (e.g., `aac`, `libopus`).                        |
+| --ffmpeg-video-container \<string\>   | CS:DM settings | No        | Output container. Allowed values: `mp4`, `avi`, `mkv`.              |
+| --ffmpeg-input-parameters \<string\>  | CS:DM settings | No        | Extra FFmpeg input parameters.                                      |
+| --ffmpeg-output-parameters \<string\> | CS:DM settings | No        | Extra FFmpeg output parameters.                                     |
+| --show-x-ray                          | CS:DM settings | No        | Enable X-Ray during recording.                                      |
+| --no-show-x-ray                       | CS:DM settings | No        | Disable X-Ray during recording.                                     |
+| --show-only-death-notices             | CS:DM settings | No        | Show only death notices HUD.                                        |
+| --no-show-only-death-notices          | CS:DM settings | No        | Show full HUD (not only death notices).                             |
+| --player-voices                       | CS:DM settings | No        | Enable in-game player voices.                                       |
+| --no-player-voices                    | CS:DM settings | No        | Disable in-game player voices.                                      |
+| --death-notices-duration \<number\>   | CS:DM settings | No        | Duration in seconds of death notices.                               |
+| --cfg \<string\>                      | CS:DM settings | No        | Plain text config executed before recording.                        |
+
+### Examples
+
+Record a video from tick 1200 to 4000 and use latest CS:DM settings:
+
+```bash
+csdm video "E:\cs\demo.dem" 1200 4000
+```
+
+Record a 1080p60 MP4 using FFmpeg:
+
+```bash
+csdm video "E:\cs\demo.dem" 1200 4000 --framerate 60 --width 1920 --height 1080 --encoder-software FFmpeg --ffmpeg-video-container mp4
+```
+
+Use HLAE + FFmpeg, disable X-Ray:
+
+```bash
+csdm video "E:\cs\demo.dem" 1200 4000 --recording-system HLAE --encoder-software FFmpeg --no-show-x-ray
 ```
