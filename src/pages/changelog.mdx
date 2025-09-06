@@ -1,11 +1,57 @@
 [comment]: # 'If the last changelog contains links to domains not in the connect-src CSP of the app, they have to be added in https://github.com/akiver/cs-demo-manager/blob/main/src/ui/index.html, otherwise clicking on the links from the app will not work!'
 
-## v3.14.2
+## v3.15.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### Analyze
+
+- Added an option to analyze multiple demos at the same time. It's 4 by default (up to 8) and can be configured from the **Analyze**
+  settings tab.
+  This can greatly improve the demos analysis speed on computers with multiple CPU cores.
+
+#### 2D Viewer
+
+- Lower radar is now drawn beneath the upper radar so you can see both at the same time. You can move it and adjust its
+  opacity, see the [documentation](/docs/guides/2d-viewer#radar-levels) for details.
+- Added a "**Drawing mode**" to draw on the radar. See the [documentation](/docs/guides/2d-viewer#drawing-on-the-radar) for details.
+
+### CLI
+
+- Added a `video` command to generate videos from demos.  
+  It currently requires to set a start/end tick as parameters which is something that would be optional in the future.  
+  In the long term, the command would allow the same options as the UI.  
+  See the [documentation](/docs/cli#generate-videos) for details.
+
+### Match
+
+- Grenades finder and opening duels maps show the lower radar beneath the upper one.
+
+### Video
+
+- The output folder is no longer deleted on video processing end. This could lead to user's data loss.
+  You now have to delete it manually if you want to.
+
+### Fixes
+
+#### Analyze
+
+- Fixed rare possible missing players or inaccurate player stats with some demos.
+- Fixed database insertion error when using an IPv6 address.
+
+#### Video
+
+- Recording may not start in some rare cases.
+- First kill camera not focusing on correct player with 5EPlay demos.
+- Do not treat not recognized FFmpeg version as not installed to avoid installation loop.
+- Properly detect FFmpeg 8.
+
+## v3.14.2
 
 ### New features and improvements
 
