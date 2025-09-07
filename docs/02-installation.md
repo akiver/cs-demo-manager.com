@@ -149,6 +149,10 @@ It's automatically done during the PostgreSQL installation.
 
 ## Troubleshooting
 
+### Anti-virus reports
+
+See the [FAQ](/docs/06-faq.md#anti-virus-reports).
+
 ### Can I use a remote database?
 
 Yes, see the [documentation](/docs/guides/database#using-a-remote-database).
