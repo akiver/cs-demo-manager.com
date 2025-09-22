@@ -306,6 +306,7 @@ Third-party software will be downloaded automatically if not present!
 | --no-player-voices                    | CS:DM settings | No        | Disable in-game player voices.                                      |
 | --death-notices-duration \<number\>   | CS:DM settings | No        | Duration in seconds of death notices.                               |
 | --cfg \<string\>                      | CS:DM settings | No        | Plain text config executed before recording.                        |
+| --focus-player \<steamID64\>          | -              | No        | Focus on a specific player by their SteamID64.                      |
 
 ### Examples
 
@@ -321,8 +322,8 @@ Record a 1080p60 MP4 using FFmpeg:
 csdm video "E:\cs\demo.dem" 1200 4000 --framerate 60 --width 1920 --height 1080 --encoder-software FFmpeg --ffmpeg-video-container mp4
 ```
 
-Use HLAE + FFmpeg, disable X-Ray:
+Use HLAE + FFmpeg, disable X-Ray and focus on a specific player:
 
 ```bash
-csdm video "E:\cs\demo.dem" 1200 4000 --recording-system HLAE --encoder-software FFmpeg --no-show-x-ray
+csdm video "E:\cs\demo.dem" 1200 4000 --recording-system HLAE --encoder-software FFmpeg --no-show-x-ray --focus-player 76561198000697560
 ```
