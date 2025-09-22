@@ -44,18 +44,18 @@ You can support the project by [contributing](/docs/contributing) or [donating](
   opacity, see the [documentation](/docs/guides/2d-viewer#radar-levels) for details.
 - Added a "**Drawing mode**" to draw on the radar. See the [documentation](/docs/guides/2d-viewer#drawing-on-the-radar) for details.
 
-### CLI
+#### CLI
 
 - Added a `video` command to generate videos from demos.  
   It currently requires to set a start/end tick as parameters which is something that would be optional in the future.  
   In the long term, the command would allow the same options as the UI.  
   See the [documentation](/docs/cli#generate-videos) for details.
 
-### Match
+#### Match
 
 - Grenades finder and opening duels maps show the lower radar beneath the upper one.
 
-### Video
+#### Video
 
 - The output folder is no longer deleted on video processing end. This could lead to user's data loss.
   You now have to delete it manually if you want to.
@@ -207,7 +207,6 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 #### Demos/Matches
 
 - Added an export mode selection dialog when exporting players' voices. You can now choose between:
-
   - One file per player (no silence, only voice)
   - One file per player (with silence, demo length)
   - Single file (all players voices are mixed together in one audio file, with silence, demo length)
@@ -296,7 +295,6 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 
 - Added CS2 aliases that you can type into the game's console or bind it to a keyboard key to listen to specific team/player's voices when watching an analyzed demo from the app.  
   The following aliases are available:
-
   - `voice_all`: listen to all players
   - `voice_ct`: listen to players that **STARTED** as CT
   - `voice_t`: listen to players that **STARTED** as T
