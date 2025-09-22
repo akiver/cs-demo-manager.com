@@ -10,11 +10,11 @@ A **match** results from a demo analysis and contains all the information about 
 | Source         | CSGO | CS2 | Comment                                                                                                                 |
 | -------------- | ---- | --- | ----------------------------------------------------------------------------------------------------------------------- |
 | 5EPlay         | ✅   | ✅  |                                                                                                                         |
-| CEVO           | ❌   | ❌  | Dead platform but demos are still detected in the app                                                                   |
+| CEVO           | ❌   | ❌  | Dead platform but demos are still detected in the app.                                                                  |
 | Challengermode | ✅   | ✅  |                                                                                                                         |
 | eBot           | ✅   | ✅  |                                                                                                                         |
 | ESL            | ✅   | ✅  | ESL is now FACEIT, newer demos from ESL events should use the FACEIT analyzer.                                          |
-| ESEA           | ✅   | ❌  | ESEA is now FACEIT, their platform is almost dead and I didn't find any CS2 demos recorded with their plugin            |
+| ESEA           | ✅   | -   | ESEA is now FACEIT and their servers never supported CS2.                                                               |
 | Esplay         | -    | ✅  |                                                                                                                         |
 | Esportal       | ✅   | ✅  |                                                                                                                         |
 | Esportligaen   | -    | ❌  | [See progress](https://github.com/akiver/cs-demo-manager/issues/846)                                                    |
@@ -48,7 +48,7 @@ HLTV and some platforms compress demos in archives. You have to decompress it ot
 Demos links usually expire after around one month.
 :::
 
-## Analysing demos
+## Analyzing demos
 
 ![Demos analysis steps](/img/documentation/analysis/analysis-steps.png)
 
