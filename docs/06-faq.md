@@ -36,7 +36,7 @@ No.
 
 ## Anti-virus reports
 
-CS:DM ships with three executables: [`cs-demo-manager.exe`](https://github.com/akiver/cs-demo-manager), [`csda.exe`](https://github.com/akiver/cs-demo-analyzer), and [`csgove.exe`](https://github.com/akiver/csgo-voice-extractor). Some antivirus may flag one or more of these as malicious (false positives).
+CS:DM ships with four executables: [`cs-demo-manager.exe`](https://github.com/akiver/cs-demo-manager), [`csda.exe`](https://github.com/akiver/cs-demo-analyzer), [`csgove.exe`](https://github.com/akiver/csgo-voice-extractor), and [`boiler-writter.exe`](https://github.com/akiver/boiler-writter). Some antivirus may flag one or more of these as malicious (false positives).
 
 The most common reason is that the binaries aren’t code‑signed: they don’t include a digital signature that verifies the publisher and the file’s integrity. Without that signature, Windows and antivirus may classify them as “Unknown publisher” and display warnings or block execution.  
 Code signing certificates are costly and the project isn’t company‑backed, that's why the app is currently unsigned.
