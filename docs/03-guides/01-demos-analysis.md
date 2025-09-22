@@ -139,7 +139,7 @@ If it's the case, a more accurate date will be retrieved from this file.
 The HLTV 2.0 rating is calculated using the formula from [this post](https://flashed.gg/posts/reverse-engineering-hltv-rating/).  
 Please note that it's an **estimated value** and may not be 100% accurate as the official HLTV formula is [private](https://www.hltv.org/news/20695/introducing-rating-20).
 
-## HLTV rating 2.1 support
+## HLTV rating 2.1+ support
 
 The official HLTV formula is **private** and there is no plan to reverse-engineer it.  
 Like for the HLTV 2.0 rating, if someone finds an accurate formula and make it [public](https://flashed.gg/posts/reverse-engineering-hltv-rating/), it will be added to the application.
