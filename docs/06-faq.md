@@ -34,6 +34,10 @@ server protected by VAC.
 
 No.
 
+## I have visual glitches
+
+If you encounter visual issues like in [this issue](https://github.com/akiver/cs-demo-manager/discussions/1055), try to disable hardware acceleration from the **UI application settings**.
+
 ## Anti-virus reports
 
 CS:DM ships with four executables: [`cs-demo-manager.exe`](https://github.com/akiver/cs-demo-manager), [`csda.exe`](https://github.com/akiver/cs-demo-analyzer), [`csgove.exe`](https://github.com/akiver/csgo-voice-extractor), and [`boiler-writter.exe`](https://github.com/akiver/boiler-writter). Some antivirus may flag one or more of these as malicious (false positives).
