@@ -55,7 +55,7 @@ export default function Home() {
           <Card title="Videos generation" description="Generate videos from demos." imageSrc="./img/video.png" />
           <Card
             title="Demos download"
-            description="Download your last Matchmaking/FACEIT demos."
+            description="Download your last Valve/third-party demos."
             imageSrc="./img/downloads.png"
           />
           <Card title="Search" description="Quickly find 5K, 4K, ninja defuse..." imageSrc="./img/search.png" />
