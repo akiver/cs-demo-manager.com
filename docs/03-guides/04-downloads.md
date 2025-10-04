@@ -38,3 +38,13 @@ Your Steam account is currently in-game on another computer, you have to:
 
 The message from the Steam Game Coordinator contains only the last 8 matches.  
 It's the same behavior as in-game.
+
+## I have the message "You are already connected to the CS game coordinator"
+
+This message appears when your Steam account is currently in-game on this computer or another one.  
+You have to close the game on that computer and retry.
+
+:::danger
+On Linux, you will see this message if you installed Steam using Flatpak!  
+You must install Steam using your distribution package manager.
+:::
