@@ -65,10 +65,10 @@ These unique IDs prevent overwriting files when generating multiple videos.
 ![Add sequence window](/img/documentation/guides/video/add-sequence.png)
 
 1. The inputs to set the sequence start/end ticks. You would probably not type the ticks manually but use the rounds timeline below.
-2. Buttons to generate/remove cameras focus.
-3. In-game options.
-4. The sequence's duration, how much disk space it requires and a button to add it.
-5. The list of camera players focus during the sequence.
+2. In-game options.
+3. The sequence's duration, how much disk space it requires and a button to add it.
+4. List of camera focus events on players during the sequence.
+5. List of fixed viewpoint cameras during the sequence.
 6. Players options.
 7. Game commands executed when the sequence starts.
 8. Rounds timeline.
@@ -282,7 +282,13 @@ For example, if you right-click on a round, you will be able to change the ticks
 ![Round context menu](/img/documentation/guides/video/round-context-menu.png)
 :::
 
-### Cameras focus
+### Cameras
+
+You can mix player-focused POVs with fixed map viewpoints.
+
+![Cameras](/img/documentation/guides/video/cameras.png)
+
+#### Player focus
 
 You can ask to focus the camera on a specific player at any tick during the sequence.  
 To do so, you have 2 options:
@@ -292,9 +298,22 @@ To do so, you have 2 options:
    ![Generate cameras dialog](/img/documentation/guides/video/generate-cameras-dialog.png)  
    This dialog allows you to focus the camera on a player at the start of the sequence and generate cameras focus from events that happened during the sequence with a delay.
 
+#### Fixed viewpoint
+
+You can also use fixed viewpoint cameras defined in the application [cameras settings](/docs/guides/cameras).  
+To do so, right-click on the timeline, go to **Set camera** and select the camera you want to use.
+
+:::warning
+If you don't see **Set camera** in the context menu, it means there is no camera defined for the current map and game and you need to [add one](/docs/guides/cameras#addingediting-a-camera) first!
+:::
+
 ### In-game options
 
 ![In-game options](/img/documentation/guides/video/in-game-options.png)
+
+#### Record audio
+
+Enable/disable audio recording.
 
 #### Player voices
 
@@ -305,6 +324,10 @@ Fully enable/disable player voices.
 It turns on/off the Counter-Strike X-Ray mode.  
 When enabled, you can see all players through walls:  
 ![X-Ray mode](/img/documentation/guides/video/x-ray.png)
+
+#### Show assists
+
+It turns on/off the display of assists in death notices using the `mp_display_kill_assists` game command.
 
 #### Show only death notices
 
@@ -360,6 +383,12 @@ Timelines are interactive. You can click and drag to move on the timeline, use t
 right-click to open a context menu.
 
 ![Timeline](/img/documentation/guides/video/timeline.gif)
+
+### Round comments
+
+If you add a comment to a round in the match **Rounds** tab, the timeline displays a comment icon. Hover the icon to read the comment.
+
+![Round comment](/img/documentation/guides/video/round-comment.png)
 
 ### Generating player's sequences
 
