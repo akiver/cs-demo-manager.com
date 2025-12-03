@@ -87,3 +87,20 @@ Example result:
 | killer_steam_id   | killer_name | map_name | date                   | duration | demo_path           |
 | ----------------- | ----------- | -------- | ---------------------- | -------- | ------------------- |
 | 76561198000000000 | Player1     | de_dust2 | 2024-06-21 07:31:21+00 | 15       | C:\path\to\demo.dem |
+
+### Find specific weapon kills
+
+This query will list all headshot kills made with the Scout (SSG 08).
+
+:::tip
+You can find all available weapon names in [this file](https://github.com/akiver/cs-demo-analyzer/blob/main/pkg/api/constants/weapon.go).  
+If you want to filter for a different weapon, replace `'SSG 08'` with the desired weapon name.  
+If you want to filter for non-headshot kills, change `kills.is_headshot = true` to `kills.is_headshot = false` or remove that line entirely to get all kills with that weapon.
+:::
+
+```sql
+SELECT *
+FROM kills
+WHERE kills.weapon_name = 'SSG 08'
+AND kills.is_headshot = true;
+```
