@@ -142,7 +142,7 @@ Please note that it's an **estimated value** and may not be 100% accurate as the
 ## HLTV rating 2.1+ support
 
 The official HLTV formula is **private** and there is no plan to reverse-engineer it.  
-Like for the HLTV 2.0 rating, if someone finds an accurate formula and make it [public](https://flashed.gg/posts/reverse-engineering-hltv-rating/), it will be added to the application.
+Like for the HLTV 2.0 rating, if someone finds an accurate formula and make it [public](https://web.archive.org/web/20241218023441/https://flashed.gg/posts/reverse-engineering-hltv-rating/), it will be added to the application.
 
 ## Demos stats are wrong or missing
 
