@@ -47,7 +47,6 @@ If you do so, you must also ensure that the CS2 version you have installed is co
 If you encounter issues with demo playback such as a game crash or playback not starting, please follow these troubleshooting steps:
 
 1. Make sure the demo you are trying to play is compatible with your current setup. Specifically check:
-
    - CS2 version: either the custom CS2 location configured in the **Playback** settings, or the version selected under **CS2 > Properties > Betas** in your Steam library.
    - CS:DM plugin version: set in the **Playback** settings in CS:DM. When you select a version other than **Latest**, CS:DM shows the supported demo date ranges.
    - Windows only (for video generation): ensure your HLAE version is compatible with your CS2 version.
@@ -79,7 +78,6 @@ and select the plugin version in the **Playback** settings in CS:DM that matches
 You can do this in two ways:
 
 1. Use a Steam beta branch to install an older version of the game.
-
    1. Right-click **CS2** in your Steam library and go to **Properties**.
    2. Go to the **Betas** tab.
       ![Steam betas](/img/documentation/guides/playback/steam-betas.png)
