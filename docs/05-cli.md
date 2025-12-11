@@ -55,7 +55,7 @@ If you are using another shell, you have to replace `~/.bashrc` with the correct
 
 <TabItem value="windows" label="Windows">
 
-Open a Windows terminal and type `csdm`, it will diplay all available commands.
+Open a Windows terminal and type `csdm`, it will display all available commands.
 
 :::caution
 If you have a message **csdm not found**, it means that the folder where the CLI executable `csdm.exe` is located is not in your `PATH` environment variable.  
@@ -66,7 +66,7 @@ The default path is **C:\Users\Username\AppData\Programs\CS Demo Manager** and y
 
 <TabItem value="macos" label="macOS">
 
-Open a terminal and type `csdm`, it will diplay all available commands.
+Open a terminal and type `csdm`, it will display all available commands.
 
 :::caution
 If you have a message **command not found**, it means the folder where the CLI executable `csdm` is located is not in your `PATH` environment variable.  
@@ -77,7 +77,7 @@ Please follow the [installation instructions](/docs/cli?os=macos#installation) a
 
 <TabItem value="linux" label="Linux">
 
-Open a terminal and type `csdm`, it will diplay all available commands.
+Open a terminal and type `csdm`, it will display all available commands.
 
 :::caution
 If you have a message **command not found**, it means the folder where the CLI executable `csdm` is located is not in your `PATH` environment variable.  
@@ -128,13 +128,13 @@ csdm dl-valve --output "C:\Users\username\Downloads"
 ## Download FACEIT demos
 
 :::danger
-This command is currrently disabled, see [here](/docs/guides/downloads#faceit) for details.
+This command is currently disabled, see [here](/docs/guides/downloads#faceit) for details.
 :::
 
-Download the last demos of the current FACEIT account set in the application or from its nickname.
+Download the last demos of the current [FACEIT](https://www.faceit.com/) account set in the application or from its nickname.
 
 ```bash
-csdm dl-faceit [shareCodes...] [--output]
+csdm dl-faceit [--nickname] [--output]
 ```
 
 | Name       | Default                                                                                       | Mandatory | Description                               |
@@ -162,19 +162,93 @@ To change the directory where demos will be downloaded:
 csdm dl-faceit --output "C:\Users\username\Downloads"
 ```
 
+## Download Renown demos
+
+Download the last demos of the current [Renown](https://renown.gg/) account set in the application or from a Steam ID.
+
+```bash
+csdm dl-renown [--steamid] [--output]
+```
+
+| Name      | Default                                                                                       | Mandatory | Description                               |
+| --------- | --------------------------------------------------------------------------------------------- | --------- | ----------------------------------------- |
+| --steamid | Current account's **Steam ID** set in the application                                         | No        | Account's Steam ID to download demos.     |
+| --output  | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded. |
+
+### Examples
+
+To download last Renown demos of the current Renown account:
+
+```bash
+csdm dl-renown
+```
+
+To download demos of a specific account identified by its Steam ID:
+
+```bash
+csdm dl-renown --steamid "PlayerSteamID64"
+```
+
+To change the directory where demos will be downloaded:
+
+```bash
+csdm dl-renown --output "C:\Users\username\Downloads"
+```
+
+## Download 5EPLAY demos
+
+Download the last demos of the current [5EPLAY](https://www.5eplay.com/) account set in the application or from its ID.
+
+```bash
+csdm dl-5eplay [--id] [--output]
+```
+
+| Name     | Default                                                                                       | Mandatory | Description                               |
+| -------- | --------------------------------------------------------------------------------------------- | --------- | ----------------------------------------- |
+| --id     | Current account's **5EPLAY ID** set in the application                                        | No        | Account's 5EPLAY ID to download demos.    |
+| --output | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded. |
+
+:::tip
+To find your **5EPlay ID**:
+
+1. Log in to your 5EPlay account.
+2. Go to your profile page.
+3. Copy the last segment of the URL. For example, if your profile URL is `https://arena.5eplay.com/data/player/1111`, your **5EPlay ID** is `1111`.
+   :::
+
+### Examples
+
+To download last 5EPlay demos of the current 5EPLAY account:
+
+```bash
+csdm dl-5eplay
+```
+
+To download demos of a specific account identified by its ID:
+
+```bash
+csdm dl-5eplay --id "Player5EPLAYID"
+```
+
+To change the directory where demos will be downloaded:
+
+```bash
+csdm dl-5eplay --output "C:\Users\username\Downloads"
+```
+
 ## Analyze demos
 
 Analyze demos and persist them in the database.
 
 ```bash
-csdm analyze [demoPaths...] [--source] [--force]
+csdm analyze demoPaths... [--source] [--force]
 ```
 
 | Name      | Default | Mandatory | Description                                                                                                                                                |
 | --------- | ------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | demoPaths |         | Yes       | Demos paths, can be either a `.dem` files path or a directory. It can be relative or absolute.                                                             |
 | --source  |         | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,esportal,faceit,fastcup,5eplay,perfectworld,popflash,valve` |
-| --force   | `false` | No        | Force demos analyzes even if they are already in the database.                                                                                             |
+| --force   | `false` | No        | Force demo analysis even if they are already in the database.                                                                                              |
 
 ### Examples
 
@@ -211,7 +285,7 @@ csdm xlsx demoPaths... [--output-folder] [--source] [--single] [--sheets] [--for
 | --output-folder | Current directory | No        | Directory where output files will be saved.                                                                                                                |
 | --single        | `false`           | No        | Generates a single XLSX file instead of one per demo.                                                                                                      |
 | --sheets        | All sheets        | No        | Includes only sheets identified by its name. Available values: [general,players,rounds,kills].                                                             |
-| --force-analyze | `false`           | No        | Force demos analyzes even if they are already in the database.                                                                                             |
+| --force-analyze | `false`           | No        | Force demo analysis even if they are already in the database.                                                                                              |
 
 ### Examples
 
@@ -247,7 +321,7 @@ csdm json demoPaths... [--output-folder] [--source] [--minify] [--force-analyze]
 | --source        |                   | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,esportal,faceit,fastcup,5eplay,perfectworld,popflash,valve` |
 | --output-folder | Current directory | No        | Directory where output files will be saved.                                                                                                                |
 | --minify        | `false`           | No        | Minify the JSON files.                                                                                                                                     |
-| --force-analyze | `false`           | No        | Force demos analyzes even if they are already in the database.                                                                                             |
+| --force-analyze | `false`           | No        | Force demo analysis even if they are already in the database.                                                                                              |
 
 ### Examples
 
