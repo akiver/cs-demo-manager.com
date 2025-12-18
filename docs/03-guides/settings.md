@@ -1,5 +1,6 @@
 ---
 title: Settings
+sidebar_position: 9
 ---
 
 ## Third-party API keys

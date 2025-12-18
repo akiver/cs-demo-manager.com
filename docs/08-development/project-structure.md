@@ -1,5 +1,6 @@
 ---
 title: 'Project structure'
+sidebar_position: 5
 ---
 
 - `build`: Contains files used by `electron-builder` to build the application.

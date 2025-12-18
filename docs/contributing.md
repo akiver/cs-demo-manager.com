@@ -1,6 +1,7 @@
 ---
 title: Contributing
 description: What you can do
+sidebar_position: 7
 ---
 
 There are different ways to contribute to the CS Demo Manager project.  

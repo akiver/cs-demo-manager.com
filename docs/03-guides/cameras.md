@@ -1,5 +1,6 @@
 ---
 title: Cameras
+sidebar_position: 6
 ---
 
 Cameras let you define fixed map viewpoints for use in video recordings.  

@@ -1,5 +1,6 @@
 ---
 title: 'Scripts'
+sidebar_position: 3
 ---
 
 Scripts must be run using the `npm run` command.

@@ -1,5 +1,6 @@
 ---
 title: 'Translations'
+sidebar_position: 7
 ---
 
 The project uses the library [Lingui](https://lingui.dev/introduction) to translate the application and [Crowdin](https://crowdin.com/project/cs-demo-manager) to allow anybody to help translating the application.

@@ -1,5 +1,6 @@
 ---
 title: 'Architecture'
+sidebar_position: 1
 ---
 
 The application is built with [Electron](https://www.electronjs.org/).  

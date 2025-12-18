@@ -3,6 +3,7 @@ title: CS2 limitations
 sidebar_label: CS2 limitations
 slug: /cs2
 description: Known limitations of CS:DM with CS2
+sidebar_position: 4
 ---
 
 Because **CS2** has missing console commands or different behaviors compared to **CS:GO**, some features are not yet available or partially available with **CS2**.  

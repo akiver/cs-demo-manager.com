@@ -1,5 +1,6 @@
 ---
 title: 'Building'
+sidebar_position: 4
 ---
 
 ## Packaging the application

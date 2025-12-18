@@ -1,5 +1,6 @@
 ---
 title: 'Download'
+sidebar_position: 4
 ---
 
 CS:DM allows you to download your recent CS2 demos from official Valve Matchmaking, Valve share codes, and third-party services.

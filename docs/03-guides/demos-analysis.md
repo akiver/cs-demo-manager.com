@@ -1,5 +1,6 @@
 ---
 title: Demos analysis
+sidebar_position: 1
 ---
 
 CS Demo Manager extracts data from Counter-Strike **demos** (`.dem` files) and generates **matches**.  

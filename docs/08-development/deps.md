@@ -1,6 +1,7 @@
 ---
 title: 'Dependencies'
 hide_title: true
+sidebar_position: 8
 ---
 
 ## CS Demo Analyzer (CSDA)

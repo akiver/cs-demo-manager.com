@@ -1,5 +1,6 @@
 ---
 title: Demo playback
+sidebar_position: 2
 ---
 
 ## Player voices filtering

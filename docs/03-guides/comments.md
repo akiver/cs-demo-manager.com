@@ -1,5 +1,6 @@
 ---
 title: Comments
+sidebar_position: 12
 ---
 
 You can add comments to demos (which are always linked to their associated match), players, and rounds.  

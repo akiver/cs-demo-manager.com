@@ -1,6 +1,7 @@
 ---
 title: 2D viewer
 slug: 2d-viewer
+sidebar_position: 8
 ---
 
 ## Introduction

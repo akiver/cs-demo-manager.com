@@ -1,5 +1,6 @@
 ---
 title: 'CS server plugin'
+sidebar_position: 6
 ---
 
 ## Introduction

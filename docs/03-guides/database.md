@@ -1,5 +1,6 @@
 ---
 title: Database
+sidebar_position: 10
 ---
 
 ## Optimizing the database

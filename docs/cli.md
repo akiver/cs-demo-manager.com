@@ -1,6 +1,7 @@
 ---
 title: CLI
 description: How to install and use the CLI (Command Line Interface)
+sidebar_position: 5
 ---
 
 CS:DM comes with a CLI (Command Line Interface) with multiple commands, allowing you to do tasks without running the GUI.

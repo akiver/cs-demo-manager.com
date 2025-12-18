@@ -1,6 +1,7 @@
 ---
 title: 'FAQ'
 hide_title: true
+sidebar_position: 6
 ---
 
 ## I encountered a bug or have a suggestion

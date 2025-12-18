@@ -1,5 +1,6 @@
 ---
 title: Shortcuts
+sidebar_position: 13
 ---
 
 ## Windows/Linux
