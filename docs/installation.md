@@ -152,7 +152,7 @@ It's automatically done during the PostgreSQL installation.
 
 ### Anti-virus reports
 
-See the [FAQ](/docs/06-faq.md#anti-virus-reports).
+See the [FAQ](/docs/faq#anti-virus-reports).
 
 ### Can I use a remote database?
 
