@@ -1,11 +1,77 @@
 [comment]: # 'If the last changelog contains links to domains not in the connect-src CSP of the app, they have to be added in https://github.com/akiver/cs-demo-manager/blob/main/src/ui/index.html, otherwise clicking on the links from the app will not work!'
 
-## v3.16.3
+## v3.17.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### General
+
+- Heatmaps are now zoomable and pannable.
+- [Comments](/docs/guides/comments) can now be added to rounds.
+- `de_nuke` radar images have been updated.
+
+#### Download
+
+- Added Renown support for third-party demo downloads.
+- Increased the number of matches fetched to 20 when retrieving lists from third-party services.
+- Improved the download settings UI.
+
+#### Video
+
+- Added [fixed camera](/docs/guides/cameras) positions.
+- Added a button to only watch sequences without generating videos.
+- Added an option to toggle audio recording.
+- Added buttons to copy/export the current video configuration to JSON.
+- CS2 TrueView telemetry is now hidden using the command `cl_trueview_show_status`.
+- Improved camera focus for overlapping kill sequences.
+
+#### CLI
+
+- Added a [command](/docs/cli#download-renown-demos) to download Renown demos.
+- Added a [command](/docs/cli#download-5eplay-demos) to download 5EPlay demos.
+- Added `--mode=player` and `--event` arguments to the [`video` command](/docs/cli#generate-videos) to generate players' sequences.
+- Added `--config-file` argument to the [`video` command](/docs/cli#generate-videos) to load configuration from a JSON file.
+
+#### Player
+
+- Added a tab to generate heatmaps for a specific player.
+
+#### Team
+
+- Added an input to filter on players in the heatmap view.
+
+#### Playback
+
+- Added a workaround to start demo playback when Steam is offline.
+
+#### Bans
+
+- Format numbers based on the user's locale in ban-related views.
+
+#### Database
+
+- Increased database connection timeout to improve stability on slow connections.
+
+### Fixes
+
+#### Playback
+
+- Fixed possible crash when starting demo playback.
+
+#### Analyze
+
+- Fixed possible error during analysis.
+
+#### UI
+
+- Fixed typos and minor UI issues.
+
+## v3.16.3
 
 ### New features and improvements
 
