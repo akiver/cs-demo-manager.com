@@ -137,20 +137,55 @@ It's automatically done during the PostgreSQL installation.
 
 <TabItem value="linux" label="Linux">
 
-Installers are available as `deb`, `AppImage`, and `rpm` files.  
-A community-maintained AUR package is also available [here](https://aur.archlinux.org/packages/cs-demo-manager-appimage).
+<Tabs groupId="distro" queryString>
+<TabItem value="debian" label="Debian-based distributions">
 
-1. Download the latest CS Demo Manager installer from [GitHub](https://github.com/akiver/cs-demo-manager/releases) for your distribution and install it.
-2. Type the password you chose during the PostgreSQL installation and click on "Connect".
+1. Download the latest `deb` installer from [GitHub](https://github.com/akiver/cs-demo-manager/releases)
+2. `sudo apt install ./cs-demo-manager_<version>_amd64.deb` (replace `<version>` with the actual version number)
+
+</TabItem>
+
+<TabItem value="redhat" label="Red Hat-based distributions">
 
 :::warning
-For Red Hat-based distributions only: enable the GNOME AppIndicator tray extension to show the app icon.
+You must enable the GNOME AppIndicator tray extension to see the app icon!
 
 1. `sudo dnf install gnome-shell-extension-appindicator`
 2. `sudo dnf install gnome-extensions-app`
 3. Reboot
-4. Open the `Extensions` application and enable `AppIndicator and KStatusNotifierItem Support`.
+4. Open the `Extensions` application and enable `AppIndicator and KStatusNotifierItem Support`
    :::
+
+5. Download the latest `rpm` installer from [GitHub](https://github.com/akiver/cs-demo-manager/releases)
+6. `sudo dnf install ./cs-demo-manager-<version>.rpm` (replace `<version>` with the actual version number)
+
+</TabItem>
+
+<TabItem value="arch" label="Arch Linux">
+For Arch-based distros there is a community-maintained [AUR package](https://aur.archlinux.org/packages/cs-demo-manager-appimage) based on the AppImage releases for easier installation and updating. Using `paru` you can install `cs-demo-manager-appimage` with
+
+```bash
+paru -S cs-demo-manager-appimage
+```
+
+or with `yay`
+
+```bash
+yay -S cs-demo-manager-appimage
+```
+
+Other AUR helpers or pacman wrappers obviously work also. Do **NOT** report build or installation issues on Github; instead use the comment section on the AUR. Likewise please don't report application specific bugs on the AUR, except in the rare case that the bug only happens when using the AUR package.
+
+</TabItem>
+
+<TabItem value="app-image" label="AppImage">
+
+1. Download the latest AppImage from [GitHub](https://github.com/akiver/cs-demo-manager/releases)
+2. Make it executable: `chmod +x cs-demo-manager-<version>.AppImage` (replace `<version>` with the actual version number)
+3. Run it: `./CS-Demo-Manager-<version>.AppImage`
+
+</TabItem>
+</Tabs>
 
 </TabItem>
 </Tabs>
