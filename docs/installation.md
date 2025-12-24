@@ -60,7 +60,7 @@ If you want to run the database in a Docker container please read [this document
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-Instructions depends on your Linux distribution, please refer to the [official documentation](https://www.postgresql.org/download/).  
+Instructions depend on your Linux distribution, please refer to the [official documentation](https://www.postgresql.org/download/).  
 Once PostgreSQL is installed (run `psql --version` to make sure it's installed), you have to change the `postgres` user password:
 
 1. `sudo -u postgres psql`
@@ -137,13 +137,20 @@ It's automatically done during the PostgreSQL installation.
 
 <TabItem value="linux" label="Linux">
 
-1. **For RedHat Linux distributions only**, enable the Gnome tray extension:
-   1. `sudo dnf install gnome-shell-extension-appindicator`
-   2. `sudo dnf install gnome-extensions-app`
-   3. Reboot
-   4. Open the `Extensions` application and enable `AppIndicator and KStatusNotifierItem Support`.
-2. Download the last CS Demo Manager installer from [GitHub](https://github.com/akiver/cs-demo-manager/releases) and install it.
-3. Type the password you chose during the PostgreSQL installation and click on "Connect".
+Installers are available as `deb`, `AppImage`, and `rpm` files.  
+A community-maintained AUR package is also available [here](https://aur.archlinux.org/packages/cs-demo-manager-appimage).
+
+1. Download the latest CS Demo Manager installer from [GitHub](https://github.com/akiver/cs-demo-manager/releases) for your distribution and install it.
+2. Type the password you chose during the PostgreSQL installation and click on "Connect".
+
+:::warning
+For Red Hat-based distributions only: enable the GNOME AppIndicator tray extension to show the app icon.
+
+1. `sudo dnf install gnome-shell-extension-appindicator`
+2. `sudo dnf install gnome-extensions-app`
+3. Reboot
+4. Open the `Extensions` application and enable `AppIndicator and KStatusNotifierItem Support`.
+   :::
 
 </TabItem>
 </Tabs>
