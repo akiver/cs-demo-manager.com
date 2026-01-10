@@ -148,3 +148,12 @@ The quick fix is to run the following command to disable the sandbox:
 ```bash
 sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 ```
+
+### Error: listen EACCES: permission denied 0.0.0.0:4574
+
+If you are on Windows, open a PowerShell terminal as administrator and run the following commands:
+
+```powershell
+net stop winnat
+net start winnat
+```
