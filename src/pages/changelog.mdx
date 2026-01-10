@@ -1,11 +1,40 @@
 [comment]: # 'If the last changelog contains links to domains not in the connect-src CSP of the app, they have to be added in https://github.com/akiver/cs-demo-manager/blob/main/src/ui/index.html, otherwise clicking on the links from the app will not work!'
 
-## v3.17.0
+## v3.17.1
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### General
+
+- Added "**Weapon inspections**" panel in match and player's global page that shows how many time a player inspected
+  his weapon and how many times he died while inspecting it.
+  :::warning
+  This feature requires re-analyzing demos to have correct data!
+  :::
+- Added `weapon_inspection_count` and `deaths_while_inspecting_weapon` columns in Excel exports.
+
+### Fixes
+
+#### Video
+
+- Death notices may not appear when sequences overlap.
+
+#### CLI
+
+- Video command help shown instead of starting video generation when `--config-file` is the only arg defined.
+- Video recording not starting when using relative demo paths.
+- Video sequences defined in JSON config file were overridden resulting in a single broken sequence.
+
+#### UI
+
+- Increased the maximum width of the first column in the sequence edition dialog.
+
+## v3.17.0
 
 ### New features and improvements
 
