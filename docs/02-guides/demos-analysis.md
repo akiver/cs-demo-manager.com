@@ -148,7 +148,6 @@ Like for the HLTV 2.0 rating, if someone finds an accurate formula and make it [
 ## Demos stats are wrong or missing
 
 - Some application updates may require re-analyzing demos to have updated stats.
-- If it's a CS2 demo, please ensure it's not related to a [CS2 limitation](/docs/cs2).
 - Ensure the demo comes from a [supported platform](/docs/guides/demos-analysis#what-are-the-supported-demo-sources).
 - Make sure the **source** is correct in the application. For example, if it says **Valve** when the demo comes from
   **FACEIT**, this may be the problem. You can update the source from the demos list (right-click on the demo).

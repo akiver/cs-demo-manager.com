@@ -1,7 +1,7 @@
 ---
 title: Installation
 description: How to install CS Demo Manager
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 import Tabs from '@theme/Tabs';
