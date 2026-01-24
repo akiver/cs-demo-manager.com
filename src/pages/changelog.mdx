@@ -1,11 +1,67 @@
 [comment]: # 'If the last changelog contains links to domains not in the connect-src CSP of the app, they have to be added in https://github.com/akiver/cs-demo-manager/blob/main/src/ui/index.html, otherwise clicking on the links from the app will not work!'
 
-## v3.17.1
+## v3.18.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### Playback
+
+- Added an option to launch CS in "_Fullscreen-windowed_" mode.  
+  :::warning
+  On Linux, the **Fullscreen** mode has been removed because Valve seems to have removed it a few months ago.  
+  See [this issue](https://github.com/ValveSoftware/csgo-osx-linux/issues/4192) and [this one](https://github.com/akiver/cs-demo-manager/issues/1299).
+  :::
+
+#### Maps
+
+- Support for the new maps added in the 21/01/2026 CS2 update.
+
+#### Video
+
+- Added an option to enable/disable CS2 _[TrueView](https://www.counter-strike.net/newsentry/578276333072678918)_ mode.
+  :::warning
+  It has been reported that when "TrueView" is enabled, recording may lags!
+  :::
+- The default checkboxes state is now based on existing sequences in the "_Edit sequences settings_" dialog.
+
+#### UI
+
+- Added Chinese Traditional. The app has been translated by [@yungchunw](https://github.com/yungchunw).
+  :::info
+  You can help translating the [application too](/docs/contributing#translate-application)!
+  :::
+
+### Fixes
+
+#### Analyze
+
+- Huge memory usage when analyzing demos since the 21/01/2026 CS2 update.
+- Fixed error during analysis when the Windows username contains a single quote.
+
+#### Playback
+
+- Playback always starting from the beginning on **Linux** since the 21/01/2026 CS2 update.
+- **CS:GO** not launching on **Linux** when the CS2 Steam runtime script location option is enabled.
+
+#### Settings
+
+- Button to reveal the **CS:GO** log file not working on Linux.
+
+#### Video
+
+- Players' death notices visibility settings may not work correctly.
+- Last player may not be visible in the table from the "_Edit sequences settings_" dialog.
+
+#### UI
+
+- Fixed wrong demo/match date timezone.
+
+## v3.17.1
 
 ### New features and improvements
 
