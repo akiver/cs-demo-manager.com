@@ -391,6 +391,8 @@ There are 3 ways to invoke this command:
 | --ffmpeg-output-parameters \<string\> | CS:DM settings | No        | Extra FFmpeg output parameters.                                                                 |
 | --show-x-ray                          | CS:DM settings | No        | Enable X-Ray during recording.                                                                  |
 | --no-show-x-ray                       | CS:DM settings | No        | Disable X-Ray during recording.                                                                 |
+| --true-view                           | CS:DM settings | No        | Enable CS2 TrueView mode during recording.                                                      |
+| --no-true-view                        | CS:DM settings | No        | Disable CS2 TrueView mode during recording.                                                     |
 | --show-assists                        | CS:DM settings | No        | Show assists in HUD.                                                                            |
 | --no-show-assists                     | CS:DM settings | No        | Hide assists in HUD.                                                                            |
 | --show-only-death-notices             | CS:DM settings | No        | Show only death notices HUD.                                                                    |
