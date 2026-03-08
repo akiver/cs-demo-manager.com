@@ -1,11 +1,45 @@
 [comment]: # 'If the last changelog contains links to domains not in the connect-src CSP of the app, they have to be added in https://github.com/akiver/cs-demo-manager/blob/main/src/ui/index.html, otherwise clicking on the links from the app will not work!'
 
-## v3.18.2
+## v3.18.3
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### Video
+
+- On Linux, FFmpeg is now downloaded from the latest `gpl` build of [BtbN's FFmpeg builds](https://github.com/BtbN/FFmpeg-Builds).  
+  It includes more encoders than the previous build such as `h264_nvenc`.
+- Moved the "Reset settings" and "Delete sequences" buttons to the 3-dot (kebab) menu.
+- Improved the error message when exporting video config to JSON.
+
+### Fixes
+
+#### Download
+
+- Fixed an incorrect match date after downloading demos from third-party services.
+- Fixed `de_ancient` being detected as `de_warden`.
+
+#### Video
+
+- Fixed incompatibility with some video players and Explorer thumbnails not working.
+
+#### Playback
+
+- Fixed a possibly inaccurate error message when launching Counter-Strike.
+
+#### CLI
+
+- Added the missing `--output` flag to the `video` command help message.
+
+#### UI
+
+- Fixed non-Valve demos using the download date instead of the actual match date.
+
+## v3.18.2
 
 ### New features and improvements
 

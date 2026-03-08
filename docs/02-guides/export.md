@@ -54,9 +54,9 @@ This query will list all 5K that happened in less than 20 seconds.
 SELECT
 	"k1"."killer_steam_id",
 	"k1"."killer_name",
-	"matches"."map_name",
-	"matches"."date",
-	(MAX("k1"."tick") - MIN("k1"."tick")) / "matches"."tickrate" AS "duration",
+	"demos"."map_name",
+	"demos"."date",
+	(MAX("k1"."tick") - MIN("k1"."tick")) / "demos"."tickrate" AS "duration",
 	"matches"."demo_path"
 FROM
 	"kills" AS "k1"
@@ -64,20 +64,21 @@ FROM
 	AND "k1"."round_number" = "k2"."round_number"
 	AND "k1"."killer_steam_id" = "k2"."killer_steam_id"
 	INNER JOIN "matches" ON "k1"."match_checksum" = "matches"."checksum"
+	INNER JOIN "demos" ON "demos"."checksum" = "matches"."checksum"
 GROUP BY
 	"k1"."killer_steam_id",
 	"k1"."killer_name",
 	"k1"."round_number",
 	"k1"."match_checksum",
-	"matches"."map_name",
+	"demos"."map_name",
 	"matches"."demo_path",
-	"matches"."date",
-	"matches"."tickrate"
+	"demos"."date",
+	"demos"."tickrate"
 HAVING
 	COUNT(DISTINCT "k1"."id") = 5 -- Replace with the number of multi-kills you want to filter
-	AND (MAX("k1"."tick") - MIN("k1"."tick")) / "matches"."tickrate" < 20 -- Replace with the desired duration
+	AND (MAX("k1"."tick") - MIN("k1"."tick")) / "demos"."tickrate" < 20 -- Replace with the desired duration
 ORDER BY
-	"matches"."date" DESC,
+	"demos"."date" DESC,
 	"k1"."match_checksum",
 	"k1"."killer_name",
 	"k1"."round_number";
