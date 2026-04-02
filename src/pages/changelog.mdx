@@ -1,11 +1,55 @@
 [comment]: # 'If the last changelog contains links to domains not in the connect-src CSP of the app, they have to be added in https://github.com/akiver/cs-demo-manager/blob/main/src/ui/index.html, otherwise clicking on the links from the app will not work!'
 
-## v3.18.4
+## v3.19.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### Demos
+
+- Added an "Analyze demos" button in the action bar to analyze demos that have not been analyzed yet.
+- Added [PRACC](https://pracc.com/) demos support.
+
+#### Match
+
+- Avatar, bans and rank columns can now be reordered.
+- Players can now be tagged directly from the scoreboard context menu.
+
+#### Playback
+
+- Added a "Wait for round end" option when watching player rounds.  
+  When enabled, playback continues until the round ends instead of stopping at the player's death, and the camera switches to the killer 2 seconds after death.
+
+#### Video
+
+- Added a customizable output filename for concatenated videos.
+- Added `.mov` as a supported video container.
+
+#### UI
+
+- Added a date format option.
+- Added a timezone option for dates.
+
+### Fixes
+
+#### Video
+
+- Fixed recording commands not being executed when a sequence starts, causing full demo playback instead.
+- Fixed FFmpeg installation failing.
+
+#### Analyze
+
+- Fixed an error when a demo's path contains a comma.
+
+#### UI
+
+- Fixed tag buttons not being selectable through keyboard navigation.
+
+## v3.18.4
 
 ### New features and improvements
 
