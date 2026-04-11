@@ -20,6 +20,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  future: {
+    v4: true,
+  },
+
   markdown: {
     mermaid: true,
     hooks: {
