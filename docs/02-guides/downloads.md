@@ -69,6 +69,13 @@ On Linux, you will see this message if you installed Steam using Flatpak!
 You must install Steam using your distribution package manager.
 :::
 
+#### Incorrect map name is displayed
+
+Map names are identified using numeric IDs hardcoded in the game.
+When a new CS2 update introduces new maps, we need to update our internal mapping to display the correct map names.
+
+If you see an incorrect map name, please report it on [GitHub](https://github.com/akiver/cs-demo-manager/issues/new?template=bug_report.yml) and provide either the match share code or the `.dem.info` file so we can analyze it and update our mapping.
+
 ## FACEIT
 
 :::danger
