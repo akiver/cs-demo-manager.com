@@ -6,7 +6,6 @@ sidebar_position: 9
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
 ## File location
 
 The settings file is a JSON file where the application stores its configuration, you can find it in the following location:
@@ -22,6 +21,17 @@ The settings file is a JSON file where the application stores its configuration,
 `$XDG_CONFIG_HOME/csdm/settings.json` if the `XDG_CONFIG_HOME` environment variable is set, otherwise `~/.config/csdm/settings.json`
 </TabItem>
 </Tabs>
+
+## Import and export
+
+If you plan to reinstall your OS or move to a new computer, you can keep your settings and database by following these steps:
+
+1. Keep your demo files where they are (or back them up if that disk will be wiped).
+2. Back up [the settings file](#file-location) so you can restore it later.
+3. [Export your database](/docs/guides/database#exporting-the-database).
+4. Reinstall your OS, then install CS:DM on the new system and launch it once (so it generates the default settings file).
+5. [Import the database backup](/docs/guides/database#importing-the-database).
+6. Restore [the settings file](#file-location) (overwrite the file created by the new install).
 
 ## Third-party API keys
 
