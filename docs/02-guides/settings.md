@@ -3,6 +3,26 @@ title: Settings
 sidebar_position: 9
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+## File location
+
+The settings file is a JSON file where the application stores its configuration, you can find it in the following location:
+
+<Tabs groupId="os" queryString>
+<TabItem value="windows" label="Windows">
+`%USERPROFILE%\.csdm\settings.json`
+</TabItem>
+<TabItem value="macos" label="macOS">
+`~/.csdm/settings.json`
+</TabItem>
+<TabItem value="linux" label="Linux">
+`$XDG_CONFIG_HOME/csdm/settings.json` if the `XDG_CONFIG_HOME` environment variable is set, otherwise `~/.config/csdm/settings.json`
+</TabItem>
+</Tabs>
+
 ## Third-party API keys
 
 CS:DM uses API keys shared between all users to retrieve data from third-party HTTP APIs.  
