@@ -74,6 +74,7 @@ You can support the project by [contributing](/docs/contributing) or [donating](
 ```
 
 Rules:
+
 - Only include `### New features and improvements` if there are feature commits; only include `### Fixes` if there are fix commits.
 - Group bullets under `#### <Category>` headings. Use one heading per unique category; list all bullets for that category under it.
 - Use sentence case for bullet descriptions.
