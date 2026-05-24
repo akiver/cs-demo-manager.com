@@ -4,15 +4,15 @@ Source code of [https://cs-demo-manager.com](https://cs-demo-manager.com), the w
 
 ## Development
 
-1. `npm i`
-2. `npm run dev`
+1. `pnpm i`
+2. `pnpm run dev`
 
 ## Working on a specific locale
 
 Most commands accept a `--locale` argument, examples:
 
-- `npm run dev --locale fr`
-- `npm run write-translations --locale fr`
+- `pnpm run dev --locale fr`
+- `pnpm run write-translations --locale fr`
 
 ## License
 
