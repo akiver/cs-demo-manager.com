@@ -11,15 +11,15 @@ You probably want to [build the application](/docs/development/scripts#build) be
 
 To package the application and create an installer:
 
-`npm run package`
+`vp run package`
 
 To package the application without creating an installer:
 
-`npm run package:dir`
+`vp run package:dir`
 
 :::tip
 If you want to package the application on macOS and skip code signing / notarization, run:
-`CSC_IDENTITY_AUTO_DISCOVERY=false npm run package:dir`
+`CSC_IDENTITY_AUTO_DISCOVERY=false vp run package:dir`
 :::
 
 ## macOS Code signing / notarization

@@ -3,7 +3,7 @@ title: 'Scripts'
 sidebar_position: 3
 ---
 
-Scripts must be run using the `npm run` command.
+Scripts must be run using the `vp run` command.
 
 - [build](/docs/development/scripts#build)
 - [compile](/docs/development/scripts#compile)
@@ -24,7 +24,7 @@ It generates the assets (JS, CSS…) for the production environment.
 Files are generated in the `out` folder.
 
 ```bash
-npm run build
+vp run build
 ```
 
 ## compile
@@ -33,7 +33,7 @@ It runs the TypeScript compiler.
 This script is executed by the CI system when a pull request is opened.
 
 ```bash
-npm run compile
+vp run compile
 ```
 
 ## deadcode
@@ -42,7 +42,7 @@ It runs [Knip](https://github.com/webpro/knip) to find dead code.
 This script is executed by the CI system when a pull request is opened.
 
 ```bash
-npm run deadcode
+vp run deadcode
 ```
 
 ## dev
@@ -52,7 +52,7 @@ It automatically restarts the application when a file used by the **main process
 HMR is enabled for the **renderer process**.
 
 ```bash
-npm run dev
+vp run dev
 ```
 
 ## dev\:cli
@@ -61,7 +61,7 @@ It builds and watches the CLI source code.
 You can then use the bash script for you OS in the `scripts` to run the CLI.
 
 ```bash
-npm run dev:cli
+vp run dev:cli
 ```
 
 ## format
@@ -70,7 +70,7 @@ It formats the code using [Prettier](https://prettier.io).
 This script is executed by the CI system when a pull request is opened.
 
 ```bash
-npm run format
+vp run format
 ```
 
 ## i18n\:extract
@@ -79,7 +79,7 @@ It extracts the strings to translate from the source code and generates the `.po
 This script is executed by the CI system when a pull request is opened.
 
 ```bash
-npm run i18n:extract
+vp run i18n:extract
 ```
 
 ## lint
@@ -88,7 +88,7 @@ It runs [ESLint](https://eslint.org) to find linting errors.
 This script is executed by the CI system when a pull request is opened.
 
 ```bash
-npm run lint
+vp run lint
 ```
 
 ## package
@@ -97,7 +97,7 @@ It packages the application into an executable file for the current platform and
 You should run the `build` script before running this script.
 
 ```bash
-npm run package
+vp run package
 ```
 
 ## package\:dir
@@ -106,7 +106,7 @@ It packages the application into an executable file for the current platform.
 You should run the `build` script before running this script.
 
 ```bash
-npm run package:dir
+vp run package:dir
 ```
 
 ## test
@@ -114,7 +114,7 @@ npm run package:dir
 It runs the tests.
 
 ```bash
-npm run test
+vp run test
 ```
 
 ## test\:watch
@@ -122,5 +122,5 @@ npm run test
 It runs the tests in watch mode.
 
 ```bash
-npm run test:watch
+vp run test:watch
 ```

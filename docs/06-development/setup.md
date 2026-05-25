@@ -12,31 +12,10 @@ import TabItem from '@theme/TabItem';
 On Windows use a shell such as [Git Bash](https://git-scm.com/), it will not work with `cmd.exe`!
 :::
 
-### Node.js
+### Vite+
 
-:::tip
-The required Node.js version is available in the [`.node-version`](https://github.com/akiver/cs-demo-manager/blob/main/.node-version) file.
-:::
-
-<Tabs groupId="os" queryString>
-
-<TabItem value="windows" label="Windows">
-
-Installation instructions are [here](https://nodejs.org/en/download/package-manager#windows-1).
-
-</TabItem>
-<TabItem value="macos" label="macOS">
-
-Installation instructions are [here](https://nodejs.org/en/download/package-manager#macos).
-
-</TabItem>
-<TabItem value="linux" label="Linux">
-
-Installation instructions for the most common distributions are [here](https://nodejs.org/en/download/package-manager).
-
-</TabItem>
-
-</Tabs>
+The Vite+ CLI is an all-in-one developer tool that handles Node.js version management, package installation, task running, code formatting, and more.  
+Follow the installation instructions [here](https://viteplus.dev/guide/) to install it.
 
 ### Python 3
 
@@ -123,8 +102,8 @@ From the root project folder:
 ## Start developing
 
 1. `cp .env.example .env` and edit variables if needed
-2. `npm install`
-3. `npm run dev`
+2. `vp install`
+3. `vp run dev`
 
 ## Troubleshooting
 
