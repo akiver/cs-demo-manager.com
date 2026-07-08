@@ -1,11 +1,84 @@
 [comment]: # 'If the last changelog contains links to domains not in the connect-src CSP of the app, they have to be added in https://github.com/akiver/cs-demo-manager/blob/main/src/ui/index.html, otherwise clicking on the links from the app will not work!'
 
-## v3.19.3
+## v3.20.0
 
 :::info
 CS Demo Manager is a free and open-source software not backed by any corporate entity.  
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
+
+### New features and improvements
+
+#### Demos
+
+- Added [Esportligaen](https://esportligaen.dk/) demos support.
+- Added support for automatically unzipping demos from archives (zip, gz and bz2).
+  :::warning
+  This feature is disabled by default as it may slow down loading demos in folders that contain archives.  
+  You can enable auto-unzipping for each archive type in the **Folders** settings tab.
+  :::
+
+#### Analyze
+
+- A team kill or suicide now doesn't decrease the player's kill count to mimic the behavior in CS2.
+  :::warning
+  This feature requires re-analyzing demos to have correct data!
+  :::
+
+#### Video
+
+- Added player's color indicator in the "Player cameras" table.
+- The sequence number can now be edited. It defines the order of the sequence in the final video, meaning sequences can
+  be recorded in any order but will be sorted by number when generating the final video.
+- Improved output filename tooltip.
+
+#### Chat
+
+- Chat messages can now be exported per player.
+- Simplified chat messages team/players filtering logic.
+
+#### XLSX
+
+- Added enemies flashed and utility damage columns to players' sheets.
+
+#### UI
+
+- Added Russian language.
+
+#### Misc
+
+- The application now automatically uses a free WebSocket port when the default one is not available.
+
+### Fixes
+
+#### Playback
+
+- Camera may not focus on the correct player with some demos.
+  :::warning
+  It requires re-analyzing affected demos!
+  :::
+- Fix possible crash on Linux when launching CS2.
+
+#### Video
+
+- A sequence is now always generated per selected round for players.
+- Player cameras being deleted when changing an existing camera target.
+- POV select input being empty in the "Generate cameras" dialog.
+
+#### Chat
+
+- Selecting "All teams" not working in chat filter.
+- Players filter possibly not applied when exporting chat messages.
+
+#### Download
+
+- 5EPlay demos download not working due to a recent change in their API.
+
+#### UI
+
+- Watch demo buttons disabled until CS is closed.
+
+## v3.19.3
 
 ### Fixes
 
