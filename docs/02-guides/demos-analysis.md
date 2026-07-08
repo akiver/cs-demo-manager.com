@@ -42,12 +42,20 @@ it but you may have incorrect data.
 - From [HLTV](https://www.hltv.org) for professional matches.
 
 :::warning
-HLTV and some platforms compress demos in archives. You have to decompress it otherwise the application will not _see_ them.
+HLTV and some platforms compress demos in archives. You have to decompress it otherwise the application will not _see_ them.  
+You can also enable [automatic demo extraction](/docs/guides/demos-analysis#automatic-demo-extraction-from-archives) to let the application do it for you.
 :::
 
 :::warning
 Demos links usually expire after around one month.
 :::
+
+## Automatic demo extraction from archives
+
+The application can automatically extract demos contained in archives (`zip`, `gz` and `bz2`) found in your folders when scanning for demos. Extracted demos are placed next to their archive.
+
+This feature is **disabled by default** as it has an impact on demo loading speed in folders that contain archives.  
+You can enable automatic extraction for each archive format from the **Folders** tab of the application settings.
 
 ## Analyzing demos
 
