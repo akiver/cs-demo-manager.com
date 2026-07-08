@@ -18,7 +18,7 @@ A **match** results from a demo analysis and contains all the information about 
 | ESEA           | ✅   | -   | ESEA is now FACEIT and their servers never supported CS2.                                                               |
 | Esplay         | -    | ✅  |                                                                                                                         |
 | Esportal       | ✅   | ✅  |                                                                                                                         |
-| Esportligaen   | -    | ❌  | [See progress](https://github.com/akiver/cs-demo-manager/issues/846)                                                    |
+| Esportligaen   | -    | ✅  |                                                                                                                         |
 | FACEIT         | ✅   | ✅  |                                                                                                                         |
 | FASTCUP        | ✅   | ✅  |                                                                                                                         |
 | Gamers Club    | ❌   | ❌  |                                                                                                                         |
