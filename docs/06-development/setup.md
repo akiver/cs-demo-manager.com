@@ -35,7 +35,7 @@ Or manually with the [installer](https://www.python.org/downloads/windows/).
 Required only on Windows because of native dependencies!
 :::
 
-Install [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) and make sure to select/install the component `Desktop development with C++` during the installation.
+Install [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/) and make sure to select/install the component `Desktop development with C++` during the installation.
 
 ### PostgreSQL
 
