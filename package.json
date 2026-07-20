@@ -16,22 +16,23 @@
     "write-translations": "docusaurus write-translations"
   },
   "dependencies": {
-    "@docusaurus/core": "3.10.1",
-    "@docusaurus/faster": "3.10.1",
-    "@docusaurus/preset-classic": "3.10.1",
-    "@docusaurus/theme-mermaid": "3.10.1",
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/faster": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@docusaurus/theme-mermaid": "3.10.2",
     "@mdx-js/react": "3.1.1",
     "prism-react-renderer": "2.4.1",
-    "react": "19.2.5",
-    "react-dom": "19.2.5"
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.10.1",
-    "@docusaurus/tsconfig": "3.10.1",
-    "@types/react": "19.2.15",
-    "autoprefixer": "10.5.0",
-    "postcss": "8.5.15",
-    "prettier": "3.8.3",
+    "@docusaurus/module-type-aliases": "3.10.2",
+    "@docusaurus/tsconfig": "3.10.2",
+    "@docusaurus/types": "3.10.2",
+    "@types/react": "19.2.17",
+    "autoprefixer": "10.5.4",
+    "postcss": "8.5.20",
+    "prettier": "3.9.5",
     "tailwindcss": "3.4.19",
     "typescript": "6.0.3"
   },
@@ -47,8 +48,16 @@
       "last 1 safari version"
     ]
   },
-  "engines": {
-    "node": ">=24"
-  },
-  "packageManager": "pnpm@11.10.0+sha512.0b7f8b98060031904c017e3a41eb187a16d40eeb829b95c4f8cb03681761fc4ab53dd219115b9b447f4dce1a05a214764461e7d3703392a9f32f9511ce8c86c8"
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "onFail": "download",
+      "version": "11.15.1"
+    },
+    "runtime": {
+      "name": "node",
+      "onFail": "download",
+      "version": "24.18.0"
+    }
+  }
 }
