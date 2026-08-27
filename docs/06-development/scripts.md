@@ -1,6 +1,6 @@
 ---
 title: 'Scripts'
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 Scripts must be run using the `vp run` command.

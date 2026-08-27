@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 ## File location
 
-The settings file is a JSON file where the application stores its configuration, you can find it in the following location:
+The settings file is a JSON file where the application stores its configuration, you can find it at the root of the [application folder](/docs/guides/application-folder):
 
 <Tabs groupId="os" queryString>
 <TabItem value="windows" label="Windows">

@@ -1,6 +1,6 @@
 ---
 title: Logs
-sidebar_position: 14
+sidebar_position: 15
 ---
 
 import Tabs from '@theme/Tabs';
@@ -28,16 +28,16 @@ Replace `<STEAM_INSTALLATION_FOLDER>` with the path to your Steam library (Steam
 
 <Tabs groupId="os" queryString>
 <TabItem value="windows" label="Windows">
-- The application log file is located at `%USERPROFILE%\.csdm\logs\csdm.log`.
+- The application log file is located at `%USERPROFILE%\.csdm\logs\csdm.log` (`logs\csdm.log` in the [application folder](/docs/guides/application-folder)).
 - The CS2 log file is located at `<STEAM_INSTALLATION_FOLDER>\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\csdm.log`.
 - The CS:GO log file is located at `<STEAM_INSTALLATION_FOLDER>\steamapps\common\Counter-Strike Global Offensive\csdm.log`.
 </TabItem>
 <TabItem value="macos" label="macOS">
-- The application log file is located at `~/.csdm/logs/csdm.log`.
+- The application log file is located at `~/.csdm/logs/csdm.log` (`logs/csdm.log` in the [application folder](/docs/guides/application-folder)).
 - The CS:GO log file is located at `<STEAM_INSTALLATION_FOLDER>/steamapps/common/Counter-Strike Global Offensive/csdm.log`.
 </TabItem>
 <TabItem value="linux" label="Linux">
-- The application log file is located at `~/.csdm/logs/csdm.log`.
+- The application log file is located at `~/.config/csdm/logs/csdm.log` (`logs/csdm.log` in the [application folder](/docs/guides/application-folder)).
 - The CS2 log file is located at `<STEAM_INSTALLATION_FOLDER>/steamapps/common/Counter-Strike 2/game/bin/linux64/csdm.log`.
 - The CS:GO log file is located at `<STEAM_INSTALLATION_FOLDER>/steamapps/common/Counter-Strike Global Offensive/csdm.log`.
 </TabItem>

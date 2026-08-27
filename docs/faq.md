@@ -10,10 +10,8 @@ Bug reports, suggestions or feature requests have to be submitted on [GitHub](ht
 
 ## The application doesn't start or crash on startup
 
-While it should happen on rare occasions, if the application keeps crashing on startup, you should try to delete the application
-configuration folder and restart the application.
-
-The configuration folder named `.csdm` is in your user directory, i.e. `C:\Users\USERNAME\.csdm` on Windows and `~/.csdm` on Linux/macOS.
+While it should happen on rare occasions, if the application keeps crashing on startup, you should try to delete the
+[application folder](/docs/guides/application-folder) and restart the application.
 
 ## Does it work with POV demos?
 

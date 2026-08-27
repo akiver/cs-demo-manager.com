@@ -9,9 +9,22 @@ Before continuing, reading the [process model documentation](https://www.electro
 Because it's easy to make an Electron application unresponsive by blocking either the
 [main process](https://www.electronjs.org/docs/latest/tutorial/performance#3-blocking-the-main-process)
 or the [renderer process](https://www.electronjs.org/docs/latest/tutorial/performance#4-blocking-the-renderer-process),
-the application forks a `Node.js` process, which hosts a `WebSocket` server.
+the application runs a `WebSocket` server in a dedicated `Node.js` process.
 This process does _almost all_ the heavy work, such as database/filesystem access, demo analysis, etc.  
-It communicates with the main and renderer process through their `WebSocket` clients.
+It communicates with the main, renderer and CLI processes through a `WebSocket` connection.
+
+## The WebSocket server
+
+The `WebSocket` server runs as a **daemon**: a detached process shared by the GUI and the [CLI](/docs/cli).  
+On startup, the Electron main process and the CLI follow the same **attach or spawn** logic:
+
+1. Read the possible file `daemon.json` located in the [application folder](/docs/guides/application-folder). It contains the daemon's `port`, `pid` and `version`.
+2. If the file points to a healthy daemon, attach to it.
+3. Otherwise, spawn a new detached daemon process and wait for it to be ready to write the `daemon.json` file.
+
+The daemon exits on its own when it has been idle for a few seconds (i.e. no connected clients and no background work in progress).
+
+Because the GUI and the CLI talk to the same daemon, work started from the CLI is instantly reflected in the UI and vice versa.
 
 The following diagram shows the creation of essential components of the application when it starts:
 
@@ -19,18 +32,15 @@ The following diagram shows the creation of essential components of the applicat
 flowchart TD
     Start["App starts"] --> Main
     Main("Main Electron process")
-    Main --> IsDev{Is dev?}
-    IsDev --> |Yes| DevWindow("BrowserWindow\n(Renderer process)")
-    DevWindow --> Server
-    IsDev --> |No| Process("Node.js process (fork)")
-    Process --> Server("WebSocket server")
+    Main --> IsRunning{"Daemon already\nrunning?"}
+    IsRunning --> |Yes| Attach("Attach")
+    IsRunning --> |No| Spawn("Spawn detached process")
+    Attach --> Server("WebSocket server\n(daemon)")
+    Spawn --> Server
     Main --> MainClient("WebSocket client")
     Main --> Window("BrowserWindow\n(Renderer process)")
     Window --> RendererClient("WebSocket client")
 ```
-
-As you can see, the `WebSocket` server is created from a [BrowserWindow](https://www.electronjs.org/docs/latest/api/browser-window) instead of a `Node.js` process during **development only**.  
-It gives us a dedicated window to debug the WebSocket server using the Chrome DevTools.
 
 ## JavaScript bundles
 
