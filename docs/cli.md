@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="windows" label="Windows">
 
-The CLI is automatically installed when you install the application with the [installer](/docs/installation#step-3-the-application).
+The CLI is automatically installed when you install the application with the [installer](/docs/installation#installing-the-application).
 
 </TabItem>
 <TabItem value="macos" label="macOS">
