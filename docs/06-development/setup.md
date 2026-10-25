@@ -3,9 +3,6 @@ title: 'Setup'
 sidebar_position: 2
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 ## Requirements
 
 :::warning
@@ -39,54 +36,39 @@ Install [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/) and 
 
 ### PostgreSQL
 
-The default database's name is `csdm` but it's recommended to create a development database, for example `csdm_dev`.  
-Using a development database allows you to work on the application and play CS without worring about breaking your main database schema and data.
+In development, the application uses its own [application folder](/docs/guides/application-folder) and settings. It allows you to work on the application and play CS without worrying
+about breaking your main database schema and data.
 
-You can setup the database using [Docker](/docs/development/setup#database-in-docker) or the [classic PostgreSQL installation](/docs/installation).
+You have 3 options to run the database:
+
+- **Embedded server** (recommended): nothing to install. `vp install` downloads the PostgreSQL binaries into the
+  `static/postgres` folder and the application starts the server on its own, its data lives in the `postgres` folder of
+  the development application folder. Keep `Embedded` selected on the connection screen.
+- [**Docker**](/docs/development/setup#database-in-docker): a PostgreSQL container, useful to test the application
+  against an external server.
+- A [**classic PostgreSQL installation**](/docs/installation#using-an-external-postgresql-server) on your machine.
+
+With Docker or a classic installation, create a dedicated development database (for example `csdm_dev`) and select
+`External` on the connection screen.
 
 ## Database in Docker
 
 :::warning
-While the PostgreSQL process can be run in a Docker container, the `psql` CLI **must be installed on the host machine**!
+[Docker](https://docs.docker.com/get-docker/) must be installed with the `docker` CLI and its Compose plugin, the scripts
+run `docker compose`.
 :::
-
-### Installing psql
-
-To install only `psql`:
-
-<Tabs groupId="os" queryString>
-<TabItem value="windows" label="Windows">
-
-Follow the installation [documentation](/docs/installation?os=windows) and install only the `Command Line Tools` component during the process.
-
-</TabItem>
-
-<TabItem value="macos" label="macOS">
-
-1. `brew install libpq`
-2. `echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc`
-
-Or follow the installation [documentation](/docs/installation?os=macos) and install only the `Command Line Tools` component during the process.
-
-</TabItem>
-<TabItem value="linux" label="Linux">
-
-Installation depends on your distribution, for example on Ubuntu:
-
-```shell
-sudo apt install postgresql-client -y
-```
-
-</TabItem>
-
-</Tabs>
 
 ### Starting the container
 
 From the root project folder:
 
-1. [Optional] `cp .env.example .env` and edit configuration variables
+1. [Optional] `cp docker/.env.example docker/.env` and edit the database name, password and port. The defaults are
+   `csdm_dev`, `password` and `5432`.
 2. `./docker/start.sh`
+
+Connect the application to the database by
+selecting `External` on the connection screen with the host `127.0.0.1`, the port, the database name, the user
+`postgres` and the password from the `docker/.env` file.
 
 :::tip
 If you are on Windows with WSL 2, you might notice a RAM usage increase by the process `vmmem`.  
