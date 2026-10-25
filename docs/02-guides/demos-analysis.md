@@ -52,7 +52,7 @@ Demos links usually expire after around one month.
 
 ## Automatic demo extraction from archives
 
-The application can automatically extract demos contained in archives (`zip`, `gz` and `bz2`) found in your folders when scanning for demos. Extracted demos are placed next to their archive.
+The application can automatically extract demos contained in archives (`zip`, `gz`, `bz2` and `zst`) found in your folders when scanning for demos. Extracted demos are placed next to their archive.
 
 This feature is **disabled by default** as it has an impact on demo loading speed in folders that contain archives.  
 You can enable automatic extraction for each archive format from the **Folders** tab of the application settings.
