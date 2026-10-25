@@ -89,22 +89,84 @@ Please follow the [installation instructions](/docs/cli?os=linux#installation) a
 
 </Tabs>
 
+```bash
+csdm <command> [arguments] [options]
+```
+
+| Command     | Description                                                                  |
+| ----------- | ---------------------------------------------------------------------------- |
+| `analyze`   | Analyze and persist demos into the database.                                 |
+| `dl-valve`  | Download the last MM demos of the current Steam account or from share codes. |
+| `dl-faceit` | Download the last demos of a FACEIT account.                                 |
+| `dl-renown` | Download the last demos of a Renown account.                                 |
+| `dl-5eplay` | Download the last demos of a 5EPlay account.                                 |
+| `xlsx`      | Analyze and export demos to XLSX files.                                      |
+| `json`      | Analyze and export demos to JSON files.                                      |
+| `video`     | Generate videos from demos and control the video generation queue.           |
+| `help`      | Show the CLI help, or the help of a command.                                 |
+
+### Getting help
+
+- `csdm help` or `csdm --help` prints the list of commands.
+- `csdm help <command>` or `csdm <command> --help` (short `-h`) prints the usage, arguments, options and examples of a command.
+- `csdm --version` prints the version of the CLI.
+
+If you type an unknown command, the CLI suggests the closest one.
+
+### Options available for all commands
+
+| Name        | Description                                                                                                 |
+| ----------- | ----------------------------------------------------------------------------------------------------------- |
+| `--quiet`   | Print only the errors and the requested data such as the JSON. Short `-q`.                                  |
+| `--verbose` | Print the details of each step, such as the daemon and database connections, and the stack trace of errors. |
+| `--help`    | Show the help of the command. Short `-h`.                                                                   |
+
+`--quiet` and `--verbose` cannot be used together.
+
+### JSON output
+
+The `analyze`, `dl-*` and `video list` commands accept a `--json` option to print their result as JSON.  
+In this mode, stdout contains **only** the JSON, the progress and other messages are printed on stderr, so the output can safely be piped to another program:
+
+```bash
+csdm analyze "C:\Users\username\Desktop\demo.dem" --json > result.json
+```
+
+### Exit codes
+
+| Code  | Meaning                                                               |
+| ----- | --------------------------------------------------------------------- |
+| `0`   | Success.                                                              |
+| `1`   | Failure, for example a demo that could not be analyzed or downloaded. |
+| `2`   | Invalid usage: unknown command, invalid argument or option.           |
+| `130` | Interrupted with `Ctrl+C`.                                            |
+
+### Shared with the application
+
+The CLI and the application use the same background process (the [daemon](/docs/development/architecture#the-websocket-server)) and the same database.  
+It means that:
+
+- The application doesn't have to be running to use the CLI, the daemon starts on demand and stops when it's idle.
+- Analyses and videos started from the CLI appear in the application in real time, and the video queue is shared.
+- Pressing `Ctrl+C` cancels the analyses or the video started by the command.
+
 ## Download Valve demos
 
 Download the last MM demos of the current Steam account or from share codes.
 
 ```bash
-csdm dl-valve [shareCodes...] [--output]
+csdm dl-valve [share-codes...] [options]
 ```
 
 :::warning
 You must be connected to your Steam account to use this command.
 :::
 
-| Name         | Default                                                                                       | Mandatory | Description                               |
-| ------------ | --------------------------------------------------------------------------------------------- | --------- | ----------------------------------------- |
-| [shareCodes] |                                                                                               | No        | Share codes to download.                  |
-| --output     | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded. |
+| Name             | Default                                                                                       | Mandatory | Description                                             |
+| ---------------- | --------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------- |
+| [share-codes...] | Last MM matches of the current Steam account                                                  | No        | Share codes of the matches to download.                 |
+| --output         | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded.               |
+| --json           | `false`                                                                                       | No        | Print the downloaded, skipped and failed demos as JSON. |
 
 ### Examples
 
@@ -135,13 +197,14 @@ This command is currently disabled, see [here](/docs/guides/downloads#faceit) fo
 Download the last demos of the current [FACEIT](https://www.faceit.com/) account set in the application or from its nickname.
 
 ```bash
-csdm dl-faceit [--nickname] [--output]
+csdm dl-faceit [options]
 ```
 
-| Name       | Default                                                                                       | Mandatory | Description                               |
-| ---------- | --------------------------------------------------------------------------------------------- | --------- | ----------------------------------------- |
-| --nickname | Account's nickname set in the application                                                     | No        | Account's nickname to download demos.     |
-| --output   | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded. |
+| Name       | Default                                                                                       | Mandatory | Description                                             |
+| ---------- | --------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------- |
+| --nickname | Account's nickname set in the application                                                     | No        | Account's nickname to download demos.                   |
+| --output   | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded.               |
+| --json     | `false`                                                                                       | No        | Print the downloaded, skipped and failed demos as JSON. |
 
 ### Examples
 
@@ -168,13 +231,14 @@ csdm dl-faceit --output "C:\Users\username\Downloads"
 Download the last demos of the current [Renown](https://renown.gg/) account set in the application or from a Steam ID.
 
 ```bash
-csdm dl-renown [--steamid] [--output]
+csdm dl-renown [options]
 ```
 
-| Name      | Default                                                                                       | Mandatory | Description                               |
-| --------- | --------------------------------------------------------------------------------------------- | --------- | ----------------------------------------- |
-| --steamid | Current account's **Steam ID** set in the application                                         | No        | Account's Steam ID to download demos.     |
-| --output  | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded. |
+| Name      | Default                                                                                       | Mandatory | Description                                             |
+| --------- | --------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------- |
+| --steamid | Current account's **Steam ID** set in the application                                         | No        | Account's Steam ID to download demos.                   |
+| --output  | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded.               |
+| --json    | `false`                                                                                       | No        | Print the downloaded, skipped and failed demos as JSON. |
 
 ### Examples
 
@@ -201,13 +265,14 @@ csdm dl-renown --output "C:\Users\username\Downloads"
 Download the last demos of the current [5EPLAY](https://www.5eplay.com/) account set in the application or from its ID.
 
 ```bash
-csdm dl-5eplay [--id] [--output]
+csdm dl-5eplay [options]
 ```
 
-| Name     | Default                                                                                       | Mandatory | Description                               |
-| -------- | --------------------------------------------------------------------------------------------- | --------- | ----------------------------------------- |
-| --id     | Current account's **5EPLAY ID** set in the application                                        | No        | Account's 5EPLAY ID to download demos.    |
-| --output | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded. |
+| Name     | Default                                                                                       | Mandatory | Description                                             |
+| -------- | --------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------- |
+| --id     | Current account's **5EPLAY ID** set in the application                                        | No        | Account's 5EPLAY ID to download demos.                  |
+| --output | 1. Folder specified in the CS:DM settings<br/>2. CS folder `replays`<br/>3. Current directory | No        | Directory where demos will be downloaded.               |
+| --json   | `false`                                                                                       | No        | Print the downloaded, skipped and failed demos as JSON. |
 
 :::tip
 To find your **5EPlay ID**:
@@ -242,14 +307,20 @@ csdm dl-5eplay --output "C:\Users\username\Downloads"
 Analyze demos and persist them in the database.
 
 ```bash
-csdm analyze demoPaths... [--source] [--force]
+csdm analyze <demo-paths...> [options]
 ```
 
-| Name      | Default | Mandatory | Description                                                                                                                                                |
-| --------- | ------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| demoPaths |         | Yes       | Demos paths, can be either a `.dem` files path or a directory. It can be relative or absolute.                                                             |
-| --source  |         | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,esportal,faceit,fastcup,5eplay,perfectworld,popflash,valve` |
-| --force   | `false` | No        | Force demo analysis even if they are already in the database.                                                                                              |
+| Name                | Default | Mandatory | Description                                                                                                                                                                                                                                       |
+| ------------------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| demo-paths          |         | Yes       | `.dem` files or folders containing `.dem` files, relative or absolute.                                                                                                                                                                            |
+| --source            |         | No        | Force the analysis logic of the demo analyzer, detected from the demo by default. Available values: `challengermode,ebot,esea,esl,esplay,esportal,esportligaen,faceit,5eplay,fastcup,gamersclub,matchzy,perfectworld,popflash,pracc,renown,valve` |
+| --force             | `false` | No        | Analyze demos even if they are already in the database.                                                                                                                                                                                           |
+| --analyze-positions | `false` | No        | Include the players, grenades… positions in the analysis. They are required by the [2D viewer](/docs/guides/2d-viewer) and generated on demand when it's opened otherwise.                                                                        |
+| --json              | `false` | No        | Print the analyzed, skipped and failed demos as JSON.                                                                                                                                                                                             |
+
+:::info
+Like in the application, demos from a source that is not supported for their game and POV demos are not analyzed, they are reported as failed.
+:::
 
 ### Examples
 
@@ -276,17 +347,17 @@ csdm analyze "C:\Users\username\Desktop\MyFolder" --source esl --force
 Analyze and export demos to either a single or multiple XLSX files.
 
 ```bash
-csdm xlsx demoPaths... [--output-folder] [--source] [--single] [--sheets] [--force-analyze]
+csdm xlsx <demo-paths...> [options]
 ```
 
-| Name            | Default           | Mandatory | Description                                                                                                                                                |
-| --------------- | ----------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| demoPaths       |                   | Yes       | Demos paths, can be either a `.dem` files path or a directory. It can be relative or absolute.                                                             |
-| --source        |                   | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,esportal,faceit,fastcup,5eplay,perfectworld,popflash,valve` |
-| --output-folder | Current directory | No        | Directory where output files will be saved.                                                                                                                |
-| --single        | `false`           | No        | Generates a single XLSX file instead of one per demo.                                                                                                      |
-| --sheets        | All sheets        | No        | Includes only sheets identified by its name. Available values: [general,players,rounds,kills].                                                             |
-| --force-analyze | `false`           | No        | Force demo analysis even if they are already in the database.                                                                                              |
+| Name            | Default           | Mandatory | Description                                                                                                                                                                                                                                       |
+| --------------- | ----------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| demo-paths      |                   | Yes       | `.dem` files or folders containing `.dem` files, relative or absolute.                                                                                                                                                                            |
+| --source        |                   | No        | Force the analysis logic of the demo analyzer, detected from the demo by default. Available values: `challengermode,ebot,esea,esl,esplay,esportal,esportligaen,faceit,5eplay,fastcup,gamersclub,matchzy,perfectworld,popflash,pracc,renown,valve` |
+| --output-folder | Current directory | No        | Directory where output files will be saved.                                                                                                                                                                                                       |
+| --single        | `false`           | No        | Generates a single XLSX file instead of one per demo.                                                                                                                                                                                             |
+| --sheets        | All sheets        | No        | Includes only sheets identified by its name. Available values: `general,players,rounds,kills`.                                                                                                                                                    |
+| --force-analyze | `false`           | No        | Analyze demos even if they are already in the database.                                                                                                                                                                                           |
 
 ### Examples
 
@@ -313,16 +384,16 @@ csdm xlsx "C:\Users\username\Desktop\MyFolder" --output-folder "C:\Users\usernam
 Analyze and export demos into JSON files.
 
 ```bash
-csdm json demoPaths... [--output-folder] [--source] [--minify] [--force-analyze]
+csdm json <demo-paths...> [options]
 ```
 
-| Name            | Default           | Mandatory | Description                                                                                                                                                |
-| --------------- | ----------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| demoPaths       |                   | Yes       | Demos paths, can be either a `.dem` files path or a directory. It can be relative or absolute.                                                             |
-| --source        |                   | No        | Force the analysis logic of the demo analyzer. Available values: `challengermode,ebot,esea,esl,esportal,faceit,fastcup,5eplay,perfectworld,popflash,valve` |
-| --output-folder | Current directory | No        | Directory where output files will be saved.                                                                                                                |
-| --minify        | `false`           | No        | Minify the JSON files.                                                                                                                                     |
-| --force-analyze | `false`           | No        | Force demo analysis even if they are already in the database.                                                                                              |
+| Name            | Default           | Mandatory | Description                                                                                                                                                                                                                                       |
+| --------------- | ----------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| demo-paths      |                   | Yes       | `.dem` files or folders containing `.dem` files, relative or absolute.                                                                                                                                                                            |
+| --source        |                   | No        | Force the analysis logic of the demo analyzer, detected from the demo by default. Available values: `challengermode,ebot,esea,esl,esplay,esportal,esportligaen,faceit,5eplay,fastcup,gamersclub,matchzy,perfectworld,popflash,pracc,renown,valve` |
+| --output-folder | Current directory | No        | Directory where output files will be saved.                                                                                                                                                                                                       |
+| --minify        | `false`           | No        | Minify the JSON files.                                                                                                                                                                                                                            |
+| --force-analyze | `false`           | No        | Analyze demos even if they are already in the database.                                                                                                                                                                                           |
 
 ### Examples
 
@@ -340,7 +411,7 @@ csdm json "C:\Users\username\Desktop\demo.dem" "C:\Users\username\Desktop\demo2.
 
 ## Generate videos
 
-Generate videos from demos.
+Generate videos from demos and control the video generation queue.
 
 :::warning
 
@@ -349,15 +420,18 @@ Generate videos from demos.
 - Demos must have been analyzed and be present in the database.
   :::
 
-There are 3 ways to invoke this command:
+Videos are added to the generation queue shared with the application, the command waits for its video to complete and pressing `Ctrl+C` aborts it.  
+Options not provided default to the application video settings.
+
+There are 3 ways to generate a video:
 
 1. By specifying a tick range
    ```bash
-   csdm video <demoPath> <startTick> <endTick> [options]
+   csdm video <demo-path> <start-tick> <end-tick> [options]
    ```
 2. By focusing on player events (it will auto-generate sequences)
    ```bash
-   csdm video <demoPath> --mode player --steamids <id1,id2> --event <event> [options]
+   csdm video <demo-path> --mode player --steamids <id1,id2> --event <event> [options]
    ```
 3. By using a JSON config file
    ```bash
@@ -366,16 +440,19 @@ There are 3 ways to invoke this command:
 
 | Name                                  | Default        | Mandatory | Description                                                                                     |
 | ------------------------------------- | -------------- | --------- | ----------------------------------------------------------------------------------------------- |
-| demoPath                              |                | Yes       | Path to the `.dem` file to record from (or provided via `--config-file`).                       |
-| startTick                             |                | Yes\*     | Start tick of the sequence to record. Required unless using `--mode player` or `--config-file`. |
-| endTick                               |                | Yes\*     | End tick of the sequence to record. Required unless using `--mode player` or `--config-file`.   |
-| --config-file \<path\>                |                | No        | Path to a JSON config file. Supports comments; must include `demoPath`.                         |
-| --output \<path\>                     | Demo folder    | No        | Output folder path (short `-o`). Defaults to demo directory.                                    |
+| demo-path                             |                | Yes       | Path to the `.dem` file to record from (or provided via `--config-file`).                       |
+| start-tick                            |                | Yes\*     | Start tick of the sequence to record. Required unless using `--mode player` or `--config-file`. |
+| end-tick                              |                | Yes\*     | End tick of the sequence to record. Required unless using `--mode player` or `--config-file`.   |
+| --config-file \<path\>                |                | No        | Path to a JSON config file (short `-c`). Supports comments; must include `demoPath`.            |
+| --output \<folder\>                   | Demo folder    | No        | Output folder path (short `-o`). Defaults to demo directory.                                    |
+| --output-file-name \<name\>           | CS:DM settings | No        | Name of the video file.                                                                         |
 | --framerate \<number\>                | CS:DM settings | No        | Output frame rate.                                                                              |
 | --width \<number\>                    | CS:DM settings | No        | Output width in pixels (min 800).                                                               |
 | --height \<number\>                   | CS:DM settings | No        | Output height in pixels (min 600).                                                              |
 | --close-game-after-recording          | CS:DM settings | No        | Close the game when recording finishes.                                                         |
 | --no-close-game-after-recording       | CS:DM settings | No        | Do not close the game after recording.                                                          |
+| --keep-raw-files-on-game-error        | CS:DM settings | No        | Keep the video, audio and image files recorded before the game crashed.                         |
+| --no-keep-raw-files-on-game-error     | CS:DM settings | No        | Delete the recorded files if the game crashes.                                                  |
 | --concatenate-sequences               | CS:DM settings | No        | Concatenate recorded sequences into a single video.                                             |
 | --no-concatenate-sequences            | CS:DM settings | No        | Export each recorded sequence separately.                                                       |
 | --encoder-software \<string\>         | CS:DM settings | No        | Software encoder. Allowed values: `FFmpeg`, `VirtualDub`.                                       |
@@ -402,7 +479,7 @@ There are 3 ways to invoke this command:
 | --player-voices                       | CS:DM settings | No        | Enable in-game player voices.                                                                   |
 | --no-player-voices                    | CS:DM settings | No        | Disable in-game player voices.                                                                  |
 | --death-notices-duration \<number\>   | CS:DM settings | No        | Duration in seconds of death notices.                                                           |
-| --cfg \<string\>                      | CS:DM settings | No        | Plain text config executed before recording.                                                    |
+| --cfg \<string\>                      | CS:DM settings | No        | Game commands executed before the sequence, one per line.                                       |
 | --focus-player \<steamID64\>          | -              | No        | Focus on a specific player by their SteamID64.                                                  |
 
 ### Player mode
@@ -424,6 +501,8 @@ The `--mode player` option auto-generates sequences around player events.
 You can use a JSON config file to configure all recording options. The easiest way to generate one and see all possible options is to export one from the application by clicking on the 3-dot menu in the **Video** view and clicking on **Export as JSON**.
 
 ![Export video config as JSON](/img/documentation/cli/export-video-config-as-json.png)
+
+The values of the config file take precedence over the command options, which take precedence over the application settings.
 
 Example as of version **3.17.0**:
 
@@ -513,7 +592,7 @@ csdm video "E:\cs\demo.dem" 1200 4000 --recording-system HLAE --encoder-software
 Generate sequences for specific players’ kills in rounds 5–10:
 
 ```bash
-csdm video "E:\cs\demo.dem" --mode player --steamids 76561198000697560,76561198000000000 --event Kills --rounds 5,6,7,8,9,10 --start-seconds-before 3 --end-seconds-after 3
+csdm video "E:\cs\demo.dem" --mode player --steamids 76561198000697560,76561198000000000 --event kills --rounds 5,6,7,8,9,10 --start-seconds-before 3 --end-seconds-after 3
 ```
 
 Use a JSON config file (JSONC allowed) to drive recording:
@@ -538,4 +617,30 @@ Example `record.jsonc`:
     "videoContainer": "mp4",
   },
 }
+```
+
+### Video queue
+
+The video generation queue is shared with the application, you can inspect and control it from the CLI.
+
+```bash
+csdm video list [--json]
+csdm video pause
+csdm video resume
+```
+
+| Subcommand | Description                                                                                |
+| ---------- | ------------------------------------------------------------------------------------------ |
+| `list`     | Print the videos in the queue and whether the queue is paused. `--json` prints it as JSON. |
+| `pause`    | Pause the queue, the video currently being generated completes before the queue stops.     |
+| `resume`   | Resume the queue.                                                                          |
+
+Example output of `csdm video list`:
+
+```
+The queue is running
+
+ID                                    STATUS     ADDED             SEQUENCES  DEMO
+3f1d2c7e-6b2a-4d0e-9f3c-1a2b3c4d5e6f  Recording  2026-10-25 14:02  2          demo.dem
+8a7b6c5d-4e3f-4a1b-8c9d-0e1f2a3b4c5d  Pending    2026-10-25 14:05  1          demo2.dem
 ```
