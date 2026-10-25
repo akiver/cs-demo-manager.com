@@ -22,7 +22,8 @@ The server runs only while the application (or the CLI) is running, and all its 
 - Password of the `csdm` user: `%USERPROFILE%\.csdm\postgres\password`
 - Server logs: `%USERPROFILE%\.csdm\postgres\data\log`
 
-The server listens on `127.0.0.1` with a port chosen at each start, you can find it in the `port` line of
+The server listens on `127.0.0.1` port `25432`, the password is required through it. If this port is already in use by
+another program, a free one is used instead: you can find it in the `port` line of
 `%USERPROFILE%\.csdm\postgres\data\csdm.conf`.
 
 </TabItem>
@@ -48,9 +49,12 @@ it.
 </Tabs>
 
 The database name and the user name are both `csdm`. You can connect to it with any PostgreSQL client while the
-application is running, for example with `psql` on macOS:
+application is running, for example with `psql`:
 
 ```bash
+# Windows
+psql -h 127.0.0.1 -p 25432 -U csdm -d csdm
+# macOS
 psql -h ~/.csdm/postgres -p 5432 -U csdm -d csdm
 ```
 
