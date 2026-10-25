@@ -59,17 +59,16 @@ If you encounter issues with demo playback such as a game crash or playback not 
 
 ## Watching CS:GO demos
 
-To watch **CS:GO** demos, select the **csgo_legacy** branch in your Steam library.
-To do so, follow these steps:
+Since version 3.21, CS:DM plays **CS:GO** demos with the standalone
+[Counter-Strike: Global Offensive](https://store.steampowered.com/app/4465480/CounterStrikeGlobal_Offensive) app that
+Valve released on Steam. Install it from the Steam store like any other game, it's installed next to CS2 in the
+`steamapps\common\csgo legacy` folder of your Steam library.
 
-1. Right-click **CS2** in your Steam library and click **Properties**.
-2. Go to the **Betas** tab.
-3. Select **csgo_legacy** from the dropdown menu.
-4. Close the window and wait for the game to be updated.
-5. You can now watch CS:GO and CS2 demos from CS:DM.
+CS:GO and CS2 are separate apps, so you can watch both CS:GO and CS2 demos from CS:DM while keeping CS2 up to date.
 
-:::tip
-You can watch both CSGO and CS2 demos from CS:DM when the **csgo_legacy** beta is selected while keeping CS2 up to date.
+:::warning
+The **csgo_legacy** beta branch of CS2 is not supported anymore. If it's still selected in your Steam library, switch
+back to **None** in the **Betas** tab of the CS2 properties.
 :::
 
 ## Watching old CS2 demos
@@ -94,7 +93,7 @@ We'll use the official Steam command `download_depot` from the Steam console to 
 This command expects 3 parameters: the app ID, the depot ID, and the manifest ID. Usage:
 `download_depot <app ID> <depot ID> <manifest ID>`
 
-- The app ID is the unique identifier for the game, which is `730` for CS2/CS:GO.
+- The app ID is the unique identifier for the game, which is `730` for CS2.
 - A depot is a collection of files. You will need to download files from 2 depots: the main depot and the OS-specific depot for your operating system.
   The 2 depots you will need are:
   - The main depot, which is [2347770](https://steamdb.info/depot/2347770/manifests/) for CS2.
