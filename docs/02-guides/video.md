@@ -189,6 +189,11 @@ The only case where disk space is less of a concern is when using HLAE + FFmpeg 
 
 When enabled, the application automatically closes the game after recording completes.
 
+### Keep recorded files if the game crashes
+
+When enabled, the video, audio and image files recorded before the game crashed are kept instead of being deleted.  
+It's useful to salvage the sequences that were recorded before the crash, or to investigate it.
+
 ### Show only death notices
 
 If enabled, only death notices will be shown in-game.
@@ -241,6 +246,10 @@ For detailed information, refer to the [FFmpeg documentation](https://ffmpeg.org
 
 Set the video quality for the selected video codec corresponding to the `-crf` FFmpeg option.  
 A lower value generally leads to higher quality but larger file sizes.
+
+:::note
+A quality of `0` with the `libx264` codec creates a lossless video that some video players can't decode.
+:::
 
 :::warning
 This option has no effect and the input is disabled if you defined a custom [FFmpeg output parameters](#output-parameters) when using HLAE + FFmpeg.  
