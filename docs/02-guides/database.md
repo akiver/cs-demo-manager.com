@@ -237,3 +237,119 @@ You must have created a fresh database before importing it.
 1. `DROP DATABASE IF EXISTS db_name;`
 2. `CREATE DATABASE db_name;`
    :::
+
+## Position tables
+
+Since version 3.21, the positions used by the [2D viewer](/docs/guides/2d-viewer) are stored in a packed binary format
+to reduce the database size and speed up the viewer. They are generated the first time you open a match in the 2D
+viewer, and deleted by the `Delete positions` option described above.
+
+| Table               | 1 row per              |
+| ------------------- | ---------------------- |
+| `player_positions`  | player and round       |
+| `grenade_positions` | grenade projectile     |
+| `inferno_positions` | inferno (molotov fire) |
+| `chicken_positions` | chicken and round      |
+| `hostage_positions` | hostage and round      |
+
+This section describes how these tables are laid out and the functions available to read them.  
+See the [SQL export](/docs/guides/export) guide for ready-to-use queries.
+
+### Layout
+
+Instead of one row per tick, each row holds the whole timeline of an entity in `bytea` columns that are **parallel
+arrays**: the value at index `i` of a column is the value at `ticks[i]`.
+
+```
+index       | 0     | 1     | 2
+ticks       | 1     | 2     | 3
+x           | 100   | 120   | 145
+y           | 50    | 52    | 55
+is_ducking  | false | false | true
+```
+
+Values are packed as **big-endian** binary:
+
+| Kind    | Size per value | Used for                                  |
+| ------- | -------------- | ----------------------------------------- |
+| int32   | 4 bytes        | ticks and integers (health, money, side…) |
+| float32 | 4 bytes        | coordinates and decimals (x, y, z, yaw…)  |
+| boolean | 1 byte         | `1` for true, `0` for false               |
+
+Values that rarely change are stored **only when they change**, with their own ticks column (for example `state_ticks`
+for player states). The value at a tick is the **last one whose tick is lower than or equal to it**: with the example
+below, the player has 73 HP at tick 60.
+
+```
+index       | 0     | 1     | 2
+state_ticks | 1     | 40    | 95
+health      | 100   | 73    | 0
+is_alive    | true  | true  | false
+```
+
+### Columns
+
+#### `player_positions`
+
+Movements are stored for every tick of the round, states only when they change.
+
+| Column                                                                                                                    | Type          | Description                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------ |
+| `match_checksum`, `round_number`, `player_steam_id`, `player_name`                                                        | regular       | Identify the row                                                                           |
+| `ticks`                                                                                                                   | int32 array   | Ticks of the movement columns below                                                        |
+| `x`, `y`, `z`, `yaw`, `flash_duration_remaining`                                                                          | float32 array | Movement, parallel to `ticks`                                                              |
+| `is_ducking`, `is_airborne`                                                                                               | boolean array | Movement, parallel to `ticks`                                                              |
+| `state_ticks`                                                                                                             | int32 array   | Ticks of the state columns below, one entry per state change                               |
+| `side`, `money`, `health`, `armor`                                                                                        | int32 array   | State, parallel to `state_ticks`. `side` is `2` for terrorists, `3` for counter-terrorists |
+| `is_alive`, `has_helmet`, `has_bomb`, `has_defuse_kit`, `is_scoping`, `is_defusing`, `is_planting`, `is_grabbing_hostage` | boolean array | State, parallel to `state_ticks`                                                           |
+| `active_weapon_name`, `equipments`, `grenades`, `pistols`, `smgs`, `rifles`, `heavy`                                      | `text[]`      | State, parallel to `state_ticks`. Weapon lists are comma-separated                         |
+
+#### `grenade_positions`, `chicken_positions`, `hostage_positions`
+
+A position is stored only when the entity moves. The last tick is when the entity disappeared or the round ended.
+
+| Column        | Type          | Description                                                                       |
+| ------------- | ------------- | --------------------------------------------------------------------------------- |
+| `ticks`       | int32 array   | Ticks of the position columns below                                               |
+| `x`, `y`, `z` | float32 array | Position, parallel to `ticks`                                                     |
+| `state_ticks` | int32 array   | `hostage_positions` only: ticks of the hostage state changes                      |
+| `states`      | int32 array   | `hostage_positions` only: hostage state, parallel to `state_ticks` (values below) |
+
+`grenade_positions` also has regular columns identifying the projectile (`grenade_id`, `projectile_id`,
+`grenade_name`) and its thrower at the time of the throw (`thrower_steam_id`, `thrower_name`, `thrower_side`,
+`thrower_team_name`, `thrower_velocity_x`, `thrower_velocity_y`, `thrower_velocity_z`, `thrower_yaw`,
+`thrower_pitch`).
+
+Hostage state values: `0` idle, `1` being untied, `2` getting picked up, `3` being carried, `4` following player, `5`
+getting dropped, `6` rescued, `7` dead.
+
+#### `inferno_positions`
+
+An inferno never moves, only the shape of its fire changes.
+
+| Column                                          | Type        | Description                                                                                                     |
+| ----------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------- |
+| `unique_id`, `thrower_steam_id`, `thrower_name` | regular     | Identify the inferno and its thrower                                                                            |
+| `x`, `y`, `z`                                   | `real`      | Position of the inferno                                                                                         |
+| `ticks`                                         | int32 array | Ticks of the convex hull changes                                                                                |
+| `convex_hulls_2d`                               | `text[]`    | 2D shape of the fire as a list of points `"x1,y1,x2,y2,..."`, parallel to `ticks`. Empty when no fire is active |
+
+### Helper functions
+
+PostgreSQL cannot read these binary values natively, so CS:DM adds the following functions to the database:
+
+| Function                    | Returns     | Description                                                 |
+| --------------------------- | ----------- | ----------------------------------------------------------- |
+| `int32_be_array(column)`    | `integer[]` | Decodes a whole int32 column (`ticks`, `health`…)           |
+| `float32_be_array(column)`  | `real[]`    | Decodes a whole float32 column (`x`, `y`…)                  |
+| `bool_array(column)`        | `boolean[]` | Decodes a whole boolean column (`is_ducking`, `is_alive`…)  |
+| `float32_be(column, index)` | `real`      | Decodes a single float32 value at the given 0-based `index` |
+
+The `*_array` functions are the fastest way to read many values because the column is decompressed once.  
+`float32_be()` is faster when you only need one or a few values of a row.
+
+:::tip
+To read a single int32 value such as a tick, compare the raw bytes with `int4send()`, which produces the same big-endian
+format: `substring(ticks FROM i * 4 + 1 FOR 4) = int4send(15000)`.  
+A single boolean value is read with `get_byte(is_ducking, i) = 1`.
+:::
