@@ -5,6 +5,187 @@ CS Demo Manager is a free and open-source software not backed by any corporate e
 You can support the project by [contributing](/docs/contributing) or [donating](/download#donate).
 :::
 
+## v3.21.0
+
+:::tip
+This release comes with a [blog post](/blog/v3-21)!
+:::
+
+### New features and improvements
+
+#### Playback
+
+- Support for the [11/11/2026 CS2 update](https://store.steampowered.com/news/app/730?emclan=103582791432902485&emgid=687522235410284761).
+- Added an in-game UI to control CS2 demo playback: match and round timelines, kills and highlights navigation,
+  precise seeking, playback speed, loop, players menu with camera lock, cameras menu, voice indicator and pressed
+  buttons overlay. Type `csdm_ui` in the game console to toggle it, see the
+  [CS2 demo playback UI](/docs/guides/cs2-demo-playback-ui) guide for details.
+- **CS:GO** demos are now played with the [standalone CS:GO app](https://store.steampowered.com/app/4465480/CounterStrikeGlobal_Offensive/) instead of the `csgo_legacy` branch, which is no longer
+  supported. You must install it from Steam to watch CS:GO demos. See the [Watching CS:GO demos](/docs/guides/playback#watching-cs-demos) guide for details.
+- Added the `csdm_replace_player_name` console command to change the name the game shows for a player without HLAE, it
+  also works on Linux.
+- The `csdm.cfg` file in the `game/csgo/cfg` folder of your CS2 installation, if it exists, is now executed when
+  watching a demo. It's not executed during video generation so it doesn't alter your recordings. See the
+  [CS2 console commands](/docs/guides/cs2-console-commands) guide for details.
+
+#### Database
+
+- The application now comes with its own PostgreSQL server that is started and stopped automatically, it means
+  installing PostgreSQL is no longer required, which simplifies the installation. It's the default for new
+  installations, existing installations keep using the PostgreSQL server they were connected to. See the
+  [database guide](/docs/guides/database) for details.
+  :::info
+  You can switch an existing installation to the embedded server from the **Database** settings but your data will not
+  be migrated because the embedded server starts with an empty database. Your analyzed matches, tags and comments will not
+  be available and you will have to analyze your demos again. Your data stays on your PostgreSQL server, you can
+  reconnect to it at any time to get it back.
+  :::
+- The `psql` program is no longer required.
+
+#### Settings
+
+- The PostgreSQL version is now shown in the About page.
+
+#### CLI
+
+- The CLI and the application now share a single background process, which means analyses and videos started from the
+  CLI are reflected in real time in the application and both share the same video queue.
+- Added the `--help`, `-h` and `--version` flags, and `csdm help <command>` to print a command's help.
+- Added the `watch` command to start a demo playback in Counter-Strike, optionally from a tick, focusing on a player
+  and executing console commands at given ticks.
+- Added a `--json` flag to the `analyze`, download (`dl-*`) and `video list` commands to output machine-readable JSON.
+- Added the `--quiet` and `--verbose` options to all commands.
+- The video queue is now printed as a table.
+- Progress is now shown on a single line with a summary at the end for the analyze, export and download commands.
+- Download progress and elapsed video generation time are now displayed.
+- Errors are now printed as human-readable messages with colors and hints instead of raw error codes.
+- Invalid options and arguments are now reported with a hint to the command help.
+- The closest command is suggested when an unknown command is entered.
+
+#### Demos
+
+- Added support for `.zst` compressed demos, including automatic extraction when scanning folders and downloads from
+  third-party providers.
+
+#### Video
+
+- Added an option to keep the raw recorded files when the game crashes.
+- The player sequences dialog options are now remembered per demo.
+- The sequence being converted is now highlighted in the queue.
+- Added a "Player voices" option to the player's sequences dialog to choose whose voices are heard in the generated
+  sequences.
+- Round sequences now have per-player options like event sequences so their voices and death notices can be edited
+  per player.
+- Added a warning when quality 0 is used with libx264, which creates a lossless video that some players can't decode.
+- Added a hint about the Windows controlled folder access protection when the raw recorded files cannot be written.
+
+#### Heatmap
+
+- Added a round time range slider, starting at the end of the freeze time, and a bomb plant phase filter (before or
+  after the plant) to match heatmaps.
+- Added a "Positions" event to match, team and player heatmaps that samples alive players once per second.
+
+#### 2D viewer
+
+- Added the C4 blast zones, drawn once the bomb is planted and animated when it explodes. See the
+  [2D viewer](/docs/guides/2d-viewer#bomb-damage) guide for details.
+- Added a settings menu in the playback bar to show or hide the player names, kills feed, death positions, shots,
+  chickens and bomb damage.
+
+#### Analyze
+
+- Support for the 11/11/2026 CS2 update.
+- Analyzing demos is faster and uses less memory, see the [blog post](/blog/v3-21#faster-analysis-smaller-database) for details.
+  :::warning
+  Existing positions are not converted, they are deleted when the database is updated. Matches analyzed with previous
+  versions keep their stats but the 2D viewer will ask you to generate the positions again.
+  :::
+- Damage values are now the health points actually removed, which is often the reported damage + 1 in CS2 demos.
+
+#### UI
+
+- Added Slovenian language. It's partially translated, you can help translating the
+  [application](/docs/contributing#translate-application)!
+- Players selects now group players by team with a checkbox to select or deselect all the players of a team.
+
+### Fixes
+
+#### Analyze
+
+- CS2 team names not detected from the players clan tag.
+- Players name not being the one shown in the scoreboard in CS2 demos, or not updated when they were renamed.
+- Players velocity always 0 for most events in CS2 demos recorded before the AnimGraph 2 update.
+- C4 damage detected as world damage in CS2 demos.
+- Bomb exploded events reported when the bomb was stopped without exploding, for example at half-time.
+- Smoke start events without or with the wrong projectile ID.
+- Events attributed to a random weapon when a player had two weapons of the same type in CS:GO demos.
+- Incorrect bomb drop/pickup and C4 carrier tracking.
+- Flashed players not paired with the correct flashbang detonation.
+- Incorrect damage taken by a player controlling a bot.
+- Chicken positions still exported after the chicken was killed.
+- Incorrect rounds duration, it's now computed from ticks instead of frames.
+- Entities not being destroyed in CS2 POV demos, and incorrect entity baselines in CS2 POV and CS:GO demos.
+- Demos with broken full packet frames failing to analyze.
+
+:::warning
+These fixes require re-analyzing affected demos!
+:::
+
+#### Database
+
+- The analysis hanging when disconnecting from, or reconnecting to, the database during a match insertion.
+- Database writes in progress (`COPY` commands) not cancelled when disconnecting.
+- The application failed to start when the PostgreSQL user was not allowed to connect to the default `postgres` database.
+
+#### CLI
+
+- Zip demo downloads never completing.
+- Output truncated when piped.
+- Demos with an unsupported source being analyzed.
+- A demo analyzed several times when duplicated paths are provided.
+- Demo downloads not checking the status code, not following redirects and leaving partial files on error.
+- Export and download errors not printed on stderr and not returning a failure exit code.
+- Demo paths provided after an option were ignored by the export commands.
+- Crash when printing a table row with fewer cells than the header.
+- Table last column truncated to an ellipsis in narrow terminals.
+- Videos and analyses started from the CLI not cancelled when it exits.
+
+#### Video
+
+- HLAE updates not detected when the executable version included a build number.
+- HLAE update check not always using the release marked as latest on GitHub.
+- Duplicated word in highlight kills tooltip.
+- VirtualDub installation failing on Windows.
+- FFmpeg installation failing since the builds repository moved.
+- FFmpeg 10+ versions considered older than 9.x when picking the latest version and checking for updates.
+
+#### Playback
+
+- Demo playback and video generation hanging when the demo was not loaded at game startup, for example when Steam is in
+  offline mode.
+- The "Counter-Strike is running" dialog not closing on confirm.
+
+#### Match
+
+- Crash when the match displayed in the application is re-analyzed through the CLI.
+
+#### Demos
+
+- Demo not reloaded when navigating back after a failed load.
+- Duplicated match checksum errors when analyzing a demo that was listed while it was still being downloaded. Demos
+  are now downloaded under a temporary name and renamed once complete.
+
+#### 2D Viewer
+
+- Loading state not shown while exporting players voice.
+
+#### UI
+
+- The app becoming interactive behind a dialog when several dialogs or the settings were open and one of them was
+  closed.
+- Title bar not clickable when settings or a dialog are open.
+- Duplicate windows opened while the main window is loading.
+
 ## v3.20.1
 
 ### Fixes

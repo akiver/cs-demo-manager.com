@@ -1,0 +1,159 @@
+---
+slug: v3-21
+title: 'CS:DM 3.21: in-game playback UI, embedded database and faster analysis'
+date: 2026-11-13
+authors: [akiver]
+tags: [version]
+image: /img/blog/v3-21/playback-ui.jpg
+---
+
+import { DonateLinks } from '@site/src/components/donate-links';
+
+# CS:DM 3.21: in-game playback UI, embedded database and faster analysis
+
+Hi :wave:, it has been a long time since my last post here. Releases usually come with a changelog entry and
+nothing more, but version 3.21 deserves a proper post.
+
+This release brings a **new in-game UI to control CS2 demo playback**, removes the need to **install PostgreSQL** on
+your machine, **speeds up demo analysis** and **shrinks the database size**.
+
+{/* truncate */}
+
+## In-game playback UI
+
+I started working on this a few months ago for a very simple reason: I wanted to see the current tick while
+watching a demo to help with debugging demo analysis, and the CS2 demo UI at the time didn't show it.  
+Once the tick was there, I kept adding things. A way to see who is talking, a less clunky way to switch between players,
+a timeline of the match... and the small overlay turned into a full playback UI.
+
+Valve improved the demo viewer in the [October 15 update](https://steamdb.info/patchnotes/25944058/) and it now shows the
+tick but that covers only some of what I had in mind.
+
+![The CS:DM playback UI drawn over a CS2 demo](/img/blog/v3-21/playback-ui.jpg)
+
+Type `csdm_ui` in the game console to show/hide the UI or bind the command to a key. By default
+the playback panel sits at the bottom of the screen but you can drag it anywhere you like. Here is what it adds on top
+of the native panel:
+
+- **Match timeline**: shows the rounds, their winner, the bomb plants/defuses, and the kills and deaths of the player
+  you are spectating. Hover a round to see more details and click anywhere to seek.
+- **Round timeline**: shows the kills, deaths, headshots and wallbangs of the current round.
+- **Round clock**: the time left in the round, the freeze time or before the bomb explodes.
+- **Highlights navigation**: jump between the kills, highlights and lowlights of all players or only the spectated
+  one, optionally spectating the killer when seeking to a kill.
+- **Precise seeking**: skip buttons with a configurable length, frame-by-frame stepping while paused, a playback speed
+  slider and a "go to" menu that accepts a time (`12:34`), a tick or a round number.
+- **Voice**: see who is talking, which the native UI doesn't show, and mute or unmute players individually or per team.
+- **Players**: cycle between players, spectate one from a menu grouped by team, and lock the camera on a player so it
+  goes back to them when they respawn.
+- **Loop**: repeat the playback between two points.
+- **Cameras**: switch to the cameras defined in CS:DM.
+- **Pressed buttons**: a second overlay that shows the keyboard and mouse buttons pressed by the spectated player and
+  their current speed.
+- **Video sequence**: quickly generate a video of what you are watching. Click once to start the sequence and once
+  more to end it. The sequence is added to the video page of the match in CS:DM, focused on the spectated player
+  (CS:DM must be running).
+
+The panels have settings for their opacity, scale, tooltips, auto-hide and which timelines are displayed.
+
+Everything is also controllable through console commands and convars, so you can bind any of it to a key. The
+[CS2 demo playback UI](/docs/guides/cs2-demo-playback-ui) guide describes every control of the UI and the
+[CS2 console commands](/docs/guides/cs2-console-commands) guide lists the commands and convars.
+
+## Embedded database
+
+Since version 3, CS:DM requires a PostgreSQL database and installing it was by far the biggest hurdle to get started:
+installer, password, service not running, wrong port, `psql` not in the `PATH`... It was the first thing most support
+requests were about.
+
+**CS:DM now comes with its own PostgreSQL server.** There is nothing to install, the application starts it when it
+launches and stops it when it quits.
+
+It's the default for new installations. Existing installations are not affected, they keep using the PostgreSQL
+server they are connected to and you can still point CS:DM at a server you manage yourself from the **Database**
+settings.
+
+You can also switch an existing installation to the embedded server from the same settings, and then uninstall
+PostgreSQL from your machine. Be aware that **your data is not migrated**, the embedded server starts with an empty
+database and your existing data stays on the external server.  
+The [database guide](/docs/guides/database) explains how it works and where the data is stored.
+
+The `psql` program is also no longer required since matches are now inserted through the database connection itself.
+
+## Faster analysis, smaller database
+
+The [demo analyzer](https://github.com/akiver/cs-demo-analyzer) and the
+[demoinfocs-golang](https://github.com/markus-wa/demoinfocs-golang) parser it relies on received a batch of
+performance work. Analyzing a demo is faster and uses considerably less memory, especially with positions enabled.
+
+Here are some numbers measured on the same machine with a 36-minute CS2 demo (de_mirage, 64-tick, 20 rounds, 281 MB)
+analyzed with the **positions analysis enabled** in the **Analyze** settings, CS:DM 3.20.1 against 3.21:
+
+|                                      | 3.20.1    | 3.21   |
+| ------------------------------------ | --------- | ------ |
+| Analysis time                        | 23s       | 5s     |
+| Analyzer peak memory                 | 1.6 GB    | 145 MB |
+| Database insertion time              | 43s       | 1s     |
+| Match size in the database           | 367 MB    | 19 MB  |
+| Rows in the `player_positions` table | 1,290,630 | 200    |
+
+The analyzer **memory usage** no longer grows with the length of the demo. A 36-round demo of 880 MB used to need more
+than 4.5 GB of RAM, it now peaks at **less than 200 MB**, which makes a real difference when several demos are analyzed
+at the same time.
+
+The biggest change is how **positions** are stored. They are now saved in a much more compact way, the database is
+**significantly smaller**, matches insert faster and the **2D viewer** loads positions quicker.
+
+If you query positions directly, the [position tables](/docs/guides/database#position-tables) section of the database
+guide describes the new layout and the [SQL export](/docs/guides/export) guide has ready-to-use queries.
+
+Existing positions are not converted, they are deleted when 3.21 updates the database. Matches analyzed with previous
+versions keep their stats, the 2D viewer will ask you to generate their positions again, and you will need to
+re-analyze them to use the new **Positions** event of the heatmaps.
+
+This update also fixes several analysis issues reported over the last months, these fixes require
+re-analyzing the affected demos.
+
+## Bomb damage in the 2D viewer
+
+The 2D viewer now draws the blast zones once the bomb is planted, you can see at a glance how much damage a player
+hiding in a corner or behind a wall would take. When the bomb explodes, the shockwave is animated as it spreads across
+the map.
+
+<img
+  src="/img/documentation/guides/2d-viewer/bomb-damage.gif"
+  alt="The C4 shockwave in the 2D viewer on de_mirage"
+  width="450"
+/>
+
+CS:GO demos, CS2 demos recorded before the July 9, 2026 update and community maps fall back to the previous radial blast.
+The [2D viewer guide](/docs/guides/2d-viewer#bomb-damage) explains both models and the colors.
+
+## Also in this release
+
+- **CS2 update**: demo playback and analysis support for the November 11, 2026 CS2 update.
+- **CS:GO**: CS:GO demos are played with the standalone CS:GO app, the `csgo_legacy` branch is no longer supported.
+- **CLI**: the CLI and the application now share a single background process which means analyses and videos started
+  from the CLI show up in real time in the application, and both share the same video queue. The CLI also gained a
+  proper `--help`, a `--json` output for scripting, progress lines, tables, readable errors and a new `watch` command to start
+  a demo playback from the terminal. See the [CLI documentation](/docs/cli).
+- **Player names**: the new `csdm_replace_player_name` console command changes the name the game shows for a
+  player in the scoreboard without HLAE, it also works on Linux. See the
+  [CS2 console commands](/docs/guides/cs2-console-commands#players-and-voices) guide.
+
+The full list of changes is in the [changelog](/changelog).
+
+## Support the project
+
+I created and maintain CS:DM during my free time, it's free software and always will be.  
+If CS:DM is useful to you, please consider making a donation, it helps me to keep working on it. :pray:
+
+<DonateLinks />
+
+## Links
+
+- [Download](/download)
+- [Installation](/docs/installation)
+- [Database guide](/docs/guides/database)
+- [Changelog](/changelog)
+- [Contributing](/docs/contributing)

@@ -103,6 +103,7 @@ csdm <command> [arguments] [options]
 | `xlsx`      | Analyze and export demos to XLSX files.                                      |
 | `json`      | Analyze and export demos to JSON files.                                      |
 | `video`     | Generate videos from demos and control the video generation queue.           |
+| `watch`     | Start the playback of a demo in Counter-Strike.                              |
 | `help`      | Show the CLI help, or the help of a command.                                 |
 
 ### Getting help
@@ -643,4 +644,52 @@ The queue is running
 ID                                    STATUS     ADDED             SEQUENCES  DEMO
 3f1d2c7e-6b2a-4d0e-9f3c-1a2b3c4d5e6f  Recording  2026-10-25 14:02  2          demo.dem
 8a7b6c5d-4e3f-4a1b-8c9d-0e1f2a3b4c5d  Pending    2026-10-25 14:05  1          demo2.dem
+```
+
+## Watch a demo
+
+Start the playback of a demo in Counter-Strike.
+
+```bash
+csdm watch <demo-path> [options]
+```
+
+| Name           | Default | Mandatory | Description                                                                                                                                |
+| -------------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| demo-path      |         | Yes       | `.dem` file, relative or absolute.                                                                                                         |
+| --tick         |         | No        | Tick at which the playback starts.                                                                                                         |
+| --focus-player |         | No        | Steam ID of the player to focus the camera on. The demo must have been analyzed and be present in the database.                            |
+| --exec         |         | No        | Console command executed when the playback reaches a tick, in the form `<tick>:<command>`. It can be repeated to execute several commands. |
+
+The game is started with the [playback settings](/docs/guides/playback) of the application.  
+The command returns when the game closes, or right away when the demo is sent to a game that is already running.
+
+:::info
+The [CS2 demo playback UI](/docs/guides/cs2-demo-playback-ui) timelines and highlights navigation, as well as the cameras, require the demo to have been analyzed. The playback works with any demo otherwise.
+:::
+
+### Examples
+
+Watch a demo:
+
+```bash
+csdm watch "C:\Users\username\Desktop\demo.dem"
+```
+
+Watch a demo from tick 12000 focusing on a player:
+
+```bash
+csdm watch "C:\Users\username\Desktop\demo.dem" --tick 12000 --focus-player 76561198000000000
+```
+
+Watch a demo and quit the game at tick 5000:
+
+```bash
+csdm watch "C:\Users\username\Desktop\demo.dem" --exec 5000:quit
+```
+
+Commands containing spaces must be quoted:
+
+```bash
+csdm watch "C:\Users\username\Desktop\demo.dem" --exec "100:csdm_ui" --exec "3000:demo_timescale 2"
 ```

@@ -8,9 +8,9 @@ import TabItem from '@theme/TabItem';
 
 ## Embedded database
 
-Since version 3.21, CS Demo Manager comes with its own PostgreSQL server: there is nothing to install, the application
-starts and stops it automatically. It's the default for new installations, existing installations keep using the
-PostgreSQL server they were connected to.
+CS Demo Manager comes with its own PostgreSQL server that the application starts and stops automatically, you don't
+need to install PostgreSQL. It's the default for installations made since version 3.21, older installations keep using
+the PostgreSQL server they were connected to (see below to switch).
 
 The server runs only while the application (or the CLI) is running, and all its files live in the
 [application folder](/docs/guides/application-folder):
@@ -23,7 +23,7 @@ The server runs only while the application (or the CLI) is running, and all its 
 - Server logs: `%USERPROFILE%\.csdm\postgres\data\log`
 
 The server listens on `127.0.0.1` port `25432`, the password is required through it. If this port is already in use by
-another program, a free one is used instead: you can find it in the `port` line of
+another program, a free one is used instead. You can find it in the `port` line of
 `%USERPROFILE%\.csdm\postgres\data\csdm.conf`.
 
 </TabItem>
@@ -60,7 +60,8 @@ psql -h ~/.csdm/postgres -p 5432 -U csdm -d csdm
 
 :::tip
 To switch between the embedded server and an external one, disconnect from the current database by clicking on the
-`Disconnect` button in `Settings` -> `Database`, then choose the server type on the connection screen.
+`Disconnect` button in `Settings` -> `Database`, then choose the server type on the connection screen. Switching to
+the embedded server starts with an empty database, the data of the external server is not migrated.
 :::
 
 ## Upgrading the embedded database
@@ -121,9 +122,29 @@ pg_dump -h 127.0.0.1 -p 5433 -U csdm -d csdm > backup.sql
 
 4. Stop the old server:
 
-```bash
-pg_ctl -D <data folder> stop
+<Tabs groupId="os" queryString>
+<TabItem value="windows" label="Windows">
+
+```powershell
+& "C:\Program Files\PostgreSQL\18\bin\pg_ctl.exe" -D "$env:USERPROFILE\.csdm\postgres\data" stop
 ```
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+/Library/PostgreSQL/18/bin/pg_ctl -D ~/.csdm/postgres/data stop
+```
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+/usr/lib/postgresql/18/bin/pg_ctl -D ~/.config/csdm/postgres/data stop
+```
+
+</TabItem>
+</Tabs>
 
 ### Step 2: Create the new database
 
@@ -133,8 +154,9 @@ pg_ctl -D <data folder> stop
 
 ### Step 3: Import the data into the new database
 
-The new PostgreSQL version is bundled with the application, its programs are in the `resources/static/postgres/bin`
-folder of the application installation folder:
+The new PostgreSQL server is bundled with the application, its programs (`pg_ctl`, `postgres`…) are in the
+`resources/static/postgres/bin` folder of the application installation folder. `psql` is not bundled, use the one of
+the version installed in step 1:
 
 <Tabs groupId="os" queryString>
 <TabItem value="windows" label="Windows">
@@ -203,11 +225,29 @@ In this case, you have to set the environment variable `PGSSLMODE` to `require` 
 
 You can export the database using `pg_dump`.
 
+:::info
+`pg_dump` and `psql` are not bundled with the application. Install the PostgreSQL command line tools of the same major
+version as the server or newer: on Windows and macOS with the
+[PostgreSQL installers](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) (only the
+`Command Line Tools` component is needed), on Linux with your distribution packages (e.g. `postgresql-client`).
+:::
+
 ```bash
 pg_dump -h host -p port -U username -d db_name > backup.sql
 ```
 
-Example with the default values:
+Example with the [embedded database](#embedded-database), the application must be running:
+
+```bash
+# Windows
+pg_dump -h 127.0.0.1 -p 25432 -U csdm -d csdm > backup.sql
+# macOS
+pg_dump -h ~/.csdm/postgres -p 5432 -U csdm -d csdm > backup.sql
+# Linux
+pg_dump -h ~/.config/csdm/postgres -p 5432 -U csdm -d csdm > backup.sql
+```
+
+Example with an external PostgreSQL server using the default values:
 
 ```bash
 pg_dump -h 127.0.0.1 -p 5432 -U postgres -d csdm > backup.sql
@@ -216,45 +256,104 @@ pg_dump -h 127.0.0.1 -p 5432 -U postgres -d csdm > backup.sql
 Positions take a lot of space, you can exclude them from the backup using the `--exclude-table-data` option:
 
 ```bash
-pg_dump -h 127.0.0.1 -p 5432 -U postgres -d csdm --exclude-table-data='*positions*' > backup.sql
+pg_dump -h host -p port -U username -d db_name --exclude-table-data='*positions*' > backup.sql
 ```
 
 See the [official documentation](https://www.postgresql.org/docs/current/app-pgdump.html) for advanced usage.
 
 ## Importing the database
 
-You can import the database using `psql`.
+You can import the database using `psql`, the backup must be imported into a fresh database.
+
+### With an external server
 
 ```bash
+psql -h host -p port -U username -d postgres -c "DROP DATABASE IF EXISTS db_name;" -c "CREATE DATABASE db_name;"
 psql -h host -p port -U username -d db_name -f backup.sql
 ```
 
 Example with the default values:
 
 ```bash
+psql -h 127.0.0.1 -p 5432 -U postgres -d postgres -c "DROP DATABASE IF EXISTS csdm;" -c "CREATE DATABASE csdm;"
 psql -h 127.0.0.1 -p 5432 -U postgres -d csdm -f backup.sql
 ```
 
-:::warning
-You must have created a fresh database before importing it.
+### With the embedded server
 
-1. `DROP DATABASE IF EXISTS db_name;`
-2. `CREATE DATABASE db_name;`
-   :::
+The database can't be replaced while the application is connected to it, you have to start the
+[embedded database](#embedded-database) server yourself while the application is closed. The application must have
+connected to the embedded database at least once so that its data folder exists.
+
+:::warning
+Make sure the application is **completely closed** (quit it from the tray/status bar menu) before running the commands
+below.
+:::
+
+1. Start the server with the `pg_ctl` program bundled with the application, on a port that is not in use:
+
+<Tabs groupId="os" queryString>
+<TabItem value="windows" label="Windows">
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\CS Demo Manager\resources\static\postgres\bin\pg_ctl.exe" -D "$env:USERPROFILE\.csdm\postgres\data" -o "-c listen_addresses=127.0.0.1 -c port=5433" -l "$env:USERPROFILE\.csdm\postgres\import.log" start
+```
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+"/Applications/CS Demo Manager.app/Contents/Resources/static/postgres/bin/pg_ctl" -D ~/.csdm/postgres/data -o "-c listen_addresses=127.0.0.1 -c port=5433" -l ~/.csdm/postgres/import.log start
+```
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+"/opt/CS Demo Manager/resources/static/postgres/bin/pg_ctl" -D ~/.config/csdm/postgres/data -o "-c listen_addresses=127.0.0.1 -c port=5433" -l ~/.config/csdm/postgres/import.log start
+```
+
+If you use the AppImage, `pg_ctl` is in the `resources/static/postgres/bin` folder where the AppImage is extracted.
+
+</TabItem>
+</Tabs>
+
+2. Replace the database and import the backup, the password is the content of the `password` file of the `postgres`
+   folder:
+
+```bash
+psql -h 127.0.0.1 -p 5433 -U csdm -d postgres -c "DROP DATABASE csdm;" -c "CREATE DATABASE csdm;"
+psql -h 127.0.0.1 -p 5433 -U csdm -d csdm -f backup.sql
+```
+
+3. Stop the server by running the same `pg_ctl` command as in step 1 with `stop` instead of the options and `start`, for
+   example on Windows:
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\CS Demo Manager\resources\static\postgres\bin\pg_ctl.exe" -D "$env:USERPROFILE\.csdm\postgres\data" stop
+```
+
+4. Start the application, it connects to the imported data and runs the pending migrations if any.
 
 ## Position tables
 
-Since version 3.21, the positions used by the [2D viewer](/docs/guides/2d-viewer) are stored in a packed binary format
-to reduce the database size and speed up the viewer. They are generated the first time you open a match in the 2D
-viewer, and deleted by the `Delete positions` option described above.
+Since version 3.21, positions are stored in a packed binary format to reduce the database size and speed up reading
+them. The following tables share this format:
 
-| Table               | 1 row per              |
-| ------------------- | ---------------------- |
-| `player_positions`  | player and round       |
-| `grenade_positions` | grenade projectile     |
-| `inferno_positions` | inferno (molotov fire) |
-| `chicken_positions` | chicken and round      |
-| `hostage_positions` | hostage and round      |
+| Table                     | 1 row per              | Used by                             |
+| ------------------------- | ---------------------- | ----------------------------------- |
+| `player_positions`        | player and round       | [2D viewer](/docs/guides/2d-viewer) |
+| `grenade_positions`       | grenade projectile     | [2D viewer](/docs/guides/2d-viewer) |
+| `inferno_positions`       | inferno (molotov fire) | [2D viewer](/docs/guides/2d-viewer) |
+| `chicken_positions`       | chicken and round      | [2D viewer](/docs/guides/2d-viewer) |
+| `hostage_positions`       | hostage and round      | [2D viewer](/docs/guides/2d-viewer) |
+| `player_position_samples` | player and round       | **Positions** event of the heatmaps |
+
+The tables used by the 2D viewer are filled when the match is analyzed with positions enabled in the **Analyze**
+settings, or else the first time the match is opened in the 2D viewer. The `player_position_samples` table is always
+filled when the match is analyzed.
+
+The `Delete positions` option described above deletes only the tables used by the 2D viewer.
 
 This section describes how these tables are laid out and the functions available to read them.  
 See the [SQL export](/docs/guides/export) guide for ready-to-use queries.
@@ -337,6 +436,18 @@ An inferno never moves, only the shape of its fire changes.
 | `x`, `y`, `z`                                   | `real`      | Position of the inferno                                                                                         |
 | `ticks`                                         | int32 array | Ticks of the convex hull changes                                                                                |
 | `convex_hulls_2d`                               | `text[]`    | 2D shape of the fire as a list of points `"x1,y1,x2,y2,..."`, parallel to `ticks`. Empty when no fire is active |
+
+#### `player_position_samples`
+
+The position of each alive player is stored once per second, from the end of the freeze time to the end of the round.
+Matches analyzed with a version older than 3.21 have no samples until they are analyzed again.
+
+| Column                                              | Type          | Description                                                           |
+| --------------------------------------------------- | ------------- | --------------------------------------------------------------------- |
+| `match_checksum`, `round_number`, `player_steam_id` | regular       | Identify the row                                                      |
+| `side`                                              | regular       | Side of the player, `2` for terrorists and `3` for counter-terrorists |
+| `ticks`                                             | int32 array   | Ticks of the samples                                                  |
+| `x`, `y`, `z`                                       | float32 array | Position, parallel to `ticks`                                         |
 
 ### Helper functions
 

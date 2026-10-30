@@ -23,6 +23,41 @@ For example, on `de_nuke`, it might look like this:
 
 ![Radar position](/img/documentation/guides/2d-viewer/radar-position.png)
 
+## Settings
+
+Hover over the settings button in the playback bar to choose what is drawn on the radar:
+
+- **Player names**: the name of each player next to their dot.
+- **Kills feed**: the list of kills of the current round.
+- **Death positions**: a cross where each player died during the round.
+- **Shots**: the bullets fired by the players.
+- **Chickens**: the position of the chickens.
+- **Bomb damage**: the [C4 blast zones](#bomb-damage) once the bomb is planted.
+
+The **Reset** button restores the default settings.
+
+![2D viewer settings](/img/documentation/guides/2d-viewer/settings.png)
+
+## Bomb damage
+
+Once the bomb is planted, the 2D viewer shows the zones where the C4 blast hurts players.  
+You can show or hide the zones and change their opacity from the [settings](#settings).
+
+![Bomb damage](/img/documentation/guides/2d-viewer/bomb-damage.gif)
+
+How the zones are computed depends on the demo:
+
+- **CS2 demos recorded since the July 9, 2026 update**: Valve replaced the blast with a shockwave that travels around
+  walls and through corridors, the damage depends on the path it takes rather than the straight-line distance from the
+  bomb. CS:DM uses the shockwave data Valve ships inside each official map, so the zones follow the map layout and are
+  drawn on the radar level where they apply. The colors show the damage taken by a player at 100 HP, from lethal to 1
+  HP.
+- **CS:GO demos, CS2 demos recorded before this update, and maps without shockwave data** such as community maps: the
+  blast is a sphere around the bomb that ignores walls. The zones are drawn as circles, the dashed circle shows where
+  the blast kills a player at 100 HP wearing armor.
+
+![Bomb damage on a map without shockwave data](/img/documentation/guides/2d-viewer/bomb-damage-legacy.png)
+
 ## Drawing on the radar
 
 Enable the **drawing mode** to draw on the radar.  
