@@ -33,6 +33,8 @@ const config: Config = {
 
   themes: ['@docusaurus/theme-mermaid'],
 
+  clientModules: [require.resolve('./src/client-modules/highlight-anchor.ts')],
+
   presets: [
     [
       'classic',

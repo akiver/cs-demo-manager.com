@@ -88,3 +88,20 @@
   border: 1px solid #2f2f2f;
   border-radius: 8px;
 }
+
+@keyframes anchor-highlight {
+  0%,
+  40% {
+    background-color: rgba(75, 156, 245, 0.25);
+    box-shadow: 0 0 0 0.5rem rgba(75, 156, 245, 0.25);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 0 0.5rem transparent;
+  }
+}
+
+.anchor-highlight {
+  animation: anchor-highlight 2s ease-out;
+  border-radius: 2px;
+}
