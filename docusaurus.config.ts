@@ -73,6 +73,7 @@ const config: Config = {
   ],
 
   themeConfig: {
+    image: 'img/blog/v3-21/playback-ui.jpg',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,

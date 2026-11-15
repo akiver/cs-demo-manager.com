@@ -48,7 +48,7 @@ Look at the top-level `## vX.Y.Z` heading in `src/pages/changelog.mdx` to find t
 
 ### 5. Write the changelog entry
 
-Prepend the following block immediately after the HTML comment on line 1 of `src/pages/changelog.mdx` (before the existing first `## v...` heading).
+Prepend the following block immediately after the `[comment]` line that follows the front matter at the top of `src/pages/changelog.mdx` (before the existing first `## v...` heading).
 
 **Important:** The previous version section already contains the `:::info` open source notice — do **not** duplicate it. After inserting the new entry, find the old `## vX.Y.Z` heading that immediately follows and delete its `:::info ... :::` block (including the surrounding blank lines) if present.
 
